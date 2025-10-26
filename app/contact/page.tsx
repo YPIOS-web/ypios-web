@@ -5,6 +5,9 @@ import Script from "next/script";
 import { redirect } from "next/navigation";
 import nodemailer from "nodemailer";
 
+/** Forcer Node.js runtime (Nodemailer n'est pas compatible Edge) */
+export const runtime = "nodejs";
+
 export const metadata: Metadata = {
   title: "Contact — YPIOS Énergie",
   description:
@@ -18,15 +21,17 @@ const IMG_BANNER = "/images/cta-ventilation-desenfumage-equilibrage.png";
 const MAX_FILES = 5;
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5 Mo
 const ALLOWED_MIME = new Set(["application/pdf", "image/png", "image/jpeg"]);
-const ALLOWED_EXT = new Set(["pdf", "png", "jpg", "jpeg"]);
+const ALLOWED_EXT = new Set([".pdf", ".png", ".jpg", ".jpeg"]);
 
-/* Utilities */
-function guessMimeFromName(name: string): string | null {
-  const ext = name?.toLowerCase().split(".").pop() || "";
-  if (ext === "pdf") return "application/pdf";
-  if (ext === "png") return "image/png";
-  if (ext === "jpg" || ext === "jpeg") return "image/jpeg";
-  return null;
+/* Utilitaire : teste aussi par extension si le type MIME est vide */
+function isAllowedFile(f: File) {
+  if (!f) return false;
+  if (f.type && ALLOWED_MIME.has(f.type)) return true;
+  const name = (f.name || "").toLowerCase();
+  for (const ext of ALLOWED_EXT) {
+    if (name.endsWith(ext)) return true;
+  }
+  return false;
 }
 
 /* ----------------------------- Server Action ----------------------------- */
@@ -39,7 +44,7 @@ async function sendContact(formData: FormData) {
     redirect("/contact?sent=1");
   }
 
-  // (Optionnel) reCAPTCHA
+  // (Optionnel) reCAPTCHA v2
   const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
   const secretKey = process.env.RECAPTCHA_SECRET_KEY;
   if (siteKey && secretKey) {
@@ -49,6 +54,8 @@ async function sendContact(formData: FormData) {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams({ secret: secretKey, response: token }),
+        // Pas de cache pour la vérif
+        cache: "no-store",
       });
       const res = (await verify.json()) as { success?: boolean };
       if (!res.success) redirect("/contact?error=captcha");
@@ -66,40 +73,37 @@ async function sendContact(formData: FormData) {
   const service = (formData.get("service") as string) || "";
   const message = (formData.get("message") as string) || "";
 
-  // Pièces jointes (ignorer les fichiers vides)
-  const raw = (formData.getAll("files") as unknown as File[]) || [];
-  const files = raw.filter(
-    (f) => f && typeof f.arrayBuffer === "function" && f.size > 0
-  );
-
-  if (files.length > MAX_FILES) redirect(`/contact?error=maxfiles`);
+  // Pièces jointes
+  const files = (formData.getAll("files") as unknown as File[]) || [];
+  if (files.filter((f) => f instanceof File && f.size > 0).length > MAX_FILES) {
+    redirect(`/contact?error=maxfiles`);
+  }
 
   const attachments: Array<{ filename: string; content: Buffer; contentType: string }> = [];
   for (const f of files) {
+    // Certains navigateurs renvoient un "fichier vide" si rien n'est sélectionné
+    if (!(f instanceof File) || f.size === 0) continue;
+
     if (f.size > MAX_FILE_SIZE) redirect(`/contact?error=maxsize`);
-
-    // MIME réel ou déduit via l'extension
-    const mime = f.type || guessMimeFromName(f.name) || "";
-    const extOk = ALLOWED_EXT.has((f.name.split(".").pop() || "").toLowerCase());
-    const mimeOk = mime && ALLOWED_MIME.has(mime);
-
-    if (!mimeOk && !extOk) {
-      redirect(`/contact?error=type`);
-    }
+    if (!isAllowedFile(f)) redirect(`/contact?error=type`);
 
     const buf = Buffer.from(await f.arrayBuffer());
     attachments.push({
       filename: f.name || "piece-jointe",
       content: buf,
-      contentType: mimeOk ? mime : "application/octet-stream",
+      contentType: f.type || "application/octet-stream",
     });
   }
 
-  // Transport Nodemailer
+  // Transport Nodemailer (par défaut OVH : ssl0.ovh.net)
+  const host = process.env.SMTP_HOST || "ssl0.ovh.net";
+  const port = Number(process.env.SMTP_PORT || 465);
+  const secure = String(process.env.SMTP_SECURE || "true") === "true";
+
   const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST!, // ex: ssl0.ovh.net
-    port: Number(process.env.SMTP_PORT || 465),
-    secure: String(process.env.SMTP_SECURE || "true") === "true",
+    host,
+    port,
+    secure,
     auth: { user: process.env.SMTP_USER!, pass: process.env.SMTP_PASS! },
   });
 
@@ -132,7 +136,6 @@ async function sendContact(formData: FormData) {
   `;
 
   try {
-    await transporter.verify();
     await transporter.sendMail({
       from,
       to,
@@ -143,22 +146,24 @@ async function sendContact(formData: FormData) {
       attachments,
       replyTo: email || undefined,
     });
-    redirect("/contact?sent=1");
-  } catch (e) {
-    console.error("MAIL_SEND_ERROR", e);
+  } catch {
     redirect("/contact?error=mail");
   }
+
+  redirect("/contact?sent=1");
 }
 
 /* ----------------------------- Page ----------------------------- */
 export default async function ContactPage({
   searchParams,
 }: {
+  // Next 15 : searchParams doit être awaited
   searchParams: Promise<{ sent?: string; error?: string }>;
 }) {
   const params = await searchParams;
   const sent = params?.sent === "1";
-  const error = params?.error;
+  // En cas de succès, on ignore tout message d'erreur résiduel
+  const error = sent ? undefined : params?.error;
 
   return (
     <main id="contenu" className="min-h-screen bg-slate-50">
@@ -210,6 +215,7 @@ export default async function ContactPage({
           encType="multipart/form-data"
           className="grid grid-cols-1 gap-6 rounded-2xl bg-white p-6 ring-1 ring-slate-200"
         >
+          {/* Honeypot */}
           <input type="text" name="website" autoComplete="off" tabIndex={-1} className="hidden" />
 
           <div className="grid sm:grid-cols-2 gap-4">
@@ -312,7 +318,7 @@ export default async function ContactPage({
               type="file"
               name="files"
               multiple
-              accept=".pdf,.png,.jpg,.jpeg,application/pdf,image/png,image/jpeg"
+              accept=".pdf,.png,.jpg,.jpeg"
               className="mt-1 block w-full text-sm text-slate-700 file:mr-4 file:rounded-lg file:border-0 file:bg-blue-50 file:px-4 file:py-2 file:text-blue-700 hover:file:bg-blue-100"
             />
           </div>
