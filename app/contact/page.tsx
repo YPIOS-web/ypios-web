@@ -14,12 +14,22 @@ export const metadata: Metadata = {
 /* ----------------------------- Bandeau ----------------------------- */
 const IMG_BANNER = "/images/cta-ventilation-desenfumage-equilibrage.png";
 
-/* ----------------------------- Config PJ -------------------------- */
+/* ----------------------------- Config PJ ----------------------------- */
 const MAX_FILES = 5;
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5 Mo
 const ALLOWED_MIME = new Set(["application/pdf", "image/png", "image/jpeg"]);
+const ALLOWED_EXT = new Set(["pdf", "png", "jpg", "jpeg"]);
 
-/* ----------------------------- Server Action ---------------------- */
+/* Utilities */
+function guessMimeFromName(name: string): string | null {
+  const ext = name?.toLowerCase().split(".").pop() || "";
+  if (ext === "pdf") return "application/pdf";
+  if (ext === "png") return "image/png";
+  if (ext === "jpg" || ext === "jpeg") return "image/jpeg";
+  return null;
+}
+
+/* ----------------------------- Server Action ----------------------------- */
 async function sendContact(formData: FormData) {
   "use server";
 
@@ -29,7 +39,7 @@ async function sendContact(formData: FormData) {
     redirect("/contact?sent=1");
   }
 
-  // reCAPTCHA optionnel
+  // (Optionnel) reCAPTCHA
   const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
   const secretKey = process.env.RECAPTCHA_SECRET_KEY;
   if (siteKey && secretKey) {
@@ -41,12 +51,9 @@ async function sendContact(formData: FormData) {
         body: new URLSearchParams({ secret: secretKey, response: token }),
       });
       const res = (await verify.json()) as { success?: boolean };
-      if (!res.success) {
-        return redirect("/contact?error=captcha");
-      }
-    } catch (e) {
-      console.error("RECAPTCHA_VERIFY_ERROR", e);
-      return redirect("/contact?error=captcha");
+      if (!res.success) redirect("/contact?error=captcha");
+    } catch {
+      redirect("/contact?error=captcha");
     }
   }
 
@@ -59,59 +66,47 @@ async function sendContact(formData: FormData) {
   const service = (formData.get("service") as string) || "";
   const message = (formData.get("message") as string) || "";
 
-  // Pièces jointes
-  const files = formData.getAll("files") as unknown as File[];
-  if (files.length > MAX_FILES) return redirect(`/contact?error=maxfiles`);
+  // Pièces jointes (ignorer les fichiers vides)
+  const raw = (formData.getAll("files") as unknown as File[]) || [];
+  const files = raw.filter(
+    (f) => f && typeof f.arrayBuffer === "function" && f.size > 0
+  );
+
+  if (files.length > MAX_FILES) redirect(`/contact?error=maxfiles`);
 
   const attachments: Array<{ filename: string; content: Buffer; contentType: string }> = [];
   for (const f of files) {
-    if (!f || typeof f.arrayBuffer !== "function") continue;
-    if (f.size > MAX_FILE_SIZE) return redirect(`/contact?error=maxsize`);
-    if (ALLOWED_MIME.size && f.type && !ALLOWED_MIME.has(f.type)) {
-      return redirect(`/contact?error=type`);
+    if (f.size > MAX_FILE_SIZE) redirect(`/contact?error=maxsize`);
+
+    // MIME réel ou déduit via l'extension
+    const mime = f.type || guessMimeFromName(f.name) || "";
+    const extOk = ALLOWED_EXT.has((f.name.split(".").pop() || "").toLowerCase());
+    const mimeOk = mime && ALLOWED_MIME.has(mime);
+
+    if (!mimeOk && !extOk) {
+      redirect(`/contact?error=type`);
     }
+
     const buf = Buffer.from(await f.arrayBuffer());
     attachments.push({
       filename: f.name || "piece-jointe",
       content: buf,
-      contentType: f.type || "application/octet-stream",
+      contentType: mimeOk ? mime : "application/octet-stream",
     });
   }
 
-  // Transport Nodemailer (OVH)
-  const host = process.env.SMTP_HOST!;
-  const port = Number(process.env.SMTP_PORT || 465);
-  const secure = String(process.env.SMTP_SECURE || "true") === "true"; // 465 => true, 587 => false
-
+  // Transport Nodemailer
   const transporter = nodemailer.createTransport({
-    host,
-    port,
-    secure,
-    auth: {
-      user: process.env.SMTP_USER!,
-      pass: process.env.SMTP_PASS!,
-    },
-    // Option TLS utile chez OVH si la pile TLS est tatillonne
-    tls: { minVersion: "TLSv1.2" },
+    host: process.env.SMTP_HOST!, // ex: ssl0.ovh.net
+    port: Number(process.env.SMTP_PORT || 465),
+    secure: String(process.env.SMTP_SECURE || "true") === "true",
+    auth: { user: process.env.SMTP_USER!, pass: process.env.SMTP_PASS! },
   });
-
-  try {
-    // Vérifie qu’on s’auth bien avant d’envoyer
-    await transporter.verify();
-  } catch (err) {
-    console.error("MAIL_VERIFY_ERROR", {
-      host,
-      port,
-      secure,
-      user: process.env.SMTP_USER,
-      error: err,
-    });
-    return redirect("/contact?error=email");
-  }
 
   const to = process.env.CONTACT_TO || process.env.SMTP_USER!;
   const from = process.env.SMTP_FROM || process.env.SMTP_USER!;
   const cc = process.env.CONTACT_CC || "";
+
   const subjectLine =
     (sujet && `Contact YPIOS — ${sujet}`) || "Contact YPIOS — Nouveau message";
 
@@ -137,6 +132,7 @@ async function sendContact(formData: FormData) {
   `;
 
   try {
+    await transporter.verify();
     await transporter.sendMail({
       from,
       to,
@@ -147,21 +143,14 @@ async function sendContact(formData: FormData) {
       attachments,
       replyTo: email || undefined,
     });
-  } catch (err) {
-    console.error("MAIL_SEND_ERROR", {
-      host,
-      port,
-      secure,
-      user: process.env.SMTP_USER,
-      error: err,
-    });
-    return redirect("/contact?error=email");
+    redirect("/contact?sent=1");
+  } catch (e) {
+    console.error("MAIL_SEND_ERROR", e);
+    redirect("/contact?error=mail");
   }
-
-  redirect("/contact?sent=1");
 }
 
-/* ----------------------------- Page ------------------------------- */
+/* ----------------------------- Page ----------------------------- */
 export default async function ContactPage({
   searchParams,
 }: {
@@ -177,7 +166,6 @@ export default async function ContactPage({
         <Script src="https://www.google.com/recaptcha/api.js" strategy="afterInteractive" />
       ) : null}
 
-      {/* Bandeau */}
       <section className="relative w-full">
         <div className="relative h-[52vh] min-h-[420px] max-h-[680px]">
           <Image
@@ -200,7 +188,6 @@ export default async function ContactPage({
         </div>
       </section>
 
-      {/* Formulaire */}
       <section className="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8 py-10">
         {sent && (
           <div className="mb-6 rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-green-800">
@@ -213,7 +200,7 @@ export default async function ContactPage({
             {error === "maxfiles" && "Trop de pièces jointes (max 5)."}
             {error === "maxsize" && "Une des pièces jointes dépasse 5 Mo."}
             {error === "type" && "Type de fichier non autorisé (PDF, PNG, JPG uniquement)."}
-            {error === "email" && "Impossible d'envoyer l'email pour le moment. Réessayez plus tard."}
+            {error === "mail" && "Impossible d'envoyer l'email pour le moment. Réessayez plus tard."}
           </div>
         )}
 
@@ -223,7 +210,6 @@ export default async function ContactPage({
           encType="multipart/form-data"
           className="grid grid-cols-1 gap-6 rounded-2xl bg-white p-6 ring-1 ring-slate-200"
         >
-          {/* honeypot */}
           <input type="text" name="website" autoComplete="off" tabIndex={-1} className="hidden" />
 
           <div className="grid sm:grid-cols-2 gap-4">
@@ -326,7 +312,7 @@ export default async function ContactPage({
               type="file"
               name="files"
               multiple
-              accept=".pdf,.png,.jpg,.jpeg"
+              accept=".pdf,.png,.jpg,.jpeg,application/pdf,image/png,image/jpeg"
               className="mt-1 block w-full text-sm text-slate-700 file:mr-4 file:rounded-lg file:border-0 file:bg-blue-50 file:px-4 file:py-2 file:text-blue-700 hover:file:bg-blue-100"
             />
           </div>
