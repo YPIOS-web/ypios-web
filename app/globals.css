@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* hauteur du header (ajuste si besoin) */
+:root {
+  --header-height: 72px;
+}
+
+html, body {
+  @apply bg-slate-50 text-slate-900 antialiased;
+}
+
+/* pour que les ancres ne passent pas sous le header si tu en utilises */
+[id] {
+  scroll-margin-top: calc(var(--header-height,72px) + 16px);
+}
