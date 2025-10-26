@@ -1,13 +1,12 @@
 // next.config.mjs
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Augmente la limite des Server Actions (par ex. 10 Mo)
-  serverActions: {
-    bodySizeLimit: 10 * 1024 * 1024, // 10 MB
-    // allowedOrigins: ['https://ypios.fr', 'https://www.ypios.fr'], // optionnel
+  experimental: {
+    serverActions: {
+      // > 1MB sinon Next refuse la requête (pièces jointes, etc.)
+      bodySizeLimit: "10mb",
+    },
   },
-
-  // (le reste de ta config ici si besoin)
 };
 
 export default nextConfig;
