@@ -5,8 +5,8 @@ import Script from "next/script";
 import { redirect } from "next/navigation";
 import nodemailer from "nodemailer";
 
-// Force l’exécution côté Node (Nodemailer ne fonctionne pas en Edge)
-export const runtime = "nodejs";
+export const runtime = "nodejs"; // assure le runtime Node sur Vercel (pas Edge)
+export const dynamic = "force-dynamic"; // évite tout cache sur cette page
 
 export const metadata: Metadata = {
   title: "Contact — YPIOS Énergie",
@@ -32,7 +32,7 @@ async function sendContact(formData: FormData) {
     redirect("/contact?sent=1");
   }
 
-  // (Optionnel) reCAPTCHA
+  // reCAPTCHA v2 (optionnel)
   const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
   const secretKey = process.env.RECAPTCHA_SECRET_KEY;
   if (siteKey && secretKey) {
@@ -42,6 +42,7 @@ async function sendContact(formData: FormData) {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams({ secret: secretKey, response: token }),
+        cache: "no-store",
       });
       const res = (await verify.json()) as { success?: boolean };
       if (!res.success) redirect("/contact?error=captcha");
@@ -78,16 +79,14 @@ async function sendContact(formData: FormData) {
     });
   }
 
-  // Transport Nodemailer
-  const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST!,
-    port: Number(process.env.SMTP_PORT || 465),
-    secure: String(process.env.SMTP_SECURE || "true") === "true",
-    auth: { user: process.env.SMTP_USER!, pass: process.env.SMTP_PASS! },
-  });
+  const smtpHost = process.env.SMTP_HOST!;
+  const smtpUser = process.env.SMTP_USER!;
+  const smtpPass = process.env.SMTP_PASS!;
+  const smtpPort = Number(process.env.SMTP_PORT || 465);
+  const smtpSecure = String(process.env.SMTP_SECURE || "true") === "true";
 
-  const to = process.env.CONTACT_TO || process.env.SMTP_USER!;
-  const from = process.env.SMTP_FROM || process.env.SMTP_USER!;
+  const to = process.env.CONTACT_TO || smtpUser;
+  const from = process.env.SMTP_FROM || smtpUser;
   const cc = process.env.CONTACT_CC || "";
 
   const subjectLine =
@@ -114,16 +113,57 @@ async function sendContact(formData: FormData) {
     <p><strong>Message:</strong><br/>${(message || "").replace(/\n/g, "<br/>")}</p>
   `;
 
-  await transporter.sendMail({
-    from,
-    to,
-    cc: cc || undefined,
-    subject: subjectLine,
-    text: plain,
-    html,
-    attachments,
-    replyTo: email || undefined,
-  });
+  // Envoi email avec gestion d'erreurs + fallback de port (465 -> 587)
+  try {
+    const primary = nodemailer.createTransport({
+      host: smtpHost,
+      port: smtpPort,
+      secure: smtpSecure, // 465 => true
+      auth: { user: smtpUser, pass: smtpPass },
+    });
+
+    try {
+      await primary.verify(); // test rapide
+      await primary.sendMail({
+        from,
+        to,
+        cc: cc || undefined,
+        subject: subjectLine,
+        text: plain,
+        html,
+        attachments,
+        replyTo: email || undefined,
+      });
+    } catch (err: any) {
+      // Fallback STARTTLS (587) si 465 échoue sur la plateforme
+      const mightBeConn = ["ECONNECTION", "ETIMEDOUT", "EAUTH", "ESOCKET"];
+      if (mightBeConn.some((k) => String(err?.code || "").includes(k))) {
+        const fallback = nodemailer.createTransport({
+          host: smtpHost,
+          port: 587,
+          secure: false, // STARTTLS
+          auth: { user: smtpUser, pass: smtpPass },
+          requireTLS: true,
+        });
+        await fallback.verify();
+        await fallback.sendMail({
+          from,
+          to,
+          cc: cc || undefined,
+          subject: subjectLine,
+          text: plain,
+          html,
+          attachments,
+          replyTo: email || undefined,
+        });
+      } else {
+        throw err;
+      }
+    }
+  } catch (e) {
+    console.error("Mail error:", e);
+    redirect("/contact?error=mail");
+  }
 
   redirect("/contact?sent=1");
 }
@@ -132,7 +172,6 @@ async function sendContact(formData: FormData) {
 export default async function ContactPage({
   searchParams,
 }: {
-  // Next 15 : searchParams doit être awaited
   searchParams: Promise<{ sent?: string; error?: string }>;
 }) {
   const params = await searchParams;
@@ -141,12 +180,11 @@ export default async function ContactPage({
 
   return (
     <main id="contenu" className="min-h-screen bg-slate-50">
-      {/* Charger reCAPTCHA uniquement si clé publique présente */}
       {process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ? (
         <Script src="https://www.google.com/recaptcha/api.js" strategy="afterInteractive" />
       ) : null}
 
-      {/* ===================== Bandeau plein écran ===================== */}
+      {/* ===================== Bandeau ===================== */}
       <section className="relative w-full">
         <div className="relative h-[52vh] min-h-[420px] max-h-[680px]">
           <Image
@@ -159,9 +197,7 @@ export default async function ContactPage({
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/25 to-transparent" />
           <div className="absolute inset-x-0 bottom-[12%] px-4 text-center">
-            <h1 className="text-white font-extrabold text-3xl sm:text-4xl drop-shadow">
-              Contact
-            </h1>
+            <h1 className="text-white font-extrabold text-3xl sm:text-4xl drop-shadow">Contact</h1>
             <p className="mt-2 text-white/90 max-w-[90ch] mx-auto text-sm sm:text-base">
               Devis, études, maintenance ou dépannage : dites-nous tout.
             </p>
@@ -171,7 +207,6 @@ export default async function ContactPage({
 
       {/* ===================== Formulaire ===================== */}
       <section className="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        {/* Alertes */}
         {sent && (
           <div className="mb-6 rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-green-800">
             Merci, votre message a bien été envoyé. Nous revenons vers vous rapidement.
@@ -183,6 +218,13 @@ export default async function ContactPage({
             {error === "maxfiles" && "Trop de pièces jointes (max 5)."}
             {error === "maxsize" && "Une des pièces jointes dépasse 5 Mo."}
             {error === "type" && "Type de fichier non autorisé (PDF, PNG, JPG uniquement)."}
+            {error === "mail" && "Impossible d'envoyer l'email pour le moment. Réessayez plus tard."}
+            {error !== "captcha" &&
+              error !== "maxfiles" &&
+              error !== "maxsize" &&
+              error !== "type" &&
+              error !== "mail" &&
+              "Une erreur est survenue. Merci de réessayer."}
           </div>
         )}
 
@@ -300,7 +342,6 @@ export default async function ContactPage({
             />
           </div>
 
-          {/* reCAPTCHA si clé publique présente */}
           {process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ? (
             <div className="g-recaptcha" data-sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY} />
           ) : null}
