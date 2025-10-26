@@ -5,6 +5,9 @@ import Script from "next/script";
 import { redirect } from "next/navigation";
 import nodemailer from "nodemailer";
 
+// Force l’exécution côté Node (Nodemailer ne fonctionne pas en Edge)
+export const runtime = "nodejs";
+
 export const metadata: Metadata = {
   title: "Contact — YPIOS Énergie",
   description:
@@ -17,11 +20,7 @@ const IMG_BANNER = "/images/cta-ventilation-desenfumage-equilibrage.png";
 /* ----------------------------- Config PJ ----------------------------- */
 const MAX_FILES = 5;
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5 Mo
-const ALLOWED_MIME = new Set([
-  "application/pdf",
-  "image/png",
-  "image/jpeg",
-]);
+const ALLOWED_MIME = new Set(["application/pdf", "image/png", "image/jpeg"]);
 
 /* ----------------------------- Server Action ----------------------------- */
 async function sendContact(formData: FormData) {
@@ -30,7 +29,6 @@ async function sendContact(formData: FormData) {
   // Honeypot anti-bot
   const honey = (formData.get("website") as string) || "";
   if (honey.trim() !== "") {
-    // Silencieux : on fait comme si c'était OK
     redirect("/contact?sent=1");
   }
 
@@ -40,21 +38,13 @@ async function sendContact(formData: FormData) {
   if (siteKey && secretKey) {
     try {
       const token = (formData.get("g-recaptcha-response") as string) || "";
-      const verify = await fetch(
-        "https://www.google.com/recaptcha/api/siteverify",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: new URLSearchParams({
-            secret: secretKey,
-            response: token,
-          }),
-        }
-      );
-      const res = (await verify.json()) as { success?: boolean; score?: number };
-      if (!res.success) {
-        redirect("/contact?error=captcha");
-      }
+      const verify = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({ secret: secretKey, response: token }),
+      });
+      const res = (await verify.json()) as { success?: boolean };
+      if (!res.success) redirect("/contact?error=captcha");
     } catch {
       redirect("/contact?error=captcha");
     }
@@ -71,15 +61,12 @@ async function sendContact(formData: FormData) {
 
   // Pièces jointes
   const files = formData.getAll("files") as unknown as File[];
-  if (files.length > MAX_FILES) {
-    redirect(`/contact?error=maxfiles`);
-  }
-  const attachments = [];
+  if (files.length > MAX_FILES) redirect(`/contact?error=maxfiles`);
+
+  const attachments: Array<{ filename: string; content: Buffer; contentType: string }> = [];
   for (const f of files) {
     if (!f || typeof f.arrayBuffer !== "function") continue;
-    if (f.size > MAX_FILE_SIZE) {
-      redirect(`/contact?error=maxsize`);
-    }
+    if (f.size > MAX_FILE_SIZE) redirect(`/contact?error=maxsize`);
     if (ALLOWED_MIME.size && f.type && !ALLOWED_MIME.has(f.type)) {
       redirect(`/contact?error=type`);
     }
@@ -91,22 +78,19 @@ async function sendContact(formData: FormData) {
     });
   }
 
-  // Transport Nodemailer (OVH ou autre)
+  // Transport Nodemailer
   const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST!,
     port: Number(process.env.SMTP_PORT || 465),
     secure: String(process.env.SMTP_SECURE || "true") === "true",
-    auth: {
-      user: process.env.SMTP_USER!,
-      pass: process.env.SMTP_PASS!,
-    },
+    auth: { user: process.env.SMTP_USER!, pass: process.env.SMTP_PASS! },
   });
 
   const to = process.env.CONTACT_TO || process.env.SMTP_USER!;
   const from = process.env.SMTP_FROM || process.env.SMTP_USER!;
   const cc = process.env.CONTACT_CC || "";
 
-  const subject =
+  const subjectLine =
     (sujet && `Contact YPIOS — ${sujet}`) || "Contact YPIOS — Nouveau message";
 
   const plain = [
@@ -134,7 +118,7 @@ async function sendContact(formData: FormData) {
     from,
     to,
     cc: cc || undefined,
-    subject,
+    subject: subjectLine,
     text: plain,
     html,
     attachments,
@@ -148,6 +132,7 @@ async function sendContact(formData: FormData) {
 export default async function ContactPage({
   searchParams,
 }: {
+  // Next 15 : searchParams doit être awaited
   searchParams: Promise<{ sent?: string; error?: string }>;
 }) {
   const params = await searchParams;
@@ -158,10 +143,7 @@ export default async function ContactPage({
     <main id="contenu" className="min-h-screen bg-slate-50">
       {/* Charger reCAPTCHA uniquement si clé publique présente */}
       {process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ? (
-        <Script
-          src="https://www.google.com/recaptcha/api.js"
-          strategy="afterInteractive"
-        />
+        <Script src="https://www.google.com/recaptcha/api.js" strategy="afterInteractive" />
       ) : null}
 
       {/* ===================== Bandeau plein écran ===================== */}
@@ -197,12 +179,10 @@ export default async function ContactPage({
         )}
         {error && (
           <div className="mb-6 rounded-lg border border-rose-200 bg-rose-50 px-4 py-3 text-rose-800">
-            {error === "captcha" &&
-              "Vérification reCAPTCHA invalide. Merci de réessayer."}
+            {error === "captcha" && "Vérification reCAPTCHA invalide. Merci de réessayer."}
             {error === "maxfiles" && "Trop de pièces jointes (max 5)."}
             {error === "maxsize" && "Une des pièces jointes dépasse 5 Mo."}
-            {error === "type" &&
-              "Type de fichier non autorisé (PDF, PNG, JPG uniquement)."}
+            {error === "type" && "Type de fichier non autorisé (PDF, PNG, JPG uniquement)."}
           </div>
         )}
 
@@ -213,19 +193,11 @@ export default async function ContactPage({
           className="grid grid-cols-1 gap-6 rounded-2xl bg-white p-6 ring-1 ring-slate-200"
         >
           {/* honeypot */}
-          <input
-            type="text"
-            name="website"
-            autoComplete="off"
-            tabIndex={-1}
-            className="hidden"
-          />
+          <input type="text" name="website" autoComplete="off" tabIndex={-1} className="hidden" />
 
           <div className="grid sm:grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium text-slate-700">
-                Nom *
-              </label>
+              <label className="block text-sm font-medium text-slate-700">Nom *</label>
               <input
                 type="text"
                 name="nom"
@@ -236,9 +208,7 @@ export default async function ContactPage({
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-slate-700">
-                Téléphone
-              </label>
+              <label className="block text-sm font-medium text-slate-700">Téléphone</label>
               <input
                 type="tel"
                 name="tel"
@@ -251,9 +221,7 @@ export default async function ContactPage({
 
           <div className="grid sm:grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium text-slate-700">
-                Email *
-              </label>
+              <label className="block text-sm font-medium text-slate-700">Email *</label>
               <input
                 type="email"
                 name="email"
@@ -264,9 +232,7 @@ export default async function ContactPage({
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-slate-700">
-                Sujet
-              </label>
+              <label className="block text-sm font-medium text-slate-700">Sujet</label>
               <input
                 type="text"
                 name="sujet"
@@ -279,9 +245,7 @@ export default async function ContactPage({
 
           <div className="grid sm:grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium text-slate-700">
-                Type de demande
-              </label>
+              <label className="block text-sm font-medium text-slate-700">Type de demande</label>
               <select
                 name="type"
                 className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500"
@@ -296,9 +260,7 @@ export default async function ContactPage({
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-slate-700">
-                Service
-              </label>
+              <label className="block text-sm font-medium text-slate-700">Service</label>
               <select
                 name="service"
                 className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500"
@@ -314,9 +276,7 @@ export default async function ContactPage({
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-slate-700">
-              Message *
-            </label>
+            <label className="block text-sm font-medium text-slate-700">Message *</label>
             <textarea
               name="message"
               required
@@ -342,9 +302,7 @@ export default async function ContactPage({
 
           {/* reCAPTCHA si clé publique présente */}
           {process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ? (
-            <div className="g-recaptcha"
-              data-sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-            />
+            <div className="g-recaptcha" data-sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY} />
           ) : null}
 
           <div className="pt-2">
