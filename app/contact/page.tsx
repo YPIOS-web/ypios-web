@@ -12,8 +12,7 @@ export const metadata: Metadata = {
 };
 
 /* ----------------------------- Bandeau ----------------------------- */
-const IMG_BANNER =
-  "/images/CTA%2C%20ventilation%2C%20d%C3%A9senfumage%2C%20%C3%A9quilibrage..png";
+const IMG_BANNER = "/images/cta-ventilation-desenfumage-equilibrage.png";
 
 /* ----------------------------- Config PJ ----------------------------- */
 const MAX_FILES = 5;

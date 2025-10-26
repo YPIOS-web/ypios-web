@@ -10,8 +10,7 @@ export const metadata: Metadata = {
 
 /* ----------------------------- Bandeau ----------------------------- */
 /** Visuel toit/CTA validé pour la ventilation */
-const IMG_BANNER =
-  "/images/CTA%2C%20ventilation%2C%20d%C3%A9senfumage%2C%20%C3%A9quilibrage..png";
+const IMG_BANNER = "/images/cta-ventilation-desenfumage-equilibrage.png";
 
 /* --------------------------- Prestations --------------------------- */
 const PRESTATIONS: { title: string; points: string[] }[] = [
@@ -68,17 +67,17 @@ const PRESTATIONS: { title: string; points: string[] }[] = [
 /* ---------------------------- Références --------------------------- */
 const REFS = [
   {
-    src: "/images/CTA%20La%20D%C3%A9fense.png", // demandé : utiliser cette photo
+    src: "/images/cta-la-defense.png",
     alt: "CTA en local technique — La Défense",
     title: "CTA Local Technique",
   },
   {
-    src: "/images/Ventilation%20toiture.png",
+    src: "/images/ventilation-toiture.png",
     alt: "Réseaux aérauliques en toiture",
     title: "Ventilation toiture",
   },
   {
-    src: "/images/Ventilation%20local%20technique.png",
+    src: "/images/ventilation-local-technique.png",
     alt: "Ventilation en local technique",
     title: "Ventilation local technique",
   },

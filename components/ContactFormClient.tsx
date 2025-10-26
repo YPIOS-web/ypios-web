@@ -52,7 +52,7 @@ export default function ContactFormClient({
           setError("Erreur : détection anti-bot.");
           return;
         }
-        if (!validateFiles(files)) return;
+        if (!validateFiles(files ?? null)) return;
         setSubmitting(true);
         try {
           await action(formData);

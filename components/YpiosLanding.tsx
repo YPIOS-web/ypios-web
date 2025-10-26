@@ -9,15 +9,13 @@ import * as React from "react";
 const IMG_HERO = "/images/Home2.png";
 const IMG_LOGO = "/logo/Petit%20YPIOS.jpeg";
 
-const IMG_SERVICE_VENTILATION =
-  "/images/CTA%2C%20ventilation%2C%20d%C3%A9senfumage%2C%20%C3%A9quilibrage..png";
+const IMG_SERVICE_VENTILATION = "/images/cta-ventilation-desenfumage-equilibrage.png";
 const IMG_SERVICE_PLOMBERIE = "/images/hero-plomberie-1792x1024.png";
 const IMG_SERVICE_CLIM = "/images/service-clim-1024.png";
 const IMG_SERVICE_REGUL = "/images/service-regulation-1024.png";
 
 const IMG_CONSEIL = "/images/Conseil%20%26%20optimisation.png";
-const IMG_DEPANNAGE = "/images/D%C3%A9pannage.png";
-
+const IMG_DEPANNAGE = "/images/depannage.png";
 const YPIOS_BLUE = "#1b4d9b";
 
 /* ===================== Slider (conservé) ===================== */
@@ -34,7 +32,7 @@ function BeforeAfterSlider({
   afterSrc: string;
   beforeLabel?: string;
   afterLabel?: string;
-  initial?: number; // 0..100
+  initial?: number;
   alt?: string;
   className?: string;
 }) {
@@ -141,14 +139,7 @@ function Hero() {
   return (
     <section className="relative w-full">
       <div className="relative w-full h-[58vh] min-h-[460px] max-h-[720px]">
-        <Image
-          src={IMG_HERO}
-          alt="Accueil — YPIOS Énergie"
-          fill
-          priority
-          className="object-cover"
-          sizes="100vw"
-        />
+        <Image src={IMG_HERO} alt="/images/Home2.png" fill priority className="object-cover" sizes="100vw" />
 
         {/* halo discret */}
         <div
@@ -167,20 +158,19 @@ function Hero() {
           }}
         />
 
-        {/* Contenu descendu pour ne pas chevaucher le header */}
         <div className="absolute inset-0 flex items-start justify-center text-center px-4">
           <div className="mt-20 md:mt-28">
-            {/* LOGO + NOM : fond retiré, texte en blanc */}
-            <div className="inline-flex items-center gap-4">
+            <div className="inline-flex items-center gap-4 rounded-full bg-black/25 backdrop-blur-sm px-6 py-3 ring-1 ring-white/15">
               <Image
                 src={IMG_LOGO}
                 alt="YPIOS"
                 width={96}
                 height={96}
-                className="h-24 w-24 rounded-full object-contain"
+                className="h-24 w-24 rounded-full object-contain bg-white/80"
               />
               <span
-                className="font-extrabold leading-none tracking-tight text-4xl md:text-5xl text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.45)]"
+                className="font-extrabold leading-none tracking-tight text-4xl md:text-5xl"
+                style={{ color: "#fff", textShadow: "0 2px 10px rgba(0,0,0,.35)" }}
               >
                 YPIOS Energie
               </span>
@@ -330,7 +320,6 @@ function Partenaires() {
             className="rounded-xl border border-slate-200 bg-white/80 p-4 flex items-center justify-center h-24"
             title={p.name}
           >
-            {/* <img> natif pour éviter les blocages Next/Image sur SVG */}
             <img
               src={`/partners/${p.file}`}
               alt={p.name}
@@ -352,14 +341,8 @@ function Footer() {
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-8 grid gap-6 sm:grid-cols-3">
         <div>
           <div className="flex items-center gap-3">
-            <Image
-              src={IMG_LOGO}
-              alt="YPIOS"
-              width={44}
-              height={44}
-              className="rounded-full object-contain"
-            />
-            <span className="text-lg font-semibold" style={{ color: YPIOS_BLUE }}>
+            <Image src={IMG_LOGO} alt="YPIOS" width={44} height={44} className="rounded-full object-contain" />
+            <span className="text-lg font-semibold" style={{ color: "#1b4d9b" }}>
               YPIOS Energie
             </span>
           </div>
@@ -376,10 +359,7 @@ function Footer() {
           <ul className="mt-3 space-y-1 text-sm text-slate-700">
             <li>
               Email :{" "}
-              <a
-                href="mailto:contact@ypios.fr"
-                className="underline decoration-slate-300 hover:decoration-slate-500"
-              >
+              <a href="mailto:contact@ypios.fr" className="underline decoration-slate-300 hover:decoration-slate-500">
                 contact@ypios.fr
               </a>
             </li>

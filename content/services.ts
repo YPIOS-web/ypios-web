@@ -82,13 +82,10 @@ export const services: Record<
       { title: "Support", text: "Astreinte selon contrat" },
     ],
     references: [
-      { title: "CTA Local Technique", image: "/images/CTA La Défense.png" },
-      { title: "Système de ventilation en toiture", image: "/images/ventilation toiture.png" },
-      {
-        title: "Système de ventilation local technique",
-        image: "/images/ventilation local technique.png",
-      },
-    ],
+  { title: "CTA Local Technique", image: "/images/cta-la-defense.png" },
+  { title: "Système de ventilation en toiture", image: "/images/ventilation-toiture.png" },
+  { title: "Système de ventilation local technique", image: "/images/ventilation-local-technique.png" },
+],
     faq: [],
   },
 
@@ -153,22 +150,10 @@ export const services: Record<
       { title: "SAV", text: "Télémaintenance et délais courts" },
     ],
     references: [
-      {
-        title: "Bureau — Climatisation murale",
-        image: "/images/Climatisation mural bureau.png",
-      },
-      {
-        title: "Bureaux — Plafonniers",
-        image: "/images/Climatisation plafonniere bureau.png",
-      },
-      {
-        title: "Bureaux — Plafonniers",
-        image: "/images/Climatisation plafonniere bureau 2.png",
-      },
-      {
-        title: "Bureau — Paris centre",
-        image: "/images/service-clim-1024.png",
-      },
+      { title: "Bureau — Climatisation murale", image: "/images/Climatisation mural bureau.png" },
+      { title: "Bureaux — Plafonniers", image: "/images/Climatisation plafonniere bureau.png" },
+      { title: "Bureaux — Plafonniers", image: "/images/Climatisation plafonniere bureau 2.png" },
+      { title: "Bureau — Paris centre", image: "/images/service-clim-1024.png" },
     ],
     faq: [],
   },
@@ -178,12 +163,7 @@ export const services: Record<
     prestationsGrouped: [
       {
         title: "Alimentations & évacuations",
-        items: [
-          "Réseaux EF/ECS/EC",
-          "Colonnes et collecteurs",
-          "Bouclage ECS",
-          "Évacuation EU/EV/EP",
-        ],
+        items: ["Réseaux EF/ECS/EC", "Colonnes et collecteurs", "Bouclage ECS", "Évacuation EU/EV/EP"],
       },
       {
         title: "Appareillages & chaufferies",
@@ -196,12 +176,7 @@ export const services: Record<
       },
       {
         title: "Maintenance",
-        items: [
-          "Entretien & détartrage",
-          "Dépannages et réparations",
-          "Recherche de fuites",
-          "DOE & plans mis à jour",
-        ],
+        items: ["Entretien & détartrage", "Dépannages et réparations", "Recherche de fuites", "DOE & plans mis à jour"],
       },
     ],
     highlights: [
@@ -225,12 +200,7 @@ export const services: Record<
     prestationsGrouped: [
       {
         title: "Supervision GTB",
-        items: [
-          "Synoptiques & alarmes",
-          "Historisation & tendances",
-          "Tableaux de bord énergie",
-          "Accès web multi-sites",
-        ],
+        items: ["Synoptiques & alarmes", "Historisation & tendances", "Tableaux de bord énergie", "Accès web multi-sites"],
       },
       {
         title: "Régulation CVC",
@@ -243,12 +213,7 @@ export const services: Record<
       },
       {
         title: "Intégrations & services",
-        items: [
-          "Éclairage, stores/BSO, compteurs",
-          "Ventilation parking (CO/NOx)",
-          "Groupes froid & chaufferies",
-          "Télémaintenance & contrats",
-        ],
+        items: ["Éclairage, stores/BSO, compteurs", "Ventilation parking (CO/NOx)", "Groupes froid & chaufferies", "Télémaintenance & contrats"],
       },
     ],
     highlights: [
@@ -259,9 +224,7 @@ export const services: Record<
       { title: "Sites occupés", text: "Interventions planifiées et discrètes" },
       { title: "Support", text: "Télémaintenance & astreinte selon contrat" },
     ],
-    references: [
-      { title: "Armoire GTB industrielle", image: "/images/Armoire GTB industrielle.png" },
-    ],
+    references: [{ title: "Armoire GTB industrielle", image: "/images/Armoire GTB industrielle.png" }],
     faq: [],
   },
 };
