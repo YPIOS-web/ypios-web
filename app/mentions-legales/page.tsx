@@ -43,7 +43,7 @@ export default function MentionsLegalesPage() {
           <h2 className="text-lg font-semibold text-slate-900">Éditeur du site</h2>
           <p className="mt-2 text-slate-700">
             Le site est édité par <strong>YPIOS Énergie</strong>, EURL au capital de
-            1 000,00 €, immatriculée au RCS d’Évry sous le numéro <strong>984 761 684</strong>.
+            1&nbsp;000,00&nbsp;€, immatriculée au RCS d’Évry sous le numéro <strong>984&nbsp;761&nbsp;684</strong>.
           </p>
 
           <div className="mt-4 grid sm:grid-cols-2 gap-6 text-sm text-slate-700">
@@ -55,7 +55,7 @@ export default function MentionsLegalesPage() {
               <div>FR05984761684</div>
 
               <div className="mt-3 font-medium text-slate-900">Siège social</div>
-              <div>2 Rue des Hauts Sablons, 91310 Lisses, France</div>
+              <div>2 Rue des Hauts Sablons, 91310 Leuville-sur-Orge, France</div>
 
               <div className="mt-3 font-medium text-slate-900">
                 Directeur de la publication
@@ -83,26 +83,44 @@ export default function MentionsLegalesPage() {
           </div>
         </div>
 
-        {/* Hébergeur */}
+        {/* Hébergeur & services associés */}
         <div className="rounded-2xl bg-white ring-1 ring-slate-200 p-6">
           <h2 className="text-lg font-semibold text-slate-900">Hébergeur</h2>
           <p className="mt-2 text-slate-700">
-            Les informations relatives à l’hébergement du site&nbsp;:
+            Le site et son contenu sont délivrés via une plateforme d’hébergement
+            applicatif (CDN/Serverless). Le nom de domaine et la messagerie sont gérés
+            chez un prestataire tiers.
           </p>
 
           <div className="mt-4 grid sm:grid-cols-2 gap-6 text-sm text-slate-700">
             <div>
-              <div className="font-medium text-slate-900">Hébergeur</div>
-              <div>—</div>
+              <div className="font-medium text-slate-900">Hébergement applicatif</div>
+              <div>
+                Vercel Inc. — Plateforme de déploiement et CDN
+                <br />
+                Adresse postale&nbsp;: 340 S Lemon Ave #4133, Walnut, CA&nbsp;91789, USA
+                <br />
+                Site&nbsp;: <span className="underline decoration-slate-300">https://vercel.com</span>
+              </div>
             </div>
+
             <div>
-              <div className="font-medium text-slate-900">Adresse</div>
-              <div>—</div>
+              <div className="font-medium text-slate-900">Nom de domaine & e-mail</div>
+              <div>
+                OVHcloud SAS
+                <br />
+                2&nbsp;rue Kellermann, 59100 Roubaix, France
+                <br />
+                Tél.&nbsp;: 1007 (depuis la France)
+                <br />
+                Site&nbsp;: <span className="underline decoration-slate-300">https://www.ovhcloud.com</span>
+              </div>
             </div>
           </div>
 
           <p className="mt-3 text-xs text-slate-500">
-            (À compléter si nécessaire — OVH, Vercel, Scaleway, etc.)
+            Les coordonnées ci-dessus permettent d’identifier les prestataires techniques
+            intervenant dans la diffusion et l’accessibilité du site.
           </p>
         </div>
 
