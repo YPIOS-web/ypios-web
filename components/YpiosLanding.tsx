@@ -158,15 +158,16 @@ function Hero() {
           }}
         />
 
+        {/* Contenu centré sans fond derrière logo + titre */}
         <div className="absolute inset-0 flex items-start justify-center text-center px-4">
           <div className="mt-20 md:mt-28">
-            <div className="inline-flex items-center gap-4 rounded-full bg-black/25 backdrop-blur-sm px-6 py-3 ring-1 ring-white/15">
+            <div className="inline-flex items-center gap-4 px-6 py-3">
               <Image
                 src={IMG_LOGO}
                 alt="YPIOS"
                 width={96}
                 height={96}
-                className="h-24 w-24 rounded-full object-contain bg-white/80"
+                className="h-24 w-24 rounded-full object-contain"
               />
               <span
                 className="font-extrabold leading-none tracking-tight text-4xl md:text-5xl"
