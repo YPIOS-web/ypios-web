@@ -1,7 +1,7 @@
 // app/realisations/page.tsx
 import type { Metadata } from "next";
 import Image from "next/image";
-import services from "@/content/services"; // <-- on utilise exactement les mêmes données
+import services from "@/content/services"; // on réutilise exactement les mêmes données
 
 export const metadata: Metadata = {
   title: "Réalisations — YPIOS Énergie",
@@ -9,6 +9,10 @@ export const metadata: Metadata = {
     "Sélection de réalisations en ventilation, climatisation, plomberie et GTC/GTB.",
 };
 
+/* ----------------------------- Bandeau ----------------------------- */
+const IMG_BANNER = "/images/cta-ventilation-desenfumage-equilibrage.png";
+
+/* ----------------------------- Types ----------------------------- */
 type Reference = { title: string; image: string };
 type ServiceEntry = { references?: Reference[] };
 
@@ -29,14 +33,36 @@ export default function Page() {
   }).filter((b) => b.refs.length > 0);
 
   return (
-    <main>
-      <section className="container mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-12">
-        <h1 className="text-3xl sm:text-4xl font-semibold text-slate-900">
-          Réalisations
-        </h1>
+    <main id="contenu" className="min-h-screen bg-slate-50">
+      {/* --------------------------- Bandeau visuel --------------------------- */}
+      <section className="relative w-full">
+        <div className="relative h-[52vh] min-h-[420px] max-h-[680px]">
+          <Image
+            src={IMG_BANNER}
+            alt="Bandeau — Réalisations"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/25 to-transparent" />
+          {/* Titre centré comme sur les autres pages */}
+          <div className="absolute inset-x-0 bottom-[12%] px-4 text-center">
+            <h1 className="text-white font-extrabold text-3xl sm:text-4xl drop-shadow">
+              Réalisations
+            </h1>
+            {/* Optionnel : sous-titre
+            <p className="mt-2 text-white/90 max-w-[90ch] mx-auto text-sm sm:text-base">
+              Quelques chantiers représentatifs.
+            </p> */}
+          </div>
+        </div>
+      </section>
 
+      {/* --------------------------- Contenu --------------------------- */}
+      <section className="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8 py-10">
         {buckets.map((b) => (
-          <div key={b.key} className="mt-10">
+          <div key={b.key} className="mt-8 first:mt-0">
             <h2 className="text-xl font-bold text-slate-900">{b.title}</h2>
 
             <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
