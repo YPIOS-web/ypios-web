@@ -17,7 +17,6 @@ const links = [
 
 export default function TopNav() {
   const pathname = usePathname();
-  const isHome = pathname === "/";
 
   const actives = useMemo(() => {
     const map = new Map<string, boolean>();
@@ -33,17 +32,11 @@ export default function TopNav() {
 
   return (
     <div className="fixed inset-x-0 top-4 z-50 flex justify-center pointer-events-none">
-      {/* Sur la Home => pas de fond ni blur ; ailleurs => pastille translucide */}
+      {/* Pillow translucide TOUJOURS affiché */}
       <nav
         aria-label="Navigation principale"
-        className={[
-          "pointer-events-auto max-w-full overflow-x-auto no-scrollbar",
-          isHome
-            ? // Home: fond retiré
-              "px-2 py-1.5 bg-transparent backdrop-blur-0 ring-0 shadow-none"
-            : // Autres pages: fond translucide (rendu actuel)
-              "rounded-full bg-black/55 px-2 py-1.5 shadow-md ring-1 ring-white/10 backdrop-blur-sm",
-        ].join(" ")}
+        className="pointer-events-auto max-w-full overflow-x-auto no-scrollbar
+                   rounded-full bg-black/55 px-2 py-1.5 shadow-md ring-1 ring-white/10 backdrop-blur-sm"
       >
         <ul className="flex items-center gap-1 sm:gap-2">
           {links.map((l) => {
