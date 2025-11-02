@@ -1,17 +1,24 @@
 // app/layout.tsx
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
+import Script from "next/script";
 import "./globals.css";
 import TopNav from "@/components/TopNav";
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://ypios.fr";
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID; // ex: G-XXXXXXXXXX
+
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "YPIOS Énergie",
     template: "%s — YPIOS Énergie",
   },
   description:
     "YPIOS Énergie — ventilation, climatisation, plomberie, GTC/GTB : études, installation, mise en service et maintenance.",
+  alternates: {
+    canonical: SITE_URL,
+  },
   icons: {
     icon: [
       { url: "/favicon.ico" },
@@ -34,6 +41,24 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className="bg-slate-50 antialiased">
         <TopNav /> {/* bandeau transparent partout */}
         {children}
+
+        {/* Google Analytics (GA4) — chargé seulement si un ID est défini */}
+        {GA_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="ga-setup" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GA_ID}');
+              `}
+            </Script>
+          </>
+        )}
       </body>
     </html>
   );

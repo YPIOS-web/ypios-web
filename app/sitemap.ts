@@ -1,27 +1,51 @@
 // app/sitemap.ts
 import type { MetadataRoute } from "next";
 
-const site =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/+$/, "") || "http://localhost:3000";
-
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://ypios.fr";
 
-  const paths = [
-    "/",                 // Accueil
-    "/realisations",
-    "/contact",
-    "/mentions-legales",
-    "/services/ventilation",
-    "/services/plomberie",
-    "/services/climatisation",
-    "/services/gtc-gtb",
+  return [
+    {
+      url: `${baseUrl}/`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 1,
+    },
+    {
+      url: `${baseUrl}/contact`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/mentions-legales`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/services/ventilation`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/services/climatisation`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/services/plomberie`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/services/gtc-gtb`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
   ];
-
-  return paths.map((p) => ({
-    url: `${site}${p}`,
-    lastModified: now,
-    changeFrequency: "monthly",
-    priority: p === "/" ? 1 : 0.7,
-  }));
 }
