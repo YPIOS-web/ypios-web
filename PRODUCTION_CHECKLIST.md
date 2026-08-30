@@ -2,6 +2,8 @@
 
 Cette liste sépare ce qui est déjà intégré au projet des informations qui doivent être renseignées ou confirmées par YPIOS au moment de la mise en ligne.
 
+Validation fonctionnelle du 30 août 2026 : formulaire reCAPTCHA et réception OVHcloud confirmés, y compris avec une pièce jointe PDF.
+
 ## 1. À confirmer avant ouverture publique
 
 - Valider une dernière fois la raison sociale, le capital, les numéros SIREN/SIRET/TVA, le code APE, l’adresse et le directeur de publication affichés dans les mentions légales.

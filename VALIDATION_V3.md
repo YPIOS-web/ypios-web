@@ -1,4 +1,4 @@
-# Rapport de validation — YPIOS V3.0.0
+# Rapport de validation — YPIOS V3.0.3
 
 Date : 30 août 2026
 
@@ -19,6 +19,11 @@ Date : 30 août 2026
 - Contrôle des localisations et légendes de chantiers : OK
 - Contrôle d’absence de secrets et de fichiers `.env` privés : OK
 - Contrôle du contenu final de l’archive : OK
+- Déploiement d’aperçu Vercel : OK
+- reCAPTCHA sur le domaine d’aperçu : OK
+- Envoi réel sans pièce jointe vers OVHcloud : OK
+- Envoi réel avec pièce jointe PDF vers OVHcloud : OK
+- Affichage du succès uniquement après acceptation SMTP : OK
 
 ## Pages compilées
 
@@ -34,6 +39,6 @@ Date : 30 août 2026
 - Cookies
 - Sitemap, robots, manifest et image Open Graph
 
-## Limite du contrôle local
+## Contrôles à renouveler après fusion en production
 
-L’envoi réel du formulaire, reCAPTCHA, Google Analytics, le domaine et le HTTPS ne peuvent être validés sans les identifiants et l’environnement de production. Ces vérifications sont détaillées dans `PRODUCTION_CHECKLIST.md`.
+Après fusion de la branche validée vers `main`, contrôler une dernière fois le domaine public, HTTPS, le favicon, Google Analytics après consentement et un envoi simple du formulaire. Les étapes sont détaillées dans `PRODUCTION_CHECKLIST.md`.

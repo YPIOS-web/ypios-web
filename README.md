@@ -1,6 +1,6 @@
 # YPIOS — MASTER production V3
 
-Version : **3.0.0** — 30 août 2026
+Version : **3.0.3** — 30 août 2026
 
 Ce dossier contient la version de production du site vitrine YPIOS. Il reprend la structure graphique V2 validée, les corrections de localisation et la banque de vraies photos de chantiers YPIOS.
 
@@ -64,7 +64,8 @@ La géométrie des installations n’a pas été modifiée. Les photos de chanti
 - métadonnées, URL canoniques, Open Graph, sitemap, robots et données structurées ;
 - consentement Analytics avant chargement du traceur ;
 - en-têtes HTTP de sécurité et suppression de la signature technique ;
-- formulaire renforcé : validation serveur, contrôle de signature des fichiers, limites de poids, antispam, limitation des tentatives et délais SMTP ;
+- formulaire renforcé : validation serveur, contrôle de signature des fichiers, limites de poids, reCAPTCHA, limitation des tentatives et délais SMTP ;
+- envoi réel validé sur Vercel vers la boîte OVHcloud, avec et sans pièce jointe ;
 - dépendances à jour et audit sans vulnérabilité connue au moment de la livraison ;
 - image partenaire ADP redimensionnée sans altération visuelle ;
 - redirections des anciennes URL légales vers leurs pages canoniques.

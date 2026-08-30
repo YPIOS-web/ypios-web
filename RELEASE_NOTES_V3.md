@@ -1,13 +1,17 @@
-# Notes de version — YPIOS V3.0.1
+# Notes de version — YPIOS V3.0.3
 
 Date : 30 août 2026
 
-## Correctif V3.0.1
+## Correctifs V3.0.1 à V3.0.3
 
 - Rétablissement du traitement standard des pièces jointes par Nodemailer afin de restaurer la remise des formulaires avec PDF, PNG ou JPG vers la boîte OVH.
 - Conservation de Nodemailer 9.0.6, version auditée sans vulnérabilité connue, plutôt que le retour à l’ancienne version vulnérable.
 - Vérification de l’acceptation du message par le serveur SMTP avant d’afficher la confirmation d’envoi.
 - Ajout de journaux techniques sans données personnelles : résultat SMTP, nombre de pièces jointes et volume total.
+- Suppression du champ anti-robot invisible qui pouvait être rempli automatiquement par le navigateur et afficher un faux succès. La protection repose désormais sur reCAPTCHA et la limitation des tentatives.
+- Validation réelle de la réception d’un formulaire avec pièce jointe dans la boîte OVHcloud `contact@ypios.fr`.
+- Renouvellement des URL de favicon pour forcer les navigateurs à charger le symbole YPIOS actuel au lieu d’une ancienne icône mise en cache.
+- Mise à jour des informations de confidentialité relatives à Google reCAPTCHA.
 
 ## Contenu validé
 
