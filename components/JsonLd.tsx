@@ -1,31 +1,27 @@
-// components/JsonLd.tsx
-"use client";
-
-import Script from "next/script";
-
 export default function JsonLd() {
-  const site =
-    process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/+$/, "") || "http://localhost:3000";
-
+  const site = (process.env.NEXT_PUBLIC_SITE_URL || "https://ypios.fr").replace(/\/+$/, "");
   const data = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: "YPIOS Énergie",
+    "@id": `${site}/#organization`,
+    name: "YPIOS",
     url: site,
     email: "contact@ypios.fr",
-    image: `${site}/icon.png`,
-    logo: `${site}/icon.png`,
+    logo: `${site}/brand/ypios-logo.svg`,
+    image: `${site}/images/og-default.jpg`,
     areaServed: "Île-de-France",
+    knowsAbout: ["Climatisation", "Ventilation", "Plomberie", "GTC", "GTB"],
     address: {
       "@type": "PostalAddress",
-      addressRegion: "Île-de-France",
+      streetAddress: "2, rue des Hauts Sablons",
+      postalCode: "91310",
+      addressLocality: "Leuville-sur-Orge",
       addressCountry: "FR",
     },
-    sameAs: [] as string[],
   };
 
   return (
-    <Script
+    <script
       id="jsonld-localbusiness"
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}

@@ -2,14 +2,15 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Politique de confidentialité — YPIOS Énergie",
+  title: "Politique de confidentialité",
   description:
     "Informations sur le traitement des données personnelles, cookies et droits RGPD (accès, rectification, effacement).",
+  alternates: { canonical: "/politique-confidentialite" },
 };
 
 export default function PrivacyPage() {
   return (
-    <main>
+    <main id="contenu">
       {/* Bandeau titre transparent, comme les autres pages */}
       <section className="relative h-40 sm:h-48">
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/0" />
@@ -26,13 +27,13 @@ export default function PrivacyPage() {
         <div className="prose prose-slate max-w-none">
           <h2>1. Responsable de traitement</h2>
           <p>
-            Le responsable du traitement est <strong>YPIOS Énergie</strong> (Île-de-France).
+            Le responsable du traitement est <strong>YPIOS</strong> (Île-de-France).
             Contact : <a href="mailto:contact@ypios.fr">contact@ypios.fr</a>.
           </p>
 
           <h2>2. Données collectées</h2>
           <ul>
-            <li>Données de contact (nom/société, email, téléphone) via le formulaire.</li>
+            <li>Données de contact (nom, e-mail, téléphone) et pièces jointes transmises via le formulaire.</li>
             <li>Données techniques minimales (logs serveurs, sécurité).</li>
             <li>Cookies strictement nécessaires au fonctionnement du site.</li>
           </ul>
@@ -41,7 +42,7 @@ export default function PrivacyPage() {
           <ul>
             <li>Réponse aux demandes envoyées via le formulaire (intérêt légitime / pré-contractuel).</li>
             <li>Sécurité, prévention de la fraude (intérêt légitime).</li>
-            <li>Mesure d’audience anonymisée (si activée) sur consentement.</li>
+            <li>Mesure d’audience (si configurée) sur consentement.</li>
           </ul>
 
           <h2>4. Durées de conservation</h2>
@@ -53,8 +54,10 @@ export default function PrivacyPage() {
 
           <h2>5. Destinataires &amp; transferts</h2>
           <p>
-            Données hébergées dans l’UE. Les sous-traitants (hébergeur, messagerie) n’accèdent aux
-            données que selon nos instructions et obligations contractuelles.
+            Les données sont accessibles à YPIOS et, dans la mesure nécessaire, à ses prestataires
+            techniques (hébergement, messagerie et services Google facultatifs). Certains prestataires
+            peuvent traiter des données hors de l’Union européenne en s’appuyant sur les garanties
+            prévues par la réglementation applicable.
           </p>
 
           <h2>6. Vos droits</h2>
@@ -68,7 +71,8 @@ export default function PrivacyPage() {
           <p>
             Le site utilise des cookies strictement nécessaires. La mesure d’audience (si déployée)
             n’est activée qu’avec votre consentement. Vous pouvez retirer votre consentement en
-            supprimant le stockage “cookie-consent-v1” de votre navigateur.
+            utilisant le bouton «&nbsp;Cookies&nbsp;» du site ou en supprimant le stockage
+            «&nbsp;ypios-consent-v1&nbsp;» de votre navigateur.
           </p>
 
           <h2>8. Sécurité</h2>
