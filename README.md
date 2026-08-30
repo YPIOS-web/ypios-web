@@ -41,7 +41,6 @@ La commande `npm run verify` regroupe le contrôle TypeScript et le build de pro
 
 Copier `.env.example` vers `.env.local`, puis renseigner uniquement les services utilisés :
 
-- `NEXT_PUBLIC_SITE_URL` : URL canonique publique ;
 - variables `SMTP_*` et `CONTACT_*` : réception des demandes ;
 - clés reCAPTCHA : protection facultative du formulaire ;
 - `NEXT_PUBLIC_GA_ID` : mesure d’audience facultative, chargée après consentement.
@@ -62,6 +61,7 @@ La géométrie des installations n’a pas été modifiée. Les photos de chanti
 ## Préparation production intégrée
 
 - métadonnées, URL canoniques, Open Graph, sitemap, robots et données structurées ;
+- domaine canonique aligné sur `https://www.ypios.fr`, destination publique configurée dans Vercel ;
 - consentement Analytics avant chargement du traceur ;
 - en-têtes HTTP de sécurité et suppression de la signature technique ;
 - formulaire renforcé : validation serveur, contrôle de signature des fichiers, limites de poids, reCAPTCHA, limitation des tentatives et délais SMTP ;

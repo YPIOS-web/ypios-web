@@ -23,7 +23,6 @@ Obligatoires pour le formulaire :
 
 À vérifier ou adapter :
 
-- `NEXT_PUBLIC_SITE_URL=https://ypios.fr`
 - `SMTP_HOST=ssl0.ovh.net`
 - `SMTP_PORT=465`
 - `SMTP_SECURE=true`

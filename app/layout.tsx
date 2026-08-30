@@ -7,7 +7,7 @@ import CookieBanner from "@/components/CookieBanner";
 import AnalyticsConsent from "@/components/AnalyticsConsent";
 import JsonLd from "@/components/JsonLd";
 
-const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://ypios.fr").replace(/\/+$/, "");
+const SITE_URL = "https://www.ypios.fr";
 const RAW_GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 const GA_ID = RAW_GA_ID && /^G-[A-Z0-9]+$/i.test(RAW_GA_ID) ? RAW_GA_ID : undefined;
 

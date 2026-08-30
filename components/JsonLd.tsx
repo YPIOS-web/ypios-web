@@ -1,5 +1,5 @@
 export default function JsonLd() {
-  const site = (process.env.NEXT_PUBLIC_SITE_URL || "https://ypios.fr").replace(/\/+$/, "");
+  const site = "https://www.ypios.fr";
   const data = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
@@ -8,7 +8,7 @@ export default function JsonLd() {
     url: site,
     email: "contact@ypios.fr",
     logo: `${site}/brand/ypios-logo.svg`,
-    image: `${site}/images/og-default.jpg`,
+    image: `${site}/opengraph-image`,
     areaServed: "Île-de-France",
     knowsAbout: ["Climatisation", "Ventilation", "Plomberie", "GTC", "GTB"],
     address: {

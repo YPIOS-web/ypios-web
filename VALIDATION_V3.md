@@ -24,6 +24,8 @@ Date : 30 août 2026
 - Envoi réel sans pièce jointe vers OVHcloud : OK
 - Envoi réel avec pièce jointe PDF vers OVHcloud : OK
 - Affichage du succès uniquement après acceptation SMTP : OK
+- Domaine canonique aligné sur la redirection Vercel vers `www.ypios.fr` : OK
+- Image des données structurées accessible : OK
 
 ## Pages compilées
 

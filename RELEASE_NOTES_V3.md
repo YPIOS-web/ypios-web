@@ -12,6 +12,8 @@ Date : 30 août 2026
 - Validation réelle de la réception d’un formulaire avec pièce jointe dans la boîte OVHcloud `contact@ypios.fr`.
 - Renouvellement des URL de favicon pour forcer les navigateurs à charger le symbole YPIOS actuel au lieu d’une ancienne icône mise en cache.
 - Mise à jour des informations de confidentialité relatives à Google reCAPTCHA.
+- Alignement des URL canoniques, du sitemap, de robots.txt et des données structurées sur le domaine principal `www.ypios.fr`.
+- Correction de l’image déclarée dans les données structurées afin d’utiliser l’image Open Graph réellement générée par le site.
 
 ## Contenu validé
 
