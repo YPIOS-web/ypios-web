@@ -1,95 +1,109 @@
-// app/realisations/page.tsx
 import type { Metadata } from "next";
 import Image from "next/image";
-import services from "@/content/services"; // on réutilise exactement les mêmes données
+import Link from "next/link";
+import { projects } from "@/content/projects";
 
 export const metadata: Metadata = {
-  title: "Réalisations — YPIOS Énergie",
+  title: "Réalisations",
   description:
-    "Sélection de réalisations en ventilation, climatisation, plomberie et GTC/GTB.",
-};
-
-/* ----------------------------- Bandeau ----------------------------- */
-const IMG_BANNER = "/images/cta-ventilation-desenfumage-equilibrage.png";
-
-/* ----------------------------- Types ----------------------------- */
-type Reference = { title: string; image: string };
-type ServiceEntry = { references?: Reference[] };
-
-const ORDER = ["climatisation", "ventilation", "plomberie", "gtc-gtb"] as const;
-const LABELS: Record<(typeof ORDER)[number], string> = {
-  climatisation: "Climatisation",
-  ventilation: "Ventilation",
-  plomberie: "Plomberie",
-  "gtc-gtb": "GTC/GTB & régulation",
+    "Découvrez des interventions réelles YPIOS en climatisation et ventilation à Melun, Osny, Paris, Orly, La Défense et Saint-Quentin-en-Yvelines.",
+  alternates: { canonical: "/realisations" },
 };
 
 export default function Page() {
-  // On lit les références *telles quelles* depuis content/services.ts
-  const store = services as Record<string, ServiceEntry>;
-  const buckets = ORDER.map((key) => {
-    const refs = (store[key]?.references ?? []) as Reference[];
-    return { key, title: LABELS[key], refs };
-  }).filter((b) => b.refs.length > 0);
-
   return (
-    <main id="contenu" className="min-h-screen bg-slate-50">
-      {/* --------------------------- Bandeau visuel --------------------------- */}
-      <section className="relative w-full">
-        <div className="relative h-[52vh] min-h-[420px] max-h-[680px]">
+    <main id="contenu" className="bg-white">
+      <section className="relative isolate overflow-hidden bg-[#0D1B3D] text-white">
+        <div className="absolute inset-0">
           <Image
-            src={IMG_BANNER}
-            alt="Bandeau — Réalisations"
+            src="/images/chantier/orly-local-cta.webp"
+            alt="Local CTA neuf réalisé par YPIOS à l’aéroport d’Orly"
             fill
             priority
             sizes="100vw"
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/25 to-transparent" />
-          {/* Titre centré comme sur les autres pages */}
-          <div className="absolute inset-x-0 bottom-[12%] px-4 text-center">
-            <h1 className="text-white font-extrabold text-3xl sm:text-4xl drop-shadow">
-              Réalisations
-            </h1>
-            {/* Optionnel : sous-titre
-            <p className="mt-2 text-white/90 max-w-[90ch] mx-auto text-sm sm:text-base">
-              Quelques chantiers représentatifs.
-            </p> */}
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(13,27,61,0.96)_0%,rgba(13,27,61,0.76)_52%,rgba(13,27,61,0.34)_100%)]" />
+        </div>
+        <div className="ypios-container relative flex min-h-[520px] items-end py-16 sm:min-h-[560px] sm:py-20">
+          <div className="max-w-3xl">
+            <span className="text-xs font-bold uppercase tracking-[0.16em] text-[#57D4EA]">Réalisations YPIOS</span>
+            <h1 className="mt-4 text-5xl font-bold tracking-[-0.045em] sm:text-6xl">Le terrain comme preuve.</h1>
+            <p className="mt-5 max-w-2xl text-base leading-7 text-white/82 sm:text-lg">
+              Une sélection de chantiers YPIOS photographiés dans leur configuration réelle.
+              Les images sont uniquement cadrées et optimisées pour le Web.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* --------------------------- Contenu --------------------------- */}
-      <section className="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        {buckets.map((b) => (
-          <div key={b.key} className="mt-8 first:mt-0">
-            <h2 className="text-xl font-bold text-slate-900">{b.title}</h2>
-
-            <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {b.refs.map((r, idx) => (
-                <figure
-                  key={`${b.key}-${idx}-${r.title}`}
-                  className="rounded-2xl ring-1 ring-black/10 bg-white overflow-hidden"
-                >
-                  <div className="relative aspect-[16/10]">
-                    {/* IMPORTANT : on passe le chemin tel qu’il est dans content/services.ts */}
-                    <Image
-                      src={r.image}
-                      alt={r.title}
-                      fill
-                      className="object-cover"
-                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                      priority={idx < 3}
-                    />
-                  </div>
-                  <figcaption className="p-3 text-sm text-slate-700">
-                    {r.title}
-                  </figcaption>
-                </figure>
-              ))}
-            </div>
+      <section className="py-16 sm:py-20">
+        <div className="ypios-container">
+          <div className="max-w-3xl">
+            <span className="ypios-kicker">Carnet de réalisations</span>
+            <h2 className="ypios-heading mt-4 text-4xl font-bold sm:text-5xl">
+              Des installations identifiées, sans mise en scène.
+            </h2>
+            <p className="mt-5 text-base leading-7 text-slate-600">
+              Chaque opération est présentée avec les équipements, réseaux et contraintes réellement rencontrés sur site.
+            </p>
           </div>
-        ))}
+
+          <div className="mt-12 grid gap-7 lg:grid-cols-2">
+            {projects.map((project) => (
+              <article
+                key={project.slug}
+                className="overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-[0_20px_55px_rgba(13,27,61,0.06)]"
+              >
+                <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
+                  <Image
+                    src={project.images[0].src}
+                    alt={project.images[0].alt}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#0D1B3D]/70 to-transparent px-6 pb-5 pt-16 text-white">
+                    <span className="text-xs font-bold uppercase tracking-[0.14em] text-[#8BE4F2]">{project.category}</span>
+                  </div>
+                </div>
+
+                {project.images.length > 1 ? (
+                  <div className="grid grid-cols-2 gap-1 border-b border-slate-200 bg-slate-100">
+                    {project.images.slice(1, 3).map((image) => (
+                      <div key={image.src} className="relative aspect-[16/7] overflow-hidden bg-slate-200">
+                        <Image src={image.src} alt={image.alt} fill sizes="(max-width: 1024px) 50vw, 25vw" className="object-cover" />
+                      </div>
+                    ))}
+                  </div>
+                ) : null}
+
+                <div className="p-6 sm:p-7">
+                  <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-bold uppercase tracking-[0.11em]">
+                    <span className="text-[#FF7A00]">{project.site}</span>
+                    <span className="text-slate-300" aria-hidden="true">•</span>
+                    <span className="text-slate-500">{project.location}</span>
+                  </div>
+                  <h3 className="mt-3 text-2xl font-bold tracking-tight text-[#0D1B3D]">{project.title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-slate-600">{project.description}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#F6F8FB] py-16 sm:py-20">
+        <div className="ypios-container rounded-[28px] bg-[#0D1B3D] px-7 py-10 text-white sm:px-10 lg:flex lg:items-center lg:justify-between lg:gap-12">
+          <div className="max-w-2xl">
+            <span className="text-xs font-bold uppercase tracking-[0.15em] text-[#57D4EA]">Un cas à étudier ?</span>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight">Présentez-nous votre installation et ses contraintes.</h2>
+            <p className="mt-3 text-sm leading-6 text-white/72">
+              Plans, photos, rapports de contrôle ou simple description du problème : nous pouvons partir de l’existant.
+            </p>
+          </div>
+          <Link href="/contact" className="ypios-button-primary mt-7 shrink-0 lg:mt-0">Nous contacter →</Link>
+        </div>
       </section>
     </main>
   );

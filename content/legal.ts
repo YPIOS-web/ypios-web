@@ -26,7 +26,7 @@ export type LegalIdentity = {
 };
 
 export const legalIdentity: LegalIdentity = {
-  brand: "YPIOS Énergie",
+  brand: "YPIOS",
   form: "EURL",
   capital: "1 000,00 €",
   rcs: {
@@ -44,16 +44,15 @@ export const legalIdentity: LegalIdentity = {
   director: "Ferreira Marques Guillaume, Gérant",
   email: "contact@ypios.fr",
 
-  // À compléter dès que l’hébergeur est figé (ex. Vercel/OVH/Scaleway)
   hosting: {
-    name: undefined,
-    address: undefined,
-    url: undefined,
+    name: "Vercel Inc.",
+    address: "440 N Barranca Avenue #4133, Covina, CA 91723, USA",
+    url: "https://vercel.com",
   },
 
   // Optionnel : lien vers une politique cookies détaillée si vous en avez une
   cookies: {
-    policyUrl: undefined,
-    analytics: false,
+    policyUrl: "/cookies",
+    analytics: true,
   },
 };

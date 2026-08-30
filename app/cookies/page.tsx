@@ -1,16 +1,16 @@
 // app/cookies/page.tsx
 import type { Metadata } from "next";
-import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Cookies",
   description:
-    "Informations sur l’utilisation des cookies sur le site YPIOS Énergie.",
+    "Informations sur l’utilisation des cookies sur le site YPIOS.",
+  alternates: { canonical: "/cookies" },
 };
 
 export default function Page() {
   return (
-    <main className="min-h-screen bg-slate-50">
+    <main id="contenu" className="min-h-screen bg-slate-50">
       {/* Hero simple */}
       <section className="relative w-full">
         <div className="relative w-full h-[32vh] min-h-[220px] max-h-[360px] bg-slate-900">
@@ -54,12 +54,8 @@ export default function Page() {
 
           <h2>Gestion de vos préférences</h2>
           <p>
-            Vous pouvez à tout moment consulter et modifier vos choix depuis la
-            page{" "}
-            <Link href="/politique-des-cookies" className="underline">
-              Politique des cookies
-            </Link>
-            . Votre navigateur permet également de supprimer les cookies déjà
+            Vous pouvez à tout moment consulter et modifier vos choix avec le bouton
+            «&nbsp;Cookies&nbsp;» affiché en bas à droite du site. Votre navigateur permet également de supprimer les cookies déjà
             déposés et de bloquer leur enregistrement.
           </p>
 

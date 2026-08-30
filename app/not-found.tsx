@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const IMG_HERO =
-  "/images/Local%20technique%20CVC%20%E2%80%94%20CTA,%20panoplie%20%26%20gaines.png";
+  "/images/chantier/orly-local-cta.webp";
 
 export default function NotFound() {
   return (

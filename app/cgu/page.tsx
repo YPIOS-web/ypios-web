@@ -4,12 +4,13 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "CGU — Conditions générales d’utilisation",
   description:
-    "Conditions générales d’utilisation du site YPIOS Énergie.",
+    "Conditions générales d’utilisation du site YPIOS.",
+  alternates: { canonical: "/mentions-legales" },
 };
 
 export default function Page() {
   return (
-    <main className="min-h-screen bg-slate-50">
+    <main id="contenu" className="min-h-screen bg-slate-50">
       {/* Hero simple, cohérent avec les autres pages légales */}
       <section className="relative w-full">
         <div className="relative w-full h-[32vh] min-h-[220px] max-h-[360px] bg-slate-900">
@@ -32,7 +33,7 @@ export default function Page() {
           <h2>1. Objet</h2>
           <p>
             Les présentes conditions générales d’utilisation (CGU) ont pour objet
-            d’encadrer l’accès et l’utilisation du site édité par YPIOS Énergie.
+            d’encadrer l’accès et l’utilisation du site édité par YPIOS.
           </p>
 
           <h2>2. Accès au site</h2>
@@ -44,7 +45,7 @@ export default function Page() {
           <h2>3. Contenus et responsabilité</h2>
           <p>
             Les informations publiées le sont à titre indicatif. Malgré le soin
-            apporté, YPIOS Énergie ne saurait être tenue pour responsable des
+            apporté, YPIOS ne saurait être tenue pour responsable des
             éventuelles imprécisions ou omissions.
           </p>
 
@@ -62,7 +63,7 @@ export default function Page() {
               Politique de confidentialité
             </a>{" "}
             et notre{" "}
-            <a href="/politique-des-cookies" className="underline">
+            <a href="/cookies" className="underline">
               Politique des cookies
             </a>.
           </p>

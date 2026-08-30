@@ -1,51 +1,26 @@
-// app/sitemap.ts
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://ypios.fr";
+  const baseUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://ypios.fr").replace(/\/+$/, "");
+  const now = new Date();
 
-  return [
-    {
-      url: `${baseUrl}/`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/contact`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/mentions-legales`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/services/ventilation`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/services/climatisation`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/services/plomberie`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/services/gtc-gtb`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-  ];
+  const routes = [
+    ["/", 1],
+    ["/services/climatisation", 0.9],
+    ["/services/ventilation", 0.9],
+    ["/services/plomberie", 0.9],
+    ["/services/gtc-gtb", 0.9],
+    ["/realisations", 0.8],
+    ["/contact", 0.8],
+    ["/mentions-legales", 0.3],
+    ["/politique-confidentialite", 0.3],
+    ["/cookies", 0.3],
+  ] as const;
+
+  return routes.map(([path, priority]) => ({
+    url: `${baseUrl}${path}`,
+    lastModified: now,
+    changeFrequency: path === "/" ? "monthly" : "yearly",
+    priority,
+  }));
 }

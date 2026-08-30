@@ -2,9 +2,10 @@
 import Image from "next/image";
 
 export const metadata = {
-  title: "Mentions légales & CGU – YPIOS Énergie",
+  title: "Mentions légales & CGU",
   description:
-    "Informations légales de l’éditeur du site YPIOS Énergie, hébergeur, propriété intellectuelle et conditions d’utilisation.",
+    "Informations légales de l’éditeur du site YPIOS, hébergeur, propriété intellectuelle et conditions d’utilisation.",
+  alternates: { canonical: "/mentions-legales" },
 };
 
 export default function MentionsLegalesPage() {
@@ -14,7 +15,7 @@ export default function MentionsLegalesPage() {
       <section className="relative w-full">
         <div className="relative w-full h-[58vh] min-h-[460px] max-h-[720px]">
           <Image
-            src="/images/Local%20technique%20CVC%20%E2%80%94%20CTA,%20panoplie%20%26%20gaines.png"
+            src="/images/chantier/orly-local-cta.webp"
             alt="Mentions légales"
             fill
             priority
@@ -42,7 +43,7 @@ export default function MentionsLegalesPage() {
         <div className="rounded-2xl bg-white ring-1 ring-slate-200 p-6">
           <h2 className="text-lg font-semibold text-slate-900">Éditeur du site</h2>
           <p className="mt-2 text-slate-700">
-            Le site est édité par <strong>YPIOS Énergie</strong>, EURL au capital de
+            Le site est édité par <strong>YPIOS</strong>, EURL au capital de
             1&nbsp;000,00&nbsp;€, immatriculée au RCS d’Évry sous le numéro <strong>984&nbsp;761&nbsp;684</strong>.
           </p>
 
@@ -98,7 +99,7 @@ export default function MentionsLegalesPage() {
               <div>
                 Vercel Inc. — Plateforme de déploiement et CDN
                 <br />
-                Adresse postale&nbsp;: 340 S Lemon Ave #4133, Walnut, CA&nbsp;91789, USA
+                Adresse postale&nbsp;: 440 N Barranca Avenue #4133, Covina, CA&nbsp;91723, USA
                 <br />
                 Site&nbsp;: <span className="underline decoration-slate-300">https://vercel.com</span>
               </div>
@@ -133,7 +134,7 @@ export default function MentionsLegalesPage() {
             L’ensemble des contenus présents sur le site (textes, images, logos, vidéos,
             icônes, mises en page…) sont protégés par le droit d’auteur. Toute
             reproduction ou représentation, totale ou partielle, sans autorisation
-            expresse de YPIOS Énergie est interdite.
+            expresse de YPIOS est interdite.
           </p>
         </div>
 
