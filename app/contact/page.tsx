@@ -67,9 +67,6 @@ function escapeHtml(value: string) {
 async function sendContact(formData: FormData) {
   "use server";
 
-  const honey = String(formData.get("website") || "");
-  if (honey.trim()) redirect("/contact?sent=1");
-
   const requestHeaders = await headers();
   const clientIp =
     requestHeaders.get("x-forwarded-for")?.split(",")[0]?.trim() ||
@@ -295,8 +292,6 @@ export default async function ContactPage({
             ) : null}
 
             <form action={sendContact} className="rounded-[26px] border border-slate-200 bg-white p-6 shadow-[0_24px_70px_rgba(13,27,61,0.07)] sm:p-8">
-              <input type="text" name="website" autoComplete="off" tabIndex={-1} aria-hidden="true" className="absolute -left-[9999px]" />
-
               <div className="grid gap-5 sm:grid-cols-2">
                 <label className="text-sm font-semibold text-[#0D1B3D]">
                   Nom *
