@@ -174,7 +174,7 @@ async function sendContact(formData: FormData) {
 
   let mailSent = false;
   try {
-    await transporter.sendMail({
+    const info = await transporter.sendMail({
       from,
       to,
       cc: cc || undefined,
@@ -183,11 +183,34 @@ async function sendContact(formData: FormData) {
       html,
       attachments,
       replyTo: email,
-      disableFileAccess: true,
-      disableUrlAccess: true,
     });
-    mailSent = true;
-  } catch {}
+
+    const acceptedCount = info.accepted?.length || 0;
+    const rejectedCount = info.rejected?.length || 0;
+    mailSent = acceptedCount > 0;
+
+    console.info("[contact] SMTP response", {
+      messageId: info.messageId,
+      acceptedCount,
+      rejectedCount,
+      attachmentCount: attachments.length,
+      attachmentBytes: totalSize,
+      delivered: mailSent,
+    });
+  } catch (error) {
+    const smtpError = error as {
+      code?: string;
+      command?: string;
+      responseCode?: number;
+    };
+    console.error("[contact] SMTP error", {
+      code: smtpError.code,
+      command: smtpError.command,
+      responseCode: smtpError.responseCode,
+      attachmentCount: attachments.length,
+      attachmentBytes: totalSize,
+    });
+  }
   if (!mailSent) redirect("/contact?error=mail");
 
   redirect("/contact?sent=1");

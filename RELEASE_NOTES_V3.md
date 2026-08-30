@@ -1,6 +1,13 @@
-# Notes de version — YPIOS V3.0.0
+# Notes de version — YPIOS V3.0.1
 
 Date : 30 août 2026
+
+## Correctif V3.0.1
+
+- Rétablissement du traitement standard des pièces jointes par Nodemailer afin de restaurer la remise des formulaires avec PDF, PNG ou JPG vers la boîte OVH.
+- Conservation de Nodemailer 9.0.6, version auditée sans vulnérabilité connue, plutôt que le retour à l’ancienne version vulnérable.
+- Vérification de l’acceptation du message par le serveur SMTP avant d’afficher la confirmation d’envoi.
+- Ajout de journaux techniques sans données personnelles : résultat SMTP, nombre de pièces jointes et volume total.
 
 ## Contenu validé
 
