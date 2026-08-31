@@ -35,6 +35,7 @@ export default function PrivacyPage() {
           <ul>
             <li>Données de contact (nom, e-mail, téléphone) et pièces jointes transmises via le formulaire.</li>
             <li>Données techniques minimales (logs serveurs, sécurité).</li>
+            <li>Données techniques traitées par Google reCAPTCHA pour protéger le formulaire contre les envois automatisés.</li>
             <li>Cookies strictement nécessaires au fonctionnement du site.</li>
           </ul>
 
@@ -55,7 +56,7 @@ export default function PrivacyPage() {
           <h2>5. Destinataires &amp; transferts</h2>
           <p>
             Les données sont accessibles à YPIOS et, dans la mesure nécessaire, à ses prestataires
-            techniques (hébergement, messagerie et services Google facultatifs). Certains prestataires
+            techniques (hébergement Vercel, messagerie OVHcloud, protection reCAPTCHA et mesure d’audience Google facultative). Certains prestataires
             peuvent traiter des données hors de l’Union européenne en s’appuyant sur les garanties
             prévues par la réglementation applicable.
           </p>

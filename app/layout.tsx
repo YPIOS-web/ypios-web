@@ -7,7 +7,7 @@ import CookieBanner from "@/components/CookieBanner";
 import AnalyticsConsent from "@/components/AnalyticsConsent";
 import JsonLd from "@/components/JsonLd";
 
-const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://ypios.fr").replace(/\/+$/, "");
+const SITE_URL = "https://www.ypios.fr";
 const RAW_GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 const GA_ID = RAW_GA_ID && /^G-[A-Z0-9]+$/i.test(RAW_GA_ID) ? RAW_GA_ID : undefined;
 
@@ -52,11 +52,11 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico" },
-      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon-16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-64.png?v=3.0.3", sizes: "64x64", type: "image/png" },
+      { url: "/favicon-32.png?v=3.0.3", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16.png?v=3.0.3", sizes: "16x16", type: "image/png" },
     ],
-    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+    apple: [{ url: "/apple-icon.png?v=3.0.3", sizes: "180x180", type: "image/png" }],
   },
   manifest: "/manifest.webmanifest",
 };

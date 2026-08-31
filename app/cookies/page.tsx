@@ -42,8 +42,8 @@ export default function Page() {
           <ul>
             <li>
               <strong>Cookies strictement nécessaires</strong> : assurent le
-              fonctionnement de base du site (sécurité, accès, préférences
-              techniques).
+              fonctionnement de base du site (sécurité, protection du formulaire
+              par reCAPTCHA, accès et préférences techniques).
             </li>
             <li>
               <strong>Cookies de mesure d’audience</strong> : optionnels, ils
