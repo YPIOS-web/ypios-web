@@ -29,7 +29,7 @@ export const services: Record<
         items: [
           "Relevés, calculs de débits et sections",
           "Sélection CTA/ventilateurs, schémas aérauliques",
-          "Notes de calculs et DOE",
+          "Notes de calcul et DOE",
         ],
       },
       {
@@ -43,7 +43,7 @@ export const services: Record<
       {
         title: "Réseaux aérauliques",
         items: [
-          "Gaines acier galvanisé / isolation / calorifuge",
+          "Gaines en acier galvanisé, isolation et calorifuge",
           "Bouches, grilles, registres et pièges à son",
           "Essais d’étanchéité et mise au point",
         ],
@@ -59,7 +59,7 @@ export const services: Record<
       {
         title: "Désenfumage",
         items: [
-          "Moteurs, volets et clapets coupe-feu",
+          "Ventilateurs, volets et clapets coupe-feu",
           "Coffrets de relayage et alimentations",
           "Essais réglementaires",
         ],
@@ -74,17 +74,17 @@ export const services: Record<
       },
     ],
     highlights: [
-      { title: "Normes", text: "RE2020, Règlement sanitaire, sécurité incendie" },
+      { title: "Référentiels", text: "Règlement sanitaire, DTU et sécurité incendie selon projet" },
       { title: "Équilibrage", text: "Instruments étalonnés & PV de mesure" },
       { title: "Marques", text: "Atlantic, Aldes, S&P, Systemair…" },
-      { title: "Désenfumage", text: "Conformité APSAD / SSI si présent" },
-      { title: "BIM & DOE", text: "Plans, schémas et notices mis à jour" },
+      { title: "Désenfumage", text: "Réseaux, organes et interfaces SSI selon installation" },
+      { title: "Plans & DOE", text: "Plans, schémas et notices mis à jour" },
       { title: "Support", text: "Astreinte selon contrat" },
     ],
     references: [
       { title: "Emmaüs Osny — CTA toiture", image: "/images/chantier/emmaus-reseaux-superposes.webp" },
       { title: "Aéroport d’Orly — Local CTA neuf", image: "/images/chantier/orly-local-cta.webp" },
-      { title: "Quatre Temps — CTA Carrier", image: "/images/chantier/quatre-temps-carrier.webp" },
+      { title: "Westfield Les 4 Temps — CTA Carrier", image: "/images/chantier/quatre-temps-carrier.webp" },
       { title: "Saint-Quentin-en-Yvelines — CTA VIM/CADO", image: "/images/chantier/saint-quentin-hero.webp" },
     ],
     faq: [],
@@ -146,9 +146,9 @@ export const services: Record<
       { title: "Fluide", text: "Manipulation réglementée — attestations à jour" },
       { title: "Marques", text: "Daikin, Mitsubishi, Toshiba, LG…" },
       { title: "Confort", text: "Niveaux sonores maîtrisés" },
-      { title: "Énergie", text: "COP/SEER optimisés" },
-      { title: "Garanties", text: "Mises en service conformes fabricants" },
-      { title: "SAV", text: "Télémaintenance et délais courts" },
+      { title: "Énergie", text: "Réglages orientés performance énergétique" },
+      { title: "Fabricants", text: "Paramétrages et mises en service selon préconisations" },
+      { title: "SAV", text: "Télémaintenance et intervention selon contrat" },
     ],
     references: [
       { title: "Saint-Aspais — Climatisation du self", image: "/images/chantier/saint-aspais-unite-exterieure.webp" },
@@ -164,7 +164,7 @@ export const services: Record<
     prestationsGrouped: [
       {
         title: "Alimentations & évacuations",
-        items: ["Réseaux EF/ECS/EC", "Colonnes et collecteurs", "Bouclage ECS", "Évacuation EU/EV/EP"],
+        items: ["Réseaux EF/ECS", "Colonnes et collecteurs", "Bouclage ECS", "Évacuation EU/EV/EP"],
       },
       {
         title: "Appareillages & chaufferies",
@@ -172,7 +172,7 @@ export const services: Record<
           "Appareils sanitaires & robinetterie",
           "Ballons & préparateurs ECS",
           "Adoucisseurs & filtres",
-          "Sécurité anti-légionelles",
+          "Prévention du risque légionelles",
         ],
       },
       {
@@ -191,7 +191,7 @@ export const services: Record<
     references: [
       { title: "Panoplies techniques", image: "/images/plomberie-technique.webp" },
       { title: "Sanitaires", image: "/images/sanitaires.webp" },
-      { title: "Chaufferie maison neuve", image: "/images/chaufferie.webp" },
+      { title: "Chaufferie — réseaux et équipements", image: "/images/chaufferie.webp" },
     ],
     faq: [],
   },

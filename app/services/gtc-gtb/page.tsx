@@ -4,7 +4,7 @@ import services from "@/content/services";
 
 export const metadata: Metadata = {
   title: "GTC / GTB",
-  description: "Supervision, régulation et automatisme des bâtiments : diagnostic, intégration, mise en service et maintenance GTB/GTC.",
+  description: "Supervision, régulation et automatisme des bâtiments : diagnostic, intégration, mise en service et maintenance GTC / GTB.",
   alternates: { canonical: "/services/gtc-gtb" },
 };
 

@@ -38,7 +38,7 @@ const partners = [
   ["ENGIE Solutions", "engie-solutions.png"],
   ["ETT", "ett.png"],
   ["SPIE Facilities", "spie-facilities.png"],
-  ["Unibail-Westfield", "unibail-westfield.png"],
+  ["Unibail-Rodamco-Westfield", "unibail-westfield.png"],
 ] as const;
 
 function Arrow() {
@@ -71,7 +71,7 @@ export default function HomePage() {
               Votre problème.<br />Notre solution.
             </h1>
             <p className="mt-7 max-w-2xl text-base leading-7 text-white/82 sm:text-lg sm:leading-8">
-              YPIOS accompagne vos installations techniques de l’étude à la remise en service :
+              YPIOS accompagne vos installations techniques de l’étude à la mise en service :
               climatisation, ventilation, plomberie, régulation et GTB.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -95,7 +95,7 @@ export default function HomePage() {
           <div className="ypios-container grid gap-px sm:grid-cols-3">
             {[
               ["Zone d’intervention", "Île-de-France"],
-              ["Secteurs", "Tertiaire · Industriel · Résidentiel"],
+              ["Secteurs", "Tertiaire · ERP · Industriel"],
               ["Interventions", "Études · Travaux · Maintenance"],
             ].map(([label, value]) => (
               <div key={label} className="py-5 sm:px-6 first:pl-0">
@@ -118,7 +118,7 @@ export default function HomePage() {
             </div>
             <p className="max-w-2xl text-base leading-7 text-slate-600 lg:justify-self-end">
               Du diagnostic à l’exécution, nous coordonnons les interventions avec une lecture
-              globale des installations pour limiter les interfaces, sécuriser les choix et remettre
+              globale des installations pour limiter les interfaces, sécuriser les choix et mettre
               les équipements en service dans de bonnes conditions.
             </p>
           </div>
@@ -184,7 +184,7 @@ export default function HomePage() {
               {[
                 ["01", "Diagnostic clair", "Relevés, contrôles, causes probables et priorités d’action."],
                 ["02", "Solution maîtrisée", "Chiffrage lisible, préparation, coordination et exécution."],
-                ["03", "Remise en service", "Essais, réglages, contrôles et traçabilité de l’intervention."],
+                ["03", "Mise en service", "Essais, réglages, contrôles et traçabilité de l’intervention."],
               ].map(([num, title, text]) => (
                 <div key={num} className="grid grid-cols-[42px_1fr] gap-4 rounded-2xl border border-slate-200 bg-white p-5">
                   <div className="text-sm font-bold text-[#FF7A00]">{num}</div>
@@ -258,17 +258,17 @@ export default function HomePage() {
             <div className="relative mb-7 aspect-[16/9] overflow-hidden rounded-2xl">
               <Image
                 src="/images/chantier/quatre-temps-carrier.webp"
-                alt="CTA Carrier existante au centre commercial Les Quatre Temps"
+                alt="CTA Carrier existante au centre Westfield Les 4 Temps"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>
             <span className="text-xs font-bold uppercase tracking-[0.14em] text-[#FF9B3D]">Réactivité</span>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight">Dépannage & remise en service</h2>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight">Dépannage & interventions correctives</h2>
             <p className="mt-4 text-sm leading-6 text-white/72">
               Recherche de panne, mise en sécurité, remplacement des organes défectueux,
-              essais et remise en service sous contrôle.
+              essais et contrôle du bon fonctionnement.
             </p>
           </div>
 
