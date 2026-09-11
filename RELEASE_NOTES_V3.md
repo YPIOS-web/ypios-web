@@ -1,6 +1,14 @@
-# Notes de version — YPIOS V3.1.0
+# Notes de version — YPIOS V3.1.1
 
 Date : 11 septembre 2026
+
+## Évolution V3.1.1 — Climatisation et GTC/GTB
+
+- Titres, descriptions et H1 précisés pour positionner les pages Climatisation et GTC/GTB sur les bâtiments professionnels en Île-de-France.
+- Ajout d’un bloc « Notre approche » sur chaque page afin d’expliquer les systèmes traités, le diagnostic de l’existant et le périmètre d’intervention.
+- Dates `lastModified` actualisées uniquement pour les deux pages réellement modifiées.
+- Aucun client, chiffre, résultat ou engagement non validé n’a été ajouté.
+- Aucun changement du formulaire, de GA4, du SMTP, de reCAPTCHA, des dépendances ou des en-têtes de sécurité.
 
 ## Évolution V3.1.0 — premier cycle SEO éditorial
 
