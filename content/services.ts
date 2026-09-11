@@ -101,6 +101,13 @@ export const services: Record<
 
   /* ============================= Climatisation ============================= */
   climatisation: {
+    overview: {
+      heading: "Climatisation VRV/DRV pour les bâtiments professionnels",
+      paragraphs: [
+        "YPIOS conçoit, installe et maintient les systèmes de climatisation VRV/DRV, splits, gainables et cassettes des bureaux, commerces, ERP et bâtiments tertiaires dans toute l’Île-de-France.",
+        "Chaque intervention tient compte des usages, des contraintes d’implantation, des niveaux sonores, des réseaux frigorifiques et des évacuations de condensats. Sur une installation existante, nous pouvons également rechercher les défauts, remettre le système en service et proposer les adaptations nécessaires.",
+      ],
+    },
     prestationsGrouped: [
       {
         title: "Études & bilan de charge",
@@ -214,6 +221,13 @@ export const services: Record<
 
   /* =============================== GTC / GTB =============================== */
   "gtc-gtb": {
+    overview: {
+      heading: "Pilotage, diagnostic et optimisation des installations techniques",
+      paragraphs: [
+        "YPIOS intervient sur les systèmes GTC/GTB et la régulation CVC des bâtiments tertiaires, ERP et sites industriels en Île-de-France, du diagnostic à l’intégration, à la mise en service et à la maintenance.",
+        "L’analyse part de l’installation réelle : automates, sondes, actionneurs, réseaux de communication, synoptiques, historiques et alarmes. L’objectif est d’identifier clairement les défauts, de rétablir un fonctionnement cohérent et de fournir à l’exploitant une supervision lisible.",
+      ],
+    },
     prestationsGrouped: [
       {
         title: "Supervision GTB",
