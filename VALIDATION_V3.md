@@ -1,6 +1,22 @@
-# Rapport de validation — YPIOS V3.0.5
+# Rapport de validation — YPIOS V3.0.6
 
-Date : 10 septembre 2026
+Date : 11 septembre 2026
+
+## Portée de la V3.0.6
+
+La V3.0.6 corrige la course d'initialisation observée lors du premier essai réel de `generate_lead` : GA4 recevait `page_view` et `form_start`, mais l'événement de confirmation pouvait être émis avant que la commande `gtag` soit disponible.
+
+Le correctif attend jusqu'à cinq secondes la disponibilité de Google Analytics. L'identifiant de confirmation n'est marqué comme suivi et retiré de l'URL qu'après mise en file de `generate_lead`.
+
+## Contrôles requis sur la Preview Vercel
+
+- accepter le consentement Analytics dans une nouvelle session ;
+- transmettre un seul formulaire de test ;
+- vérifier `generate_lead` dans le rapport GA4 Temps réel ;
+- confirmer que l'identifiant `lead` disparaît de l'URL après émission ;
+- recharger la page de confirmation et confirmer l'absence de second `generate_lead`.
+
+## Validation héritée de la V3.0.5
 
 ## Portée de la V3.0.5
 
