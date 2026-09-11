@@ -99,7 +99,7 @@ export const projects: Project[] = [
   },
   {
     slug: "quatre-temps",
-    site: "Centre commercial Les Quatre Temps",
+    site: "Westfield Les 4 Temps",
     location: "La Défense (92)",
     category: "Ventilation",
     title: "CTA Carrier en local technique",
@@ -108,11 +108,11 @@ export const projects: Project[] = [
     images: [
       {
         src: "/images/chantier/quatre-temps-carrier.webp",
-        alt: "CTA Carrier existante au centre commercial Les Quatre Temps",
+        alt: "CTA Carrier existante au centre Westfield Les 4 Temps",
       },
       {
         src: "/images/chantier/quatre-temps-cta.webp",
-        alt: "Centrale de traitement d’air Carrier dans son local technique aux Quatre Temps",
+        alt: "Centrale de traitement d’air Carrier dans son local technique au centre Westfield Les 4 Temps",
       },
     ],
   },

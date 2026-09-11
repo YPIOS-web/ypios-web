@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: "%s | YPIOS",
   },
   description:
-    "YPIOS accompagne les bâtiments tertiaires, industriels et résidentiels en climatisation, ventilation, plomberie et GTB : études, travaux, maintenance et dépannage en Île-de-France.",
+    "YPIOS accompagne les bâtiments tertiaires, ERP et sites industriels en climatisation, ventilation, plomberie et GTB : études, travaux, mise en service, maintenance et dépannage en Île-de-France.",
   applicationName: "YPIOS",
   alternates: { canonical: "/" },
   authors: [{ name: "YPIOS", url: SITE_URL }],
@@ -42,21 +42,21 @@ export const metadata: Metadata = {
     siteName: "YPIOS",
     title: "YPIOS | Climatisation, ventilation, plomberie & GTB",
     description:
-      "Études, travaux, maintenance et dépannage CVC, plomberie et GTB en Île-de-France.",
+      "Études, travaux, mise en service, maintenance et dépannage CVC, plomberie et GTB en Île-de-France.",
     url: "/",
   },
   twitter: {
     card: "summary_large_image",
     title: "YPIOS | Climatisation, ventilation, plomberie & GTB",
-    description: "Études, travaux, maintenance et dépannage CVC, plomberie et GTB en Île-de-France.",
+    description: "Études, travaux, mise en service, maintenance et dépannage CVC, plomberie et GTB en Île-de-France.",
   },
   icons: {
     icon: [
-      { url: "/favicon-64.png?v=3.0.3", sizes: "64x64", type: "image/png" },
-      { url: "/favicon-32.png?v=3.0.3", sizes: "32x32", type: "image/png" },
-      { url: "/favicon-16.png?v=3.0.3", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-64.png?v=3.0.4", sizes: "64x64", type: "image/png" },
+      { url: "/favicon-32.png?v=3.0.4", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16.png?v=3.0.4", sizes: "16x16", type: "image/png" },
     ],
-    apple: [{ url: "/apple-icon.png?v=3.0.3", sizes: "180x180", type: "image/png" }],
+    apple: [{ url: "/apple-icon.png?v=3.0.4", sizes: "180x180", type: "image/png" }],
   },
   manifest: "/manifest.webmanifest",
 };

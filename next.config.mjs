@@ -48,8 +48,15 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "ypios.fr" }],
+        destination: "https://www.ypios.fr/:path*",
+        permanent: true,
+      },
       { source: "/cgu", destination: "/mentions-legales", permanent: true },
       { source: "/politique-des-cookies", destination: "/cookies", permanent: true },
+      { source: "/services/a-propos", destination: "/", permanent: true },
     ];
   },
 };

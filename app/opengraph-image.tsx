@@ -27,7 +27,7 @@ export default function OGImage() {
           Climatisation · Ventilation · Plomberie · GTB
         </div>
         <div style={{ fontSize: 26, marginTop: 22, opacity: 0.86 }}>
-          Études, travaux, maintenance et dépannage — Île-de-France
+          Études, travaux, mise en service, maintenance et dépannage — Île-de-France
         </div>
         <div style={{ fontSize: 22, marginTop: 46, color: "#6FE3F4" }}>
           Your Problem Is Our Solution

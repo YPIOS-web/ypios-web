@@ -1,8 +1,8 @@
 # YPIOS — MASTER production V3
 
-Version : **3.0.3** — 30 août 2026
+Version : **3.0.5** — 10 septembre 2026
 
-Ce dossier contient la version de production du site vitrine YPIOS. Il reprend la structure graphique V2 validée, les corrections de localisation et la banque de vraies photos de chantiers YPIOS.
+Ce dossier contient la version de production du site vitrine YPIOS. Il reprend la structure graphique V2 validée, les corrections éditoriales finales, les localisations validées et la banque de vraies photos de chantiers YPIOS.
 
 ## Socle technique
 
@@ -10,7 +10,7 @@ Ce dossier contient la version de production du site vitrine YPIOS. Il reprend l
 - React 19.2.8
 - TypeScript 5.9.3
 - Tailwind CSS 3.4
-- Nodemailer 9.0.6
+- Nodemailer 9.1.1
 - Node.js 24.x
 
 Les versions applicatives sont verrouillées par `package-lock.json`. Aucun secret, dossier `node_modules` ni fichier de build n’est livré dans le MASTER.
@@ -62,12 +62,13 @@ La géométrie des installations n’a pas été modifiée. Les photos de chanti
 
 - métadonnées, URL canoniques, Open Graph, sitemap, robots et données structurées ;
 - domaine canonique aligné sur `https://www.ypios.fr`, destination publique configurée dans Vercel ;
-- consentement Analytics avant chargement du traceur ;
+- consentement Analytics avant chargement du traceur et mesure sans donnée personnelle des demandes transmises, clics e-mail, clics téléphoniques et accès à la page Contact ;
 - en-têtes HTTP de sécurité et suppression de la signature technique ;
 - formulaire renforcé : validation serveur, contrôle de signature des fichiers, limites de poids, reCAPTCHA, limitation des tentatives et délais SMTP ;
 - envoi réel validé sur Vercel vers la boîte OVHcloud, avec et sans pièce jointe ;
 - dépendances à jour et audit sans vulnérabilité connue au moment de la livraison ;
 - image partenaire ADP redimensionnée sans altération visuelle ;
-- redirections des anciennes URL légales vers leurs pages canoniques.
+- redirections des anciennes URL légales et de l’ancienne page `/services/a-propos` vers leurs pages canoniques.
+- harmonisation du vocabulaire de mise en service, des secteurs B2B et de la référence Westfield Les 4 Temps.
 
-Consulter `PRODUCTION_CHECKLIST.md` avant toute mise en ligne et `VALIDATION_V3.md` pour le rapport de contrôle de cette archive.
+Consulter `PRODUCTION_CHECKLIST.md` avant toute mise en ligne et `VALIDATION_V3.md` pour le détail des contrôles V3.0.5 et des validations héritées.

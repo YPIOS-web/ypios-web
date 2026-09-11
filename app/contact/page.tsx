@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { randomUUID } from "node:crypto";
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
@@ -210,7 +211,7 @@ async function sendContact(formData: FormData) {
   }
   if (!mailSent) redirect("/contact?error=mail");
 
-  redirect("/contact?sent=1");
+  redirect(`/contact?sent=1&lead=${randomUUID()}`);
 }
 
 const fieldClass =
