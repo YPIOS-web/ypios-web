@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import type { ReactNode } from "react";
+import { Suspense, type ReactNode } from "react";
 import "./globals.css";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
@@ -81,7 +81,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <SiteFooter />
         <JsonLd />
         <CookieBanner />
-        <AnalyticsConsent gaId={GA_ID} />
+        <Suspense fallback={null}>
+          <AnalyticsConsent gaId={GA_ID} />
+        </Suspense>
       </body>
     </html>
   );

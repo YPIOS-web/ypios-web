@@ -1,6 +1,29 @@
-# Rapport de validation — YPIOS V3.0.6
+# Rapport de validation — YPIOS V3.0.7
 
 Date : 11 septembre 2026
+
+## Portée de la V3.0.7
+
+Le second essai réel a confirmé que GA4 recevait `page_view` et `form_start`, mais toujours pas `generate_lead`. La V3.0.6 attendait correctement l'initialisation Analytics, mais son effet ne se relançait pas lorsque le routeur Next.js ajoutait les paramètres de confirmation sans remonter le layout racine.
+
+Le correctif abonne désormais le suivi au chemin et aux paramètres d'URL courants. L'arrivée sur `/contact?sent=1&lead=…` déclenche donc le contrôle de conversion même lors d'une navigation côté client.
+
+## Contrôles locaux V3.0.7 réalisés le 11 septembre 2026
+
+- vérification TypeScript stricte : OK ;
+- build de production Next.js 16.3.3 : OK, 18 routes générées ;
+- génération statique avec la frontière `Suspense` : OK ;
+- audit des dépendances de production : 0 vulnérabilité connue ;
+- aucun changement graphique, éditorial, SMTP ou de validation du formulaire.
+
+## Contrôles requis sur la Preview Vercel
+
+- partir de `/contact` avec le consentement Analytics accepté ;
+- simuler une navigation côté client vers une URL de confirmation valide ;
+- confirmer que le suivi détecte la nouvelle URL sans rechargement complet ;
+- transmettre un seul formulaire de test après validation de la Preview ;
+- vérifier `generate_lead` dans GA4 Temps réel ;
+- confirmer que l'identifiant `lead` disparaît après émission et qu'un rechargement ne recompte pas la demande.
 
 ## Portée de la V3.0.6
 
