@@ -5,8 +5,10 @@ export type PrestationsGroup = { title: string; items: string[] };
 export type Highlight = { title: string; text: string };
 export type Reference = { title: string; image: string };
 export type FAQ = { q: string; a: string };
+export type Overview = { heading: string; paragraphs: string[] };
 
 export type ServiceData = {
+  overview?: Overview;
   prestationsGrouped: PrestationsGroup[];
   highlights: Highlight[];
   references: Reference[];
@@ -23,6 +25,13 @@ export const services: Record<
 > = {
   /* ============================== Ventilation ============================== */
   ventilation: {
+    overview: {
+      heading: "Ventilation et traitement d’air des bâtiments tertiaires",
+      paragraphs: [
+        "YPIOS intervient sur les centrales de traitement d’air (CTA), les réseaux aérauliques et les équipements associés, de l’étude aux essais. Nous réalisons les installations neuves, les adaptations de l’existant, la mise au point et les opérations de maintenance dans toute l’Île-de-France.",
+        "Sur un site occupé ou une installation à reprendre, l’intervention commence par les relevés utiles : débits, état des réseaux, organes de régulation, supportage et contraintes d’exploitation. L’objectif est de proposer une solution lisible, compatible avec l’existant et documentée à la réception.",
+      ],
+    },
     prestationsGrouped: [
       {
         title: "Études techniques & dimensionnement",
@@ -161,6 +170,13 @@ export const services: Record<
 
   /* =============================== Plomberie =============================== */
   plomberie: {
+    overview: {
+      heading: "Plomberie technique pour les bâtiments tertiaires et ERP",
+      paragraphs: [
+        "YPIOS réalise et remet en état les réseaux EF/ECS, les bouclages, les évacuations EU/EV/EP, les panoplies et les équipements sanitaires. Nos interventions couvrent les travaux neufs, les adaptations d’installations existantes, la maintenance et le dépannage dans toute l’Île-de-France.",
+        "Nous intégrons dès l’étude les contraintes d’accès, de continuité de service et d’intervention en site occupé. Les matériaux, équipements et dispositifs de sécurité sont sélectionnés selon l’installation, puis les ouvrages sont remis avec les plans et les éléments de traçabilité utiles.",
+      ],
+    },
     prestationsGrouped: [
       {
         title: "Alimentations & évacuations",
