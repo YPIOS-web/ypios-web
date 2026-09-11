@@ -89,6 +89,14 @@ export default function Page() {
                   </div>
                   <h3 className="mt-3 text-2xl font-bold tracking-tight text-[#0D1B3D]">{project.title}</h3>
                   <p className="mt-3 text-sm leading-6 text-slate-600">{project.description}</p>
+                  {project.details ? (
+                    <Link
+                      href={`/realisations/${project.slug}`}
+                      className="mt-5 inline-flex text-sm font-bold text-[#0D1B3D] underline decoration-[#00B7DB] decoration-2 underline-offset-4 hover:text-[#007B9A]"
+                    >
+                      Découvrir cette réalisation →
+                    </Link>
+                  ) : null}
                 </div>
               </article>
             ))}

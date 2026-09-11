@@ -3,7 +3,7 @@
 /* --------------------------- Types de contenu --------------------------- */
 export type PrestationsGroup = { title: string; items: string[] };
 export type Highlight = { title: string; text: string };
-export type Reference = { title: string; image: string };
+export type Reference = { title: string; image: string; href?: string };
 export type FAQ = { q: string; a: string };
 export type Overview = { heading: string; paragraphs: string[] };
 
@@ -92,7 +92,11 @@ export const services: Record<
     ],
     references: [
       { title: "Emmaüs Osny — CTA toiture", image: "/images/chantier/emmaus-reseaux-superposes.webp" },
-      { title: "Aéroport d’Orly — Local CTA neuf", image: "/images/chantier/orly-local-cta.webp" },
+      {
+        title: "Aéroport d’Orly — Local CTA neuf",
+        image: "/images/chantier/orly-local-cta.webp",
+        href: "/realisations/aeroport-orly",
+      },
       { title: "Westfield Les 4 Temps — CTA Carrier", image: "/images/chantier/quatre-temps-carrier.webp" },
       { title: "Saint-Quentin-en-Yvelines — CTA VIM/CADO", image: "/images/chantier/saint-quentin-hero.webp" },
     ],

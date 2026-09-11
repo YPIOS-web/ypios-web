@@ -1,3 +1,17 @@
+export type ProjectDetail = {
+  seoTitle: string;
+  seoDescription: string;
+  h1: string;
+  lead: string;
+  context: string[];
+  intervention: string[];
+  technicalPoints: { title: string; text: string }[];
+  result: string;
+  serviceHref: string;
+  serviceLabel: string;
+  lastModified: string;
+};
+
 export type Project = {
   slug: string;
   site: string;
@@ -6,6 +20,7 @@ export type Project = {
   title: string;
   description: string;
   images: { src: string; alt: string }[];
+  details?: ProjectDetail;
 };
 
 export const projects: Project[] = [
@@ -82,6 +97,44 @@ export const projects: Project[] = [
     title: "Local CTA neuf pour un local électrique",
     description:
       "Création d’un local CTA neuf avec réseaux aérauliques calorifugés et raccordements hydrauliques pour la ventilation d’un local électrique.",
+    details: {
+      seoTitle: "Création d’un local CTA à l’aéroport d’Orly",
+      seoDescription:
+        "Découvrez le local CTA neuf réalisé par YPIOS à l’aéroport d’Orly, avec réseaux aérauliques calorifugés et raccordements hydrauliques.",
+      h1: "Création d’un local CTA à l’aéroport d’Orly",
+      lead:
+        "Installation d’une centrale de traitement d’air et de ses réseaux associés pour assurer la ventilation d’un local électrique.",
+      context: [
+        "Cette réalisation concerne la création d’une installation de ventilation dédiée à un local électrique situé à l’aéroport d’Orly. Le projet intègre une centrale de traitement d’air dans un local technique neuf, ainsi que les réseaux nécessaires à son fonctionnement.",
+        "Les photographies du chantier permettent de suivre concrètement l’organisation de l’ensemble : implantation de la CTA, cheminement des gaines calorifugées et raccordements hydrauliques.",
+      ],
+      intervention: [
+        "Création et équipement d’un local CTA neuf",
+        "Installation de la centrale de traitement d’air",
+        "Mise en œuvre des réseaux aérauliques calorifugés",
+        "Réalisation des raccordements hydrauliques associés",
+        "Organisation des différents réseaux dans le local technique",
+      ],
+      technicalPoints: [
+        {
+          title: "Centrale de traitement d’air",
+          text: "La CTA est implantée dans un espace technique dédié avec les équipements et raccordements associés à l’installation.",
+        },
+        {
+          title: "Réseaux aérauliques calorifugés",
+          text: "Les gaines calorifugées assurent la liaison entre la centrale et le réseau de ventilation du local électrique.",
+        },
+        {
+          title: "Raccordements hydrauliques",
+          text: "Les liaisons hydrauliques visibles complètent l’équipement de la CTA et sont intégrées à l’organisation générale du local.",
+        },
+      ],
+      result:
+        "La réalisation forme un ensemble technique regroupant la CTA, les réseaux aérauliques et les raccordements hydrauliques destinés à la ventilation du local électrique. Les photographies présentent l’installation dans sa configuration réelle.",
+      serviceHref: "/services/ventilation",
+      serviceLabel: "Ventilation & CTA",
+      lastModified: "2026-09-11",
+    },
     images: [
       {
         src: "/images/chantier/orly-local-cta.webp",
@@ -136,3 +189,13 @@ export const projects: Project[] = [
     ],
   },
 ];
+
+export type DetailedProject = Project & { details: ProjectDetail };
+
+export const detailedProjects = projects.filter(
+  (project): project is DetailedProject => Boolean(project.details),
+);
+
+export function getDetailedProject(slug: string) {
+  return detailedProjects.find((project) => project.slug === slug);
+}
