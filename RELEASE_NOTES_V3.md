@@ -1,8 +1,17 @@
-# Notes de version — YPIOS V3.0.5
+# Notes de version — YPIOS V3.0.6
 
-Date : 10 septembre 2026
+Date : 11 septembre 2026
+
+## Correctif V3.0.6 — fiabilisation de `generate_lead`
+
+- Attente explicite de l'initialisation complète de la balise Google avant l'émission de `generate_lead`.
+- Marquage de la demande comme suivie et nettoyage de l'identifiant de confirmation uniquement après mise en file de l'événement Analytics.
+- Nouvelle tentative possible au rechargement si Google Analytics est bloqué ou ne devient pas disponible dans les cinq secondes.
+- Conservation de la déduplication par demande et absence de donnée personnelle dans l'événement.
 
 ## Correctifs V3.0.5 — mesure SEO et consolidation technique
+
+Date : 10 septembre 2026
 
 - Ajout d'une mesure GA4 respectueuse du consentement pour les formulaires transmis (`generate_lead`), les clics e-mail (`email_click`), les clics téléphoniques (`phone_click`) et les accès à la page Contact (`contact_intent`).
 - Aucun nom, e-mail, téléphone, message ou identifiant personnel n'est transmis à Google Analytics.

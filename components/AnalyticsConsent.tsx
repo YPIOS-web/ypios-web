@@ -1,12 +1,25 @@
 "use client";
 
-import { GoogleAnalytics, sendGAEvent } from "@next/third-parties/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { useEffect, useState } from "react";
 
 const STORAGE_KEY = "ypios-consent-v1";
 const TRACKED_LEAD_PREFIX = "ypios-lead-tracked:";
+const GA_READY_RETRY_MS = 100;
+const GA_READY_MAX_ATTEMPTS = 50;
 
 type Consent = { analytics?: boolean };
+type AnalyticsWindow = Window & {
+  gtag?: (command: "event", eventName: string, parameters: Record<string, string>) => void;
+};
+
+function sendAnalyticsEvent(eventName: string, parameters: Record<string, string>) {
+  const gtag = (window as AnalyticsWindow).gtag;
+  if (typeof gtag !== "function") return false;
+
+  gtag("event", eventName, parameters);
+  return true;
+}
 
 export default function AnalyticsConsent({ gaId }: { gaId?: string }) {
   const [allowed, setAllowed] = useState(false);
@@ -31,6 +44,7 @@ export default function AnalyticsConsent({ gaId }: { gaId?: string }) {
     if (!gaId || !/^G-[A-Z0-9]+$/i.test(gaId) || !allowed) return;
 
     window.dataLayer = window.dataLayer || [];
+    let leadTrackingTimer: number | undefined;
 
     const trackContactClick = (event: MouseEvent) => {
       if (!(event.target instanceof Element)) return;
@@ -42,12 +56,12 @@ export default function AnalyticsConsent({ gaId }: { gaId?: string }) {
       const eventParameters = { source_path: window.location.pathname };
 
       if (href.startsWith("mailto:")) {
-        sendGAEvent("event", "email_click", eventParameters);
+        sendAnalyticsEvent("email_click", eventParameters);
         return;
       }
 
       if (href.startsWith("tel:")) {
-        sendGAEvent("event", "phone_click", eventParameters);
+        sendAnalyticsEvent("phone_click", eventParameters);
         return;
       }
 
@@ -57,7 +71,7 @@ export default function AnalyticsConsent({ gaId }: { gaId?: string }) {
         targetUrl.pathname === "/contact" &&
         window.location.pathname !== "/contact"
       ) {
-        sendGAEvent("event", "contact_intent", eventParameters);
+        sendAnalyticsEvent("contact_intent", eventParameters);
       }
     };
 
@@ -75,23 +89,45 @@ export default function AnalyticsConsent({ gaId }: { gaId?: string }) {
         alreadyTracked = sessionStorage.getItem(storageKey) === "1";
       } catch {}
 
-      if (!alreadyTracked) {
-        sendGAEvent("event", "generate_lead", { method: "website_form" });
-        try {
-          sessionStorage.setItem(storageKey, "1");
-        } catch {}
-      }
+      const removeLeadToken = () => {
+        search.delete("lead");
+        const query = search.toString();
+        window.history.replaceState(
+          null,
+          "",
+          `${window.location.pathname}${query ? `?${query}` : ""}${window.location.hash}`,
+        );
+      };
 
-      search.delete("lead");
-      const query = search.toString();
-      window.history.replaceState(
-        null,
-        "",
-        `${window.location.pathname}${query ? `?${query}` : ""}${window.location.hash}`,
-      );
+      if (alreadyTracked) {
+        removeLeadToken();
+      } else {
+        const trackLeadWhenReady = (attempt: number) => {
+          if (!sendAnalyticsEvent("generate_lead", { method: "website_form" })) {
+            if (attempt < GA_READY_MAX_ATTEMPTS) {
+              leadTrackingTimer = window.setTimeout(
+                () => trackLeadWhenReady(attempt + 1),
+                GA_READY_RETRY_MS,
+              );
+            }
+            return;
+          }
+
+          try {
+            sessionStorage.setItem(storageKey, "1");
+          } catch {}
+
+          removeLeadToken();
+        };
+
+        trackLeadWhenReady(0);
+      }
     }
 
-    return () => document.removeEventListener("click", trackContactClick);
+    return () => {
+      document.removeEventListener("click", trackContactClick);
+      if (leadTrackingTimer !== undefined) window.clearTimeout(leadTrackingTimer);
+    };
   }, [allowed, gaId]);
 
   if (!gaId || !/^G-[A-Z0-9]+$/i.test(gaId) || !allowed) return null;
