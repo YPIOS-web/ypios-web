@@ -1,6 +1,42 @@
-# Rapport de validation — YPIOS V3.0.7
+# Rapport de validation — YPIOS V3.1.0
 
 Date : 11 septembre 2026
+
+## Portée de la V3.1.0
+
+Premier cycle éditorial SEO préparé à partir de la V3.0.7 de production. La version cible les trois pages présentant le meilleur potentiel immédiat dans Google Search Console : Ventilation, Plomberie et Réalisations.
+
+Données de référence du 10 juin au 7 septembre 2026 :
+
+- Plomberie : 48 impressions, position moyenne 5,17 et aucun clic ;
+- Réalisations : 36 impressions, position moyenne 5,00 et aucun clic ;
+- Ventilation : 34 impressions, position moyenne 11,76 et aucun clic.
+
+Les titres, descriptions et intitulés visibles ont été rendus plus explicites. Les pages Ventilation et Plomberie reçoivent un bloc éditorial décrivant le périmètre d’intervention, les adaptations de l’existant, les sites occupés, la maintenance et la traçabilité, sans ajouter de client, chiffre ou résultat non validé.
+
+## Contrôles locaux V3.1.0 réalisés le 11 septembre 2026
+
+- vérification TypeScript stricte : OK ;
+- build de production Next.js 16.3.3 : OK, 18 routes générées ;
+- audit des dépendances de production : 0 vulnérabilité connue ;
+- rendu HTML des nouveaux titres, descriptions, H1 et URL canoniques : OK ;
+- sitemap généré en `www` avec une date `lastModified` propre à chaque page : OK ;
+- revue React : composants serveur conservés, aucun hook ni JavaScript client ajouté, structure de titres et images optimisées conservées ;
+- aucun changement du formulaire, de GA4, du SMTP, de reCAPTCHA, des dépendances ou des en-têtes de sécurité.
+
+## Contrôles requis sur la Preview Vercel
+
+- vérifier les pages Ventilation, Plomberie et Réalisations sur ordinateur et mobile ;
+- contrôler la lisibilité du nouveau bloc « Notre approche » ;
+- vérifier l’absence de régression sur l’en-tête, les boutons, les images et le pied de page ;
+- contrôler les métadonnées et le sitemap sur l’URL de Preview ;
+- après validation, fusionner seulement avec l’accord explicite de Guillaume.
+
+## Suivi externe restant
+
+Search Console liste encore uniquement l’ancien sitemap `https://ypios.fr/sitemap.xml`, soumis le 2 novembre 2025 et non téléchargé depuis le 5 janvier 2026. Après la mise en production de la V3.1.0, le sitemap `https://www.ypios.fr/sitemap.xml` devra être soumis dans Search Console.
+
+## Validation héritée de la V3.0.7
 
 ## Portée de la V3.0.7
 

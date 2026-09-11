@@ -5,11 +5,13 @@ export type PrestationsGroup = { title: string; items: string[] };
 export type Highlight = { title: string; text: string };
 export type Reference = { title: string; image: string };
 export type FAQ = { q: string; a: string };
+export type Overview = { heading: string; paragraphs: string[] };
 
 export type ServiceContent = {
   title: string;
   subtitle?: string;
   hero: { src: string; alt: string };
+  overview?: Overview;
   prestationsGrouped: PrestationsGroup[];
   highlights: Highlight[];
   references: Reference[];
@@ -43,6 +45,22 @@ export default function ServicePage({ content: c }: { content: ServiceContent })
           </div>
         </div>
       </section>
+
+      {c.overview ? (
+        <section className="border-b border-slate-100 bg-white py-12 sm:py-14">
+          <div className="ypios-container grid gap-6 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-14">
+            <div>
+              <span className="ypios-kicker">Notre approche</span>
+              <h2 className="ypios-heading mt-4 text-3xl font-bold sm:text-4xl">{c.overview.heading}</h2>
+            </div>
+            <div className="space-y-4 text-base leading-7 text-slate-600">
+              {c.overview.paragraphs.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       <section className="py-16 bg-white sm:py-20">
         <div className="ypios-container">

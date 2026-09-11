@@ -4,9 +4,9 @@ import Link from "next/link";
 import { projects } from "@/content/projects";
 
 export const metadata: Metadata = {
-  title: "Réalisations",
+  title: "Réalisations CVC en Île-de-France",
   description:
-    "Découvrez des interventions réelles YPIOS en climatisation et ventilation à Melun, Osny, Paris, Orly, La Défense et Saint-Quentin-en-Yvelines.",
+    "Découvrez des réalisations YPIOS en climatisation et ventilation pour des bureaux, ERP, sites industriels et installations techniques en Île-de-France.",
   alternates: { canonical: "/realisations" },
 };
 
@@ -28,10 +28,12 @@ export default function Page() {
         <div className="ypios-container relative flex min-h-[520px] items-end py-16 sm:min-h-[560px] sm:py-20">
           <div className="max-w-3xl">
             <span className="text-xs font-bold uppercase tracking-[0.16em] text-[#57D4EA]">Réalisations YPIOS</span>
-            <h1 className="mt-4 text-5xl font-bold tracking-[-0.045em] sm:text-6xl">Le terrain comme preuve.</h1>
+            <h1 className="mt-4 text-5xl font-bold tracking-[-0.045em] sm:text-6xl">
+              Réalisations CVC en Île-de-France
+            </h1>
             <p className="mt-5 max-w-2xl text-base leading-7 text-white/82 sm:text-lg">
-              Une sélection de chantiers YPIOS photographiés dans leur configuration réelle.
-              Les images sont uniquement cadrées et optimisées pour le Web.
+              Une sélection de chantiers YPIOS en climatisation, ventilation et traitement d’air,
+              photographiés dans leur configuration réelle.
             </p>
           </div>
         </div>
@@ -42,10 +44,11 @@ export default function Page() {
           <div className="max-w-3xl">
             <span className="ypios-kicker">Carnet de réalisations</span>
             <h2 className="ypios-heading mt-4 text-4xl font-bold sm:text-5xl">
-              Des installations identifiées, sans mise en scène.
+              Des installations CVC documentées sur le terrain.
             </h2>
             <p className="mt-5 text-base leading-7 text-slate-600">
-              Chaque opération est présentée avec les équipements, réseaux et contraintes réellement rencontrés sur site.
+              Chaque opération est présentée avec les équipements, les réseaux et les contraintes réellement rencontrés sur site,
+              afin de montrer concrètement les solutions mises en œuvre par YPIOS.
             </p>
           </div>
 

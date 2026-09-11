@@ -1,6 +1,14 @@
-# Notes de version — YPIOS V3.0.7
+# Notes de version — YPIOS V3.1.0
 
 Date : 11 septembre 2026
+
+## Évolution V3.1.0 — premier cycle SEO éditorial
+
+- Titres et descriptions enrichis pour les pages Ventilation, Plomberie et Réalisations, en cohérence avec les intentions commerciales et la zone d’intervention en Île-de-France.
+- H1 de la page Réalisations rendu explicite afin de mieux décrire son contenu aux visiteurs et aux moteurs de recherche.
+- Ajout d’un bloc éditorial utile sur les pages Ventilation et Plomberie : périmètre d’intervention, existant, sites occupés, maintenance et traçabilité.
+- Dates `lastModified` désormais définies par page dans le sitemap, uniquement selon la date réelle de modification du contenu.
+- Aucun nouveau client, chiffre, résultat ou engagement non validé n’a été ajouté.
 
 ## Correctif V3.0.7 — suivi de la navigation de confirmation
 
