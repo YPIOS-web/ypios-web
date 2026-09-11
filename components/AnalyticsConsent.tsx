@@ -1,6 +1,7 @@
 "use client";
 
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const STORAGE_KEY = "ypios-consent-v1";
@@ -23,6 +24,9 @@ function sendAnalyticsEvent(eventName: string, parameters: Record<string, string
 
 export default function AnalyticsConsent({ gaId }: { gaId?: string }) {
   const [allowed, setAllowed] = useState(false);
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const searchString = searchParams.toString();
 
   useEffect(() => {
     const refresh = () => {
@@ -44,7 +48,6 @@ export default function AnalyticsConsent({ gaId }: { gaId?: string }) {
     if (!gaId || !/^G-[A-Z0-9]+$/i.test(gaId) || !allowed) return;
 
     window.dataLayer = window.dataLayer || [];
-    let leadTrackingTimer: number | undefined;
 
     const trackContactClick = (event: MouseEvent) => {
       if (!(event.target instanceof Element)) return;
@@ -77,7 +80,15 @@ export default function AnalyticsConsent({ gaId }: { gaId?: string }) {
 
     document.addEventListener("click", trackContactClick);
 
-    const search = new URLSearchParams(window.location.search);
+    return () => document.removeEventListener("click", trackContactClick);
+  }, [allowed, gaId]);
+
+  useEffect(() => {
+    if (!gaId || !/^G-[A-Z0-9]+$/i.test(gaId) || !allowed) return;
+
+    let leadTrackingTimer: number | undefined;
+
+    const search = new URLSearchParams(searchString);
     const leadId = search.get("lead");
     const isValidLeadId = Boolean(leadId && /^[a-f0-9-]{36}$/i.test(leadId));
 
@@ -95,7 +106,7 @@ export default function AnalyticsConsent({ gaId }: { gaId?: string }) {
         window.history.replaceState(
           null,
           "",
-          `${window.location.pathname}${query ? `?${query}` : ""}${window.location.hash}`,
+          `${pathname}${query ? `?${query}` : ""}${window.location.hash}`,
         );
       };
 
@@ -125,10 +136,9 @@ export default function AnalyticsConsent({ gaId }: { gaId?: string }) {
     }
 
     return () => {
-      document.removeEventListener("click", trackContactClick);
       if (leadTrackingTimer !== undefined) window.clearTimeout(leadTrackingTimer);
     };
-  }, [allowed, gaId]);
+  }, [allowed, gaId, pathname, searchString]);
 
   if (!gaId || !/^G-[A-Z0-9]+$/i.test(gaId) || !allowed) return null;
 

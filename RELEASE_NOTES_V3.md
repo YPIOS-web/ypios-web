@@ -1,6 +1,13 @@
-# Notes de version — YPIOS V3.0.6
+# Notes de version — YPIOS V3.0.7
 
 Date : 11 septembre 2026
+
+## Correctif V3.0.7 — suivi de la navigation de confirmation
+
+- Prise en compte des changements de paramètres d'URL effectués par le routeur Next.js après l'envoi du formulaire.
+- Relance du contrôle de conversion lorsque l'URL devient `/contact?sent=1&lead=…`, même si le layout Analytics reste monté.
+- Ajout de la frontière `Suspense` requise par Next.js pour la lecture réactive des paramètres d'URL.
+- Conservation de l'attente GA4, de la déduplication par demande et de l'absence de donnée personnelle.
 
 ## Correctif V3.0.6 — fiabilisation de `generate_lead`
 
