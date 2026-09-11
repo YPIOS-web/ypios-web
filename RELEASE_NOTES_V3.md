@@ -1,6 +1,16 @@
-# Notes de version — YPIOS V3.1.1
+# Notes de version — YPIOS V3.2.0
 
 Date : 11 septembre 2026
+
+## Évolution V3.2.0 — première étude de cas détaillée
+
+- Création de la page indexable `/realisations/aeroport-orly` consacrée au local CTA neuf réalisé à l’aéroport d’Orly.
+- Présentation structurée du besoin, de l’intervention, des principaux ensembles techniques, du résultat observable et des photographies du chantier.
+- Architecture dynamique prête à accueillir progressivement d’autres études de cas, sans publier les réalisations qui ne disposent pas encore d’un contenu détaillé validé.
+- Ajout de liens internes depuis la page Réalisations et la page Ventilation.
+- Ajout de la nouvelle URL et de ses trois images au sitemap.
+- Le contenu se limite aux faits déjà publics : local CTA neuf, local électrique, réseaux aérauliques calorifugés et raccordements hydrauliques.
+- Aucun débit, pression, matériel, protocole, partenaire, résultat chiffré ou engagement non validé n’a été publié.
 
 ## Évolution V3.1.1 — Climatisation et GTC/GTB
 

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export type PrestationsGroup = { title: string; items: string[] };
 export type Highlight = { title: string; text: string };
-export type Reference = { title: string; image: string };
+export type Reference = { title: string; image: string; href?: string };
 export type FAQ = { q: string; a: string };
 export type Overview = { heading: string; paragraphs: string[] };
 
@@ -129,7 +129,17 @@ export default function ServicePage({ content: c }: { content: ServiceContent })
                   <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
                     <Image src={reference.image} alt={reference.title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
                   </div>
-                  <figcaption className="px-5 py-4 text-sm font-semibold text-[#0D1B3D]">{reference.title}</figcaption>
+                  <figcaption className="px-5 py-4 text-sm font-semibold text-[#0D1B3D]">
+                    <span>{reference.title}</span>
+                    {reference.href ? (
+                      <Link
+                        href={reference.href}
+                        className="mt-2 block text-xs font-bold text-[#007B9A] underline decoration-[#00B7DB] underline-offset-4"
+                      >
+                        Voir l’étude de cas →
+                      </Link>
+                    ) : null}
+                  </figcaption>
                 </figure>
               ))}
             </div>

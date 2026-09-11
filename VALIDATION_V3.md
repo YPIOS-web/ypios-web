@@ -1,6 +1,40 @@
-# Rapport de validation — YPIOS V3.1.1
+# Rapport de validation — YPIOS V3.2.0
 
 Date : 11 septembre 2026
+
+## Portée de la V3.2.0
+
+Premier développement d’une réalisation YPIOS sous forme d’étude de cas indexable. La page cible la création d’un local CTA à l’aéroport d’Orly et répond à une intention directement liée au métier Ventilation / CTA.
+
+Données de référence du 10 juin au 8 septembre 2026 :
+
+- requête `local cta` : 13 impressions, position moyenne 23 et aucun clic ;
+- page Réalisations : 36 impressions, position moyenne 5 et aucun clic.
+
+Le contenu public reste volontairement limité aux informations déjà présentes sur le site et visibles sur les photographies. Les données de dimensionnement ou de régulation issues du dossier technique ne sont pas intégrées sans confirmation de leur conformité à l’installation finale.
+
+## Contrôles locaux V3.2.0 réalisés le 11 septembre 2026
+
+- vérification TypeScript stricte : OK ;
+- build de production Next.js 16.3.3 : OK, 19 routes générées ;
+- page `/realisations/aeroport-orly` générée statiquement : OK ;
+- statut HTTP local : 200 ;
+- title, description, Open Graph, canonical et H1 unique : OK ;
+- contenu rendu : environ 430 mots ;
+- liens entrants depuis Réalisations et Ventilation : OK ;
+- sitemap : nouvelle URL présente avec les trois images du chantier ;
+- slug non publié : réponse 404 ;
+- revue React : composant serveur, aucune donnée côté client, images `next/image` dimensionnées et libellés accessibles ;
+- dépendances inchangées depuis l’audit V3.1.0 sans vulnérabilité connue ;
+- aucun changement du formulaire, de GA4, du SMTP, de reCAPTCHA ou des en-têtes de sécurité.
+
+## Contrôles requis sur la Preview Vercel V3.2.0
+
+- vérifier la nouvelle page sur ordinateur et mobile ;
+- contrôler le cadrage des trois photographies et la lisibilité du texte sur l’image principale ;
+- tester les liens vers Réalisations, Ventilation et Contact ;
+- confirmer que les formulations décrivent fidèlement l’opération réalisée ;
+- après validation, fusionner seulement avec l’accord explicite de Guillaume.
 
 ## Portée de la V3.1.1
 

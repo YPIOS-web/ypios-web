@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { detailedProjects } from "@/content/projects";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.ypios.fr";
@@ -16,10 +17,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ["/cookies", 0.3, "2026-09-08"],
   ] as const;
 
-  return routes.map(([path, priority, lastModified]) => ({
+  const staticRoutes: MetadataRoute.Sitemap = routes.map(([path, priority, lastModified]) => ({
     url: `${baseUrl}${path}`,
     lastModified: new Date(`${lastModified}T00:00:00.000Z`),
     changeFrequency: path === "/" ? "monthly" : "yearly",
     priority,
   }));
+
+  const projectRoutes: MetadataRoute.Sitemap = detailedProjects.map((project) => ({
+    url: `${baseUrl}/realisations/${project.slug}`,
+    lastModified: new Date(`${project.details.lastModified}T00:00:00.000Z`),
+    changeFrequency: "yearly",
+    priority: 0.7,
+    images: project.images.map((image) => `${baseUrl}${image.src}`),
+  }));
+
+  return [...staticRoutes, ...projectRoutes];
 }
