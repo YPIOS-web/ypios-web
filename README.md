@@ -1,6 +1,6 @@
 # YPIOS — MASTER production V3
 
-Version : **3.3.0** — 12 septembre 2026
+Version : **3.4.0** — 12 septembre 2026
 
 Ce dossier contient la version de production du site vitrine YPIOS. Il reprend la structure graphique V2 validée, les corrections éditoriales finales, les localisations validées et la banque de vraies photos de chantiers YPIOS.
 

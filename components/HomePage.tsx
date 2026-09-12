@@ -261,7 +261,7 @@ export default function HomePage() {
             <div className="relative mb-7 aspect-[16/9] overflow-hidden rounded-2xl">
               <Image
                 src="/images/chantier/quatre-temps-carrier.webp"
-                alt="CTA Carrier existante au centre Westfield Les 4 Temps"
+                alt="Nouvelle CTA Carrier installée au centre Westfield Les 4 Temps"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"

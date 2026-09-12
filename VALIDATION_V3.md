@@ -1,6 +1,41 @@
-# Rapport de validation — YPIOS V3.3.0
+# Rapport de validation — YPIOS V3.4.0
 
 Date : 12 septembre 2026
+
+## Portée de la V3.4.0
+
+Création d’une deuxième étude de cas indexable à partir d’une réalisation YPIOS déjà publique : l’installation de climatisation et de ventilation des bureaux de Damae Medical à Paris 13e. La page cible une intention professionnelle locale sans créer une page géographique artificielle et s’appuie uniquement sur les équipements et cheminements visibles ou déjà décrits dans le contenu validé.
+
+Données de référence du 13 août au 9 septembre 2026 :
+
+- page Climatisation : 19 impressions, position moyenne 26,58 et aucun clic ;
+- page Ventilation : 5 impressions, position moyenne 15 et aucun clic ;
+- la version précédente ne proposait qu’une seule étude de cas détaillée, consacrée à Orly.
+
+## Contrôles locaux V3.4.0 réalisés le 12 septembre 2026
+
+- vérification TypeScript stricte : OK ;
+- build de production Next.js 16.3.3 : OK, 21 routes générées ;
+- pages `/realisations/damae-paris-13` et `/realisations/aeroport-orly` générées statiquement : OK ;
+- statut HTTP local de la nouvelle page : 200 ;
+- title, description, Open Graph, canonical et H1 unique : OK ;
+- données structurées `Article` et `BreadcrumbList` valides syntaxiquement, en complément du `LocalBusiness` global : OK ;
+- liens sortants vers Climatisation, Ventilation, Réalisations et Contact : OK ;
+- liens entrants depuis Réalisations, Climatisation et Ventilation : OK ;
+- sitemap : nouvelle URL présente avec les trois images du chantier ;
+- textes alternatifs présents sur toutes les images rendues : OK ;
+- fiche Westfield Les 4 Temps corrigée selon la confirmation de Guillaume : remplacement complet de la CTA ;
+- audit des dépendances de production : 0 vulnérabilité connue ;
+- aucun changement du formulaire, de GA4, du SMTP, de reCAPTCHA, des dépendances ou des en-têtes de sécurité.
+
+## Contrôles requis sur la Preview Vercel V3.4.0
+
+- vérifier la nouvelle page sur ordinateur et mobile ;
+- contrôler le cadrage des trois photographies et la lisibilité du titre sur l’image principale ;
+- vérifier visuellement les pages Climatisation et Ventilation après l’ajout du lien ;
+- tester les liens vers Réalisations, Climatisation, Ventilation et Contact ;
+- confirmer que les formulations décrivent fidèlement l’opération Damae Medical ;
+- après validation, fusionner seulement avec l’accord explicite de Guillaume.
 
 ## Portée de la V3.3.0
 
