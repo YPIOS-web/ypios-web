@@ -330,11 +330,11 @@ export default function Page() {
               </h2>
               <p className="mt-5 text-base leading-7 text-white/72">
                 Lorsque l’état initial l’exige, la maintenance commence par une remise en état. Cette
-                intervention sur une CTA existante illustre le passage d’un équipement ancien à une
-                installation reprise, raccordée et prête à être suivie dans de meilleures conditions.
+                réalisation illustre le remplacement complet d’un équipement ancien par une nouvelle
+                CTA installée et raccordée dans le local technique existant.
               </p>
-              <Link href="/realisations" className="mt-7 inline-flex font-bold text-[#FF9B3D] hover:text-[#FFB56B]">
-                Découvrir les réalisations YPIOS →
+              <Link href="/realisations/quatre-temps" className="mt-7 inline-flex font-bold text-[#FF9B3D] hover:text-[#FFB56B]">
+                Voir le remplacement de cette CTA →
               </Link>
             </div>
 

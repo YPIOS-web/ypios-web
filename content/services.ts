@@ -91,7 +91,11 @@ export const services: Record<
       { title: "Support", text: "Astreinte selon contrat" },
     ],
     references: [
-      { title: "Emmaüs Osny — CTA toiture", image: "/images/chantier/emmaus-reseaux-superposes.webp" },
+      {
+        title: "Westfield Les 4 Temps — Remplacement complet d’une CTA",
+        image: "/images/chantier/quatre-temps-carrier.webp",
+        href: "/realisations/quatre-temps",
+      },
       {
         title: "Aéroport d’Orly — Local CTA neuf",
         image: "/images/chantier/orly-local-cta.webp",
@@ -102,7 +106,7 @@ export const services: Record<
         image: "/images/chantier/damae-reseaux-apparents.webp",
         href: "/realisations/damae-paris-13",
       },
-      { title: "Westfield Les 4 Temps — CTA Carrier", image: "/images/chantier/quatre-temps-carrier.webp" },
+      { title: "Emmaüs Osny — CTA toiture", image: "/images/chantier/emmaus-reseaux-superposes.webp" },
       { title: "Saint-Quentin-en-Yvelines — CTA VIM/CADO", image: "/images/chantier/saint-quentin-hero.webp" },
     ],
     faq: [],

@@ -222,18 +222,75 @@ export const projects: Project[] = [
     slug: "quatre-temps",
     site: "Westfield Les 4 Temps",
     location: "La Défense (92)",
-    category: "Ventilation",
+    category: "Ventilation & CTA",
     title: "Remplacement complet d’une CTA Carrier",
     description:
       "Remplacement complet de la centrale de traitement d’air par une nouvelle CTA Carrier, documentée dans son local technique.",
+    details: {
+      seoTitle: "Remplacement d’une CTA à La Défense",
+      seoDescription:
+        "Découvrez le remplacement complet d’une centrale de traitement d’air par une nouvelle CTA Carrier au centre Westfield Les 4 Temps, à La Défense.",
+      h1: "Remplacement complet d’une CTA au centre Westfield Les 4 Temps",
+      lead:
+        "Remplacement de l’ancienne centrale de traitement d’air par une nouvelle CTA Carrier dans un local technique existant à La Défense.",
+      contextHeading:
+        "Remplacer une centrale existante dans son environnement technique.",
+      configuration: "Remplacement complet en local technique",
+      context: [
+        "Cette réalisation concerne le remplacement complet d’une centrale de traitement d’air au centre Westfield Les 4 Temps, à La Défense. L’ancienne CTA occupait déjà le local technique et était raccordée aux réseaux aérauliques du site.",
+        "Les photographies avant et après permettent de comparer directement l’équipement existant avec la nouvelle centrale Carrier installée dans le même environnement technique.",
+      ],
+      interventionHeading:
+        "Passer de l’ancienne installation à une nouvelle CTA Carrier.",
+      interventionLead:
+        "L’intervention a porté sur le remplacement complet de la centrale tout en conservant une lecture claire de ses raccordements au sein du local.",
+      intervention: [
+        "Repérage de la centrale existante et de son environnement technique",
+        "Dépose de l’ancienne centrale de traitement d’air",
+        "Installation de la nouvelle CTA Carrier",
+        "Raccordement de la centrale aux réseaux aérauliques existants",
+        "Contrôle de l’intégration générale dans le local technique",
+      ],
+      galleryHeading:
+        "L’ancienne et la nouvelle CTA documentées dans le même local.",
+      technicalPoints: [
+        {
+          title: "Remplacement complet",
+          text: "L’équipement existant a laissé place à une nouvelle centrale de traitement d’air, et non à une simple remise en état de l’ancienne machine.",
+        },
+        {
+          title: "CTA Carrier",
+          text: "La nouvelle centrale Carrier est installée dans le local technique et raccordée aux réseaux visibles sur les photographies.",
+        },
+        {
+          title: "Comparaison avant / après",
+          text: "Les vues prises dans le local permettent d’identifier clairement l’ancienne installation puis la nouvelle CTA après remplacement.",
+        },
+      ],
+      resultHeading: "Une nouvelle centrale intégrée au local technique.",
+      result:
+        "La nouvelle CTA Carrier remplace intégralement l’équipement précédent. Les photographies présentent la centrale installée, ses raccordements aérauliques et son intégration dans la configuration existante du local.",
+      serviceLinks: [
+        { href: "/services/ventilation", label: "Ventilation & CTA" },
+        { href: "/services/maintenance-cvc", label: "Maintenance CVC" },
+      ],
+      ctaHeading: "Une CTA existante à remplacer ou à remettre en état ?",
+      ctaText:
+        "Présentez-nous l’équipement, le local technique, les réseaux existants et les contraintes d’exploitation du site.",
+      lastModified: "2026-09-12",
+    },
     images: [
       {
-        src: "/images/chantier/quatre-temps-carrier.webp",
-        alt: "Nouvelle CTA Carrier installée au centre Westfield Les 4 Temps",
+        src: "/images/quatre-temps-apres.webp",
+        alt: "Nouvelle CTA Carrier après remplacement au centre Westfield Les 4 Temps",
+      },
+      {
+        src: "/images/quatre-temps-avant.webp",
+        alt: "Ancienne centrale de traitement d’air avant remplacement au centre Westfield Les 4 Temps",
       },
       {
         src: "/images/chantier/quatre-temps-cta.webp",
-        alt: "Nouvelle centrale de traitement d’air Carrier dans son local technique au centre Westfield Les 4 Temps",
+        alt: "Nouvelle CTA Carrier raccordée aux réseaux aérauliques du local technique",
       },
     ],
   },

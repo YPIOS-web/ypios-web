@@ -5,9 +5,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.ypios.fr";
 
   const routes = [
-    ["/", 1, "2026-09-08"],
+    ["/", 1, "2026-09-12"],
     ["/services/climatisation", 0.9, "2026-09-11"],
-    ["/services/ventilation", 0.9, "2026-09-11"],
+    ["/services/ventilation", 0.9, "2026-09-12"],
     ["/services/plomberie", 0.9, "2026-09-11"],
     ["/services/gtc-gtb", 0.9, "2026-09-11"],
     ["/services/maintenance-cvc", 0.9, "2026-09-12"],
