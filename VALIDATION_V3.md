@@ -1,6 +1,44 @@
-# Rapport de validation — YPIOS V3.2.0
+# Rapport de validation — YPIOS V3.3.0
 
-Date : 11 septembre 2026
+Date : 12 septembre 2026
+
+## Portée de la V3.3.0
+
+Création d’une page dédiée à l’intention commerciale « maintenance CVC en Île-de-France », distincte des pages métiers existantes. La page présente la démarche de reprise et de maintenance d’un parc professionnel sans promettre un périmètre, un délai ou un résultat avant l’état initial.
+
+Données de référence du 10 juin au 8 septembre 2026 :
+
+- requête `gtb maintenance` : 1 impression, position moyenne 75 et aucun clic ;
+- requête `gtc maintenance` : 5 impressions, position moyenne 68,6 et aucun clic ;
+- aucune page transversale dédiée à la maintenance CVC dans le site V3.2.0 ;
+- GA4 reçoit désormais l’événement `generate_lead`, avec deux événements observés les 10 et 11 septembre 2026, dont un associé à Organic Search.
+
+Le choix de créer cette page repose principalement sur la valeur commerciale de la maintenance récurrente et sur l’absence d’une page répondant précisément à cette intention. Le faible volume GSC actuel est traité comme un point zéro, pas comme une prévision de trafic.
+
+## Contrôles locaux V3.3.0 réalisés le 12 septembre 2026
+
+- vérification TypeScript stricte : OK ;
+- build de production Next.js 16.3.3 : OK, 20 routes générées ;
+- page `/services/maintenance-cvc` générée statiquement : OK ;
+- statut HTTP local : 200 ;
+- title, description, Open Graph, canonical et H1 unique : OK ;
+- contenu rendu : environ 940 mots ;
+- données structurées `Service`, zone Île-de-France et rattachement à l’organisation YPIOS : OK ;
+- liens entrants depuis l’accueil, l’en-tête, le pied de page et les quatre pages métiers : OK ;
+- liens sortants vers Contact, Réalisations et les quatre pages métiers : OK ;
+- sitemap : nouvelle URL présente avec une date de modification stable ;
+- revue React : composant serveur, aucune donnée côté client, tableaux statiques hors rendu et images `next/image` dimensionnées ;
+- audit des dépendances de production : 0 vulnérabilité connue ;
+- aucun changement du formulaire, de GA4, du SMTP, de reCAPTCHA ou des en-têtes de sécurité.
+
+## Contrôles requis sur la Preview Vercel V3.3.0
+
+- vérifier la page Maintenance CVC sur ordinateur et mobile ;
+- contrôler la lisibilité du titre sur la photographie principale ;
+- vérifier les photographies avant/après et la fidélité des formulations ;
+- tester les liens vers Contact, Réalisations et les quatre pages métiers ;
+- contrôler l’ajout de Maintenance dans les navigations ordinateur et mobile ;
+- après validation, fusionner seulement avec l’accord explicite de Guillaume.
 
 ## Portée de la V3.2.0
 

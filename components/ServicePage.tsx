@@ -154,7 +154,15 @@ export default function ServicePage({ content: c }: { content: ServiceContent })
             <h2 className="mt-3 text-3xl font-bold tracking-tight">Vous avez un projet ou un problème technique à résoudre ?</h2>
             <p className="mt-3 text-sm leading-6 text-white/72">Présentez-nous le contexte, les contraintes du site et le niveau d’urgence.</p>
           </div>
-          <Link href="/contact" className="ypios-button-primary mt-7 shrink-0 lg:mt-0">Nous contacter →</Link>
+          <div className="mt-7 flex shrink-0 flex-wrap gap-3 lg:mt-0">
+            <Link
+              href="/services/maintenance-cvc"
+              className="inline-flex min-h-[46px] items-center justify-center rounded-full border border-white/25 bg-white/10 px-5 py-3 text-sm font-bold text-white hover:bg-white/15"
+            >
+              Maintenance CVC
+            </Link>
+            <Link href="/contact" className="ypios-button-primary">Nous contacter →</Link>
+          </div>
         </div>
       </section>
     </main>
