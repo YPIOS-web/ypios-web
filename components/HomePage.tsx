@@ -248,8 +248,8 @@ export default function HomePage() {
             <Link href="/services/maintenance-cvc" className="ypios-button-primary">
               Découvrir notre maintenance CVC <Arrow />
             </Link>
-            <Link href="/realisations" className="ypios-button-secondary">
-              Découvrir nos réalisations <Arrow />
+            <Link href="/realisations/quatre-temps" className="ypios-button-secondary">
+              Voir le remplacement de cette CTA <Arrow />
             </Link>
           </div>
         </div>

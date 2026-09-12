@@ -1,6 +1,38 @@
-# Rapport de validation — YPIOS V3.4.0
+# Rapport de validation — YPIOS V3.5.0
 
 Date : 12 septembre 2026
+
+## Portée de la V3.5.0
+
+Création d’une troisième étude de cas indexable consacrée au remplacement complet d’une CTA au centre Westfield Les 4 Temps, à La Défense. La page renforce les pages Ventilation et Maintenance CVC par une preuve terrain avant/après, sans créer une nouvelle page de service redondante.
+
+Le contenu public est limité aux informations déjà confirmées ou visibles : remplacement complet, ancienne centrale, nouvelle CTA Carrier, local technique, réseaux aérauliques et localisation. Les caractéristiques techniques détaillées et les intervenants du dossier ne sont pas publiés.
+
+## Contrôles locaux V3.5.0 réalisés le 12 septembre 2026
+
+- vérification TypeScript stricte : OK ;
+- build de production Next.js 16.3.3 : OK, 22 routes générées ;
+- page `/realisations/quatre-temps` générée statiquement : OK ;
+- statut HTTP local de la nouvelle page et des pages liées : 200 ;
+- title, description, canonical et H1 unique : OK ;
+- contenu rendu : environ 470 mots ;
+- données structurées `Article` et `BreadcrumbList` valides syntaxiquement, en complément du `LocalBusiness` global : OK ;
+- liens entrants depuis l’accueil, Maintenance CVC, Ventilation et Réalisations : OK ;
+- liens sortants vers Ventilation, Maintenance CVC, Réalisations et Contact : OK ;
+- sitemap : nouvelle URL présente avec les trois images du chantier ;
+- textes alternatifs présents sur les trois images rendues : OK ;
+- revue React : composants serveur conservés, aucun hook ni JavaScript client ajouté et images `next/image` dimensionnées ;
+- audit des dépendances de production : 0 vulnérabilité connue ;
+- aucun changement du formulaire, de GA4, du SMTP, de reCAPTCHA, des dépendances ou des en-têtes de sécurité.
+
+## Contrôles requis sur la Preview Vercel V3.5.0
+
+- vérifier la nouvelle page sur ordinateur et mobile ;
+- contrôler le cadrage des vues avant/après et la lisibilité du titre sur l’image principale ;
+- vérifier visuellement l’accueil, Maintenance CVC et Ventilation après l’ajout des liens ;
+- tester les liens vers Réalisations, Ventilation, Maintenance CVC et Contact ;
+- confirmer que les formulations décrivent fidèlement le remplacement complet réalisé ;
+- après validation, fusionner seulement avec l’accord explicite de Guillaume.
 
 ## Portée de la V3.4.0
 

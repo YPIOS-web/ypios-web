@@ -1,6 +1,15 @@
-# Notes de version — YPIOS V3.4.0
+# Notes de version — YPIOS V3.5.0
 
 Date : 12 septembre 2026
+
+## Évolution V3.5.0 — étude de cas Westfield Les 4 Temps
+
+- Création de la page indexable `/realisations/quatre-temps` consacrée au remplacement complet d’une CTA au centre Westfield Les 4 Temps, à La Défense.
+- Présentation de l’ancienne centrale et de la nouvelle CTA Carrier à partir des photographies avant/après déjà publiques.
+- Ajout de liens internes depuis l’accueil, Maintenance CVC, Ventilation et Réalisations.
+- Ajout automatique de la page et de ses trois photographies au sitemap.
+- Réutilisation du modèle validé des études de cas, avec métadonnées, canonical et données structurées `Article` et `BreadcrumbList`.
+- Aucun débit, puissance, donnée de régulation, intervenant tiers ou résultat chiffré n’a été publié.
 
 ## Évolution V3.4.0 — étude de cas Damae Medical
 
