@@ -1,6 +1,39 @@
-# Rapport de validation — YPIOS V3.5.0
+# Rapport de validation — YPIOS V3.6.0
 
 Date : 12 septembre 2026
+
+## Portée de la V3.6.0
+
+Création d’une quatrième étude de cas indexable consacrée à l’installation d’une CTA en toiture sur un site industriel à Saint-Quentin-en-Yvelines. La page renforce la page Ventilation avec une preuve terrain distincte des opérations déjà publiées à Orly, Paris 13e et La Défense.
+
+Le contenu public est limité aux informations déjà présentes sur le site ou visibles sur les photographies : CTA VIM/CADO, implantation en toiture, réseaux aérauliques circulaires, changements de direction et supportage. Aucun client nominatif, débit, puissance, performance ou intervenant tiers n’est publié.
+
+## Contrôles locaux V3.6.0 réalisés le 12 septembre 2026
+
+- vérification TypeScript stricte : OK ;
+- build de production Next.js 16.3.3 : OK, 23 routes générées ;
+- page `/realisations/saint-quentin-en-yvelines` générée statiquement : OK ;
+- statut HTTP local de la nouvelle page et des pages liées : 200 ;
+- slug non publié : réponse 404 ;
+- title, description, canonical et H1 unique : OK ;
+- contenu rendu : environ 467 mots ;
+- données structurées `Article` et `BreadcrumbList` valides syntaxiquement, en complément du `LocalBusiness` global : OK ;
+- liens entrants depuis l’accueil, Ventilation et Réalisations : OK ;
+- liens sortants vers Ventilation, Maintenance CVC, Réalisations et Contact : OK ;
+- sitemap : nouvelle URL présente avec les deux images du chantier ;
+- textes alternatifs présents sur les deux photographies rendues : OK ;
+- revue React : composants serveur conservés, aucun hook ni JavaScript client ajouté et images `next/image` dimensionnées ;
+- audit des dépendances de production : 0 vulnérabilité connue ;
+- aucun changement du formulaire, de GA4, du SMTP, de reCAPTCHA, des dépendances ou des en-têtes de sécurité.
+
+## Contrôles requis sur la Preview Vercel V3.6.0
+
+- vérifier la nouvelle page sur ordinateur et mobile ;
+- contrôler le cadrage de la vue générale et la lisibilité du titre sur l’image principale ;
+- vérifier le lien ajouté sur l’image d’accueil et la référence ajoutée à la page Ventilation ;
+- tester les liens vers Réalisations, Ventilation, Maintenance CVC et Contact ;
+- confirmer que les formulations décrivent fidèlement l’installation de Saint-Quentin-en-Yvelines ;
+- après validation, fusionner seulement avec l’accord explicite de Guillaume.
 
 ## Portée de la V3.5.0
 
