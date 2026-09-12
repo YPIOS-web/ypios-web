@@ -45,9 +45,56 @@ export default async function ProjectPage({ params }: Props) {
   }
 
   const { details } = project;
+  const pageUrl = `https://www.ypios.fr/realisations/${project.slug}`;
+  const caseStudyJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": `${pageUrl}#article`,
+        headline: details.h1,
+        description: details.seoDescription,
+        image: project.images.map((image) => `https://www.ypios.fr${image.src}`),
+        dateModified: `${details.lastModified}T00:00:00.000Z`,
+        author: { "@id": "https://www.ypios.fr/#organization" },
+        publisher: { "@id": "https://www.ypios.fr/#organization" },
+        mainEntityOfPage: pageUrl,
+        articleSection: project.category,
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${pageUrl}#breadcrumb`,
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Accueil",
+            item: "https://www.ypios.fr/",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Réalisations",
+            item: "https://www.ypios.fr/realisations",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: project.site,
+            item: pageUrl,
+          },
+        ],
+      },
+    ],
+  };
 
   return (
     <main id="contenu" className="bg-white">
+      <script
+        id={`jsonld-realisation-${project.slug}`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(caseStudyJsonLd) }}
+      />
       <section className="relative isolate overflow-hidden bg-[#0D1B3D] text-white">
         <div className="absolute inset-0">
           <Image
@@ -86,7 +133,7 @@ export default async function ProjectPage({ params }: Props) {
           <article>
             <span className="ypios-kicker">Le besoin</span>
             <h2 className="ypios-heading mt-4 text-3xl font-bold sm:text-4xl">
-              Une installation de ventilation dédiée au local électrique.
+              {details.contextHeading}
             </h2>
             <div className="mt-6 space-y-4 text-base leading-7 text-slate-600">
               {details.context.map((paragraph) => (
@@ -112,7 +159,7 @@ export default async function ProjectPage({ params }: Props) {
               </div>
               <div>
                 <dt className="font-semibold text-slate-500">Configuration</dt>
-                <dd className="mt-1 font-bold text-[#0D1B3D]">Local CTA neuf</dd>
+                <dd className="mt-1 font-bold text-[#0D1B3D]">{details.configuration}</dd>
               </div>
             </dl>
           </aside>
@@ -124,10 +171,10 @@ export default async function ProjectPage({ params }: Props) {
           <div className="max-w-3xl">
             <span className="ypios-kicker">Intervention YPIOS</span>
             <h2 className="ypios-heading mt-4 text-3xl font-bold sm:text-4xl">
-              La CTA et ses réseaux traités comme un ensemble.
+              {details.interventionHeading}
             </h2>
             <p className="mt-5 text-base leading-7 text-slate-600">
-              La réalisation réunit les principaux ouvrages nécessaires à l’intégration de la centrale dans son local technique.
+              {details.interventionLead}
             </p>
           </div>
 
@@ -149,7 +196,7 @@ export default async function ProjectPage({ params }: Props) {
           <div className="max-w-3xl">
             <span className="ypios-kicker">Détails de l’installation</span>
             <h2 className="ypios-heading mt-4 text-3xl font-bold sm:text-4xl">
-              Une réalisation documentée dans sa configuration réelle.
+              {details.galleryHeading}
             </h2>
           </div>
 
@@ -178,7 +225,7 @@ export default async function ProjectPage({ params }: Props) {
       <section className="border-y border-slate-200 bg-white py-14 sm:py-16">
         <div className="ypios-container max-w-4xl">
           <span className="ypios-kicker">Résultat observable</span>
-          <h2 className="ypios-heading mt-4 text-3xl font-bold sm:text-4xl">Une installation technique complète et lisible.</h2>
+          <h2 className="ypios-heading mt-4 text-3xl font-bold sm:text-4xl">{details.resultHeading}</h2>
           <p className="mt-5 text-base leading-7 text-slate-600">{details.result}</p>
         </div>
       </section>
@@ -187,18 +234,21 @@ export default async function ProjectPage({ params }: Props) {
         <div className="ypios-container rounded-[28px] bg-[#0D1B3D] px-7 py-10 text-white sm:px-10 lg:flex lg:items-center lg:justify-between lg:gap-12">
           <div className="max-w-2xl">
             <span className="text-xs font-bold uppercase tracking-[0.15em] text-[#57D4EA]">Votre installation</span>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight">Un projet de CTA ou de ventilation à étudier ?</h2>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight">{details.ctaHeading}</h2>
             <p className="mt-3 text-sm leading-6 text-white/72">
-              Présentez-nous le bâtiment, l’installation existante et les contraintes du local technique.
+              {details.ctaText}
             </p>
           </div>
           <div className="mt-7 flex shrink-0 flex-wrap gap-3 lg:mt-0">
-            <Link
-              href={details.serviceHref}
-              className="inline-flex min-h-[46px] items-center justify-center rounded-full border border-white/25 bg-white/10 px-5 py-3 text-sm font-bold text-white hover:bg-white/15"
-            >
-              Voir {details.serviceLabel}
-            </Link>
+            {details.serviceLinks.map((service) => (
+              <Link
+                key={service.href}
+                href={service.href}
+                className="inline-flex min-h-[46px] items-center justify-center rounded-full border border-white/25 bg-white/10 px-5 py-3 text-sm font-bold text-white hover:bg-white/15"
+              >
+                Voir {service.label}
+              </Link>
+            ))}
             <Link href="/contact" className="ypios-button-primary">Nous contacter →</Link>
           </div>
         </div>

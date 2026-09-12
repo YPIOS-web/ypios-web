@@ -1,6 +1,18 @@
-# Notes de version — YPIOS V3.3.0
+# Notes de version — YPIOS V3.4.0
 
 Date : 12 septembre 2026
+
+## Évolution V3.4.0 — étude de cas Damae Medical
+
+- Création de la page indexable `/realisations/damae-paris-13` consacrée à l’installation de climatisation et de ventilation d’un plateau de bureaux à Paris 13e.
+- Présentation des cassettes suspendues, des réseaux circulaires apparents et de leur coordination avec les chemins de câbles.
+- Généralisation du modèle des études de cas afin que les besoins, la configuration, l’intervention, le résultat et les appels à l’action soient propres à chaque réalisation.
+- Conservation sans changement du contenu validé de la page Aéroport d’Orly lors de cette généralisation.
+- Ajout de liens internes depuis Réalisations, Climatisation et Ventilation vers la nouvelle étude de cas.
+- Ajout automatique de la page et de ses trois photographies au sitemap.
+- Ajout de données structurées `Article` et `BreadcrumbList` sur les études de cas détaillées.
+- Correction de la fiche Westfield Les 4 Temps après confirmation du périmètre : remplacement complet de la CTA, et non conservation de l’équipement existant.
+- Aucun équipement, puissance, marque, résultat chiffré ou engagement non validé n’a été ajouté.
 
 ## Évolution V3.3.0 — page Maintenance CVC
 

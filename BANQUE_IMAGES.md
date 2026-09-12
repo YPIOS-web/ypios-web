@@ -8,7 +8,7 @@ Cette version privilégie les photographies de chantiers YPIOS et ne présente a
 - **Damae Medical — Paris 13e** : cassettes suspendues, bureaux et réseaux de ventilation circulaires apparents.
 - **Emmaüs — Osny (95)** : CTA toiture, réseaux rectangulaires superposés, changements de niveau et supportage.
 - **Aéroport d’Orly — Orly** : local CTA neuf pour la ventilation d’un local électrique, réseaux calorifugés et réseaux hydrauliques rouges.
-- **Westfield Les 4 Temps — La Défense** : vraie CTA Carrier existante en local technique.
+- **Westfield Les 4 Temps — La Défense** : nouvelle CTA Carrier après remplacement complet, photographiée dans son local technique.
 - **Site industriel — Saint-Quentin-en-Yvelines** : CTA VIM/CADO et réseaux circulaires en toiture.
 
 ## Règle de traitement

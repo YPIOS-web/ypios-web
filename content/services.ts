@@ -97,6 +97,11 @@ export const services: Record<
         image: "/images/chantier/orly-local-cta.webp",
         href: "/realisations/aeroport-orly",
       },
+      {
+        title: "Damae Paris 13 — Réseaux apparents",
+        image: "/images/chantier/damae-reseaux-apparents.webp",
+        href: "/realisations/damae-paris-13",
+      },
       { title: "Westfield Les 4 Temps — CTA Carrier", image: "/images/chantier/quatre-temps-carrier.webp" },
       { title: "Saint-Quentin-en-Yvelines — CTA VIM/CADO", image: "/images/chantier/saint-quentin-hero.webp" },
     ],
@@ -173,7 +178,11 @@ export const services: Record<
     references: [
       { title: "Saint-Aspais — Climatisation du self", image: "/images/chantier/saint-aspais-unite-exterieure.webp" },
       { title: "Saint-Aspais — Gainables et faux plafond", image: "/images/chantier/saint-aspais-gainable.webp" },
-      { title: "Damae Paris 13 — Cassettes suspendues", image: "/images/chantier/damae-cassette.webp" },
+      {
+        title: "Damae Paris 13 — Cassettes suspendues",
+        image: "/images/chantier/damae-cassette.webp",
+        href: "/realisations/damae-paris-13",
+      },
       { title: "Damae Paris 13 — Réseaux apparents", image: "/images/chantier/damae-reseaux-apparents.webp" },
     ],
     faq: [],
