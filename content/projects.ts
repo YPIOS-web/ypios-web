@@ -302,6 +302,59 @@ export const projects: Project[] = [
     title: "CTA VIM/CADO et réseaux circulaires",
     description:
       "Installation en toiture d’une CTA VIM/CADO avec réseaux circulaires, supportage et raccordements aérauliques.",
+    details: {
+      seoTitle: "Installation d’une CTA en toiture à Saint-Quentin-en-Yvelines",
+      seoDescription:
+        "Découvrez l’installation par YPIOS d’une CTA VIM/CADO et de réseaux aérauliques circulaires en toiture sur un site industriel des Yvelines.",
+      h1: "Installation d’une CTA en toiture sur un site industriel à Saint-Quentin-en-Yvelines",
+      lead:
+        "Mise en œuvre d’une centrale de traitement d’air VIM/CADO, de ses réseaux circulaires et de leur supportage sur la toiture d’un bâtiment industriel.",
+      contextHeading:
+        "Intégrer une centrale et ses réseaux dans une configuration de toiture existante.",
+      configuration: "CTA et réseaux en toiture",
+      context: [
+        "Cette réalisation concerne une installation de ventilation en toiture sur un site industriel situé à Saint-Quentin-en-Yvelines. La centrale de traitement d’air est raccordée à plusieurs tronçons aérauliques qui cheminent entre les équipements et les émergences du bâtiment.",
+        "L’implantation extérieure impose une organisation lisible de la CTA, des changements de direction et des supports. Les photographies montrent la centrale dans son environnement réel ainsi que la répartition des réseaux circulaires autour de l’équipement.",
+      ],
+      interventionHeading:
+        "Une installation aéraulique organisée autour de la CTA.",
+      interventionLead:
+        "L’intervention réunit la centrale, ses raccordements et les réseaux visibles en toiture dans un ensemble technique cohérent.",
+      intervention: [
+        "Implantation de la centrale de traitement d’air en toiture",
+        "Installation de la CTA VIM/CADO",
+        "Mise en œuvre des réseaux aérauliques circulaires",
+        "Raccordement de la centrale aux différents tronçons de ventilation",
+        "Supportage de la CTA et des réseaux associés",
+      ],
+      galleryHeading:
+        "La centrale et ses raccordements documentés dans leur environnement réel.",
+      technicalPoints: [
+        {
+          title: "CTA en toiture",
+          text: "La centrale VIM/CADO est implantée à l’extérieur et intégrée à l’organisation générale des équipements présents en toiture.",
+        },
+        {
+          title: "Réseaux circulaires",
+          text: "Les gaines circulaires assurent les différentes liaisons aérauliques autour de la centrale, avec plusieurs changements de direction visibles.",
+        },
+        {
+          title: "Supportage technique",
+          text: "La CTA et les tronçons de réseau reposent sur des supports adaptés à leur implantation et à leur cheminement en toiture.",
+        },
+      ],
+      resultHeading: "Une installation de ventilation complète et lisible en toiture.",
+      result:
+        "La centrale VIM/CADO, ses raccordements aérauliques et les réseaux circulaires forment un ensemble clairement organisé sur la toiture du site industriel. Les vues d’ensemble et de détail permettent d’en observer l’implantation réelle.",
+      serviceLinks: [
+        { href: "/services/ventilation", label: "Ventilation & CTA" },
+        { href: "/services/maintenance-cvc", label: "Maintenance CVC" },
+      ],
+      ctaHeading: "Un projet de CTA ou de réseaux aérauliques en toiture ?",
+      ctaText:
+        "Présentez-nous le bâtiment, les équipements attendus, les réseaux existants et les contraintes d’accès à la toiture.",
+      lastModified: "2026-09-12",
+    },
     images: [
       {
         src: "/images/chantier/saint-quentin-hero.webp",

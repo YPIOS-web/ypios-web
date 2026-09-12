@@ -1,6 +1,15 @@
-# Notes de version — YPIOS V3.5.0
+# Notes de version — YPIOS V3.6.0
 
 Date : 12 septembre 2026
+
+## Évolution V3.6.0 — étude de cas Saint-Quentin-en-Yvelines
+
+- Création de la page indexable `/realisations/saint-quentin-en-yvelines` consacrée à l’installation d’une CTA en toiture sur un site industriel des Yvelines.
+- Présentation de la CTA VIM/CADO, des réseaux aérauliques circulaires, des changements de direction et du supportage visibles sur les photographies déjà publiques.
+- Ajout de liens internes depuis l’accueil, Ventilation et Réalisations.
+- Ajout automatique de la page et de ses deux photographies au sitemap.
+- Réutilisation du modèle validé des études de cas, avec métadonnées, canonical et données structurées `Article` et `BreadcrumbList`.
+- Aucun débit, puissance, performance, client nominatif, intervenant tiers ou résultat chiffré n’a été publié.
 
 ## Évolution V3.5.0 — étude de cas Westfield Les 4 Temps
 

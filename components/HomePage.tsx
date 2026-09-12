@@ -85,9 +85,12 @@ export default function HomePage() {
                 Voir nos réalisations <Arrow />
               </Link>
             </div>
-            <p className="mt-7 text-xs font-semibold uppercase tracking-[0.13em] text-white/55">
-              Réalisation YPIOS · Saint-Quentin-en-Yvelines
-            </p>
+            <Link
+              href="/realisations/saint-quentin-en-yvelines"
+              className="mt-7 inline-flex text-xs font-semibold uppercase tracking-[0.13em] text-white/65 underline decoration-white/30 underline-offset-4 hover:text-white"
+            >
+              Réalisation YPIOS · Saint-Quentin-en-Yvelines →
+            </Link>
           </div>
         </div>
 

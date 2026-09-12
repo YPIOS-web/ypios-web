@@ -1,6 +1,6 @@
 # YPIOS — MASTER production V3
 
-Version : **3.5.0** — 12 septembre 2026
+Version : **3.6.0** — 12 septembre 2026
 
 Ce dossier contient la version de production du site vitrine YPIOS. Il reprend la structure graphique V2 validée, les corrections éditoriales finales, les localisations validées et la banque de vraies photos de chantiers YPIOS.
 
@@ -71,4 +71,4 @@ La géométrie des installations n’a pas été modifiée. Les photos de chanti
 - redirections des anciennes URL légales et de l’ancienne page `/services/a-propos` vers leurs pages canoniques.
 - harmonisation du vocabulaire de mise en service, des secteurs B2B et de la référence Westfield Les 4 Temps.
 
-Consulter `PRODUCTION_CHECKLIST.md` avant toute mise en ligne et `VALIDATION_V3.md` pour le détail des contrôles V3.5.0 et des validations héritées.
+Consulter `PRODUCTION_CHECKLIST.md` avant toute mise en ligne et `VALIDATION_V3.md` pour le détail des contrôles V3.6.0 et des validations héritées.

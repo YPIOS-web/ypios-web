@@ -107,7 +107,11 @@ export const services: Record<
         href: "/realisations/damae-paris-13",
       },
       { title: "Emmaüs Osny — CTA toiture", image: "/images/chantier/emmaus-reseaux-superposes.webp" },
-      { title: "Saint-Quentin-en-Yvelines — CTA VIM/CADO", image: "/images/chantier/saint-quentin-hero.webp" },
+      {
+        title: "Saint-Quentin-en-Yvelines — CTA VIM/CADO",
+        image: "/images/chantier/saint-quentin-hero.webp",
+        href: "/realisations/saint-quentin-en-yvelines",
+      },
     ],
     faq: [],
   },
