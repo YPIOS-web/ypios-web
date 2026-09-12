@@ -5,6 +5,7 @@ const serviceLinks = [
   ["Ventilation", "/services/ventilation"],
   ["Plomberie", "/services/plomberie"],
   ["GTC / GTB", "/services/gtc-gtb"],
+  ["Maintenance CVC", "/services/maintenance-cvc"],
 ] as const;
 
 export default function SiteFooter() {

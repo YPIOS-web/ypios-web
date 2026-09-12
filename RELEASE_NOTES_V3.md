@@ -1,6 +1,17 @@
-# Notes de version — YPIOS V3.2.0
+# Notes de version — YPIOS V3.3.0
 
-Date : 11 septembre 2026
+Date : 12 septembre 2026
+
+## Évolution V3.3.0 — page Maintenance CVC
+
+- Création de la page indexable `/services/maintenance-cvc`, destinée aux bâtiments tertiaires, ERP et sites industriels en Île-de-France.
+- Présentation de la maintenance préventive, de la maintenance corrective, du dépannage et de la remise en état des installations CVC.
+- Périmètre transversal couvrant ventilation et CTA, climatisation, hydraulique, régulation et GTB/GTC.
+- Mise en avant d’un état initial avant contrat, de la criticité des équipements, d’un plan de maintenance défini et d’un suivi documenté.
+- Ajout de liens depuis l’en-tête, le pied de page, l’accueil et les quatre pages métiers, puis ajout de l’URL au sitemap.
+- Ajout de données structurées `Service` limitées au périmètre réellement présenté sur la page.
+- Réutilisation exclusive de photographies YPIOS déjà validées ; aucune image artificielle ajoutée.
+- Aucun délai d’intervention, taux d’économie, disponibilité permanente, obligation réglementaire ou résultat chiffré non validé n’est annoncé.
 
 ## Évolution V3.2.0 — première étude de cas détaillée
 

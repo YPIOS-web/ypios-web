@@ -9,6 +9,7 @@ const links = [
   { href: "/services/ventilation", label: "Ventilation" },
   { href: "/services/plomberie", label: "Plomberie" },
   { href: "/services/gtc-gtb", label: "GTC / GTB" },
+  { href: "/services/maintenance-cvc", label: "Maintenance" },
   { href: "/realisations", label: "Réalisations" },
 ];
 

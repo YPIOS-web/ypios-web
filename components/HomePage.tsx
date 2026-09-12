@@ -244,7 +244,10 @@ export default function HomePage() {
             </figure>
           </div>
 
-          <div className="mt-8 flex justify-start">
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Link href="/services/maintenance-cvc" className="ypios-button-primary">
+              Découvrir notre maintenance CVC <Arrow />
+            </Link>
             <Link href="/realisations" className="ypios-button-secondary">
               Découvrir nos réalisations <Arrow />
             </Link>

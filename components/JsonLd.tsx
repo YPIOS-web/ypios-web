@@ -10,7 +10,7 @@ export default function JsonLd() {
     logo: `${site}/brand/ypios-logo.svg`,
     image: `${site}/opengraph-image`,
     areaServed: "Île-de-France",
-    knowsAbout: ["Climatisation", "Ventilation", "Plomberie", "GTC", "GTB"],
+    knowsAbout: ["Climatisation", "Ventilation", "Plomberie", "GTC", "GTB", "Maintenance CVC"],
     address: {
       "@type": "PostalAddress",
       streetAddress: "2, rue des Hauts Sablons",
