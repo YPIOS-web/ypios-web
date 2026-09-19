@@ -230,6 +230,22 @@ export default async function ProjectPage({ params }: Props) {
         </div>
       </section>
 
+      {details.decisionGuide ? (
+        <section className="bg-[#F6F8FB] py-14 sm:py-16">
+          <div className="ypios-container max-w-4xl">
+            <span className="ypios-kicker">Choisir l’intervention adaptée</span>
+            <h2 className="ypios-heading mt-4 text-3xl font-bold sm:text-4xl">
+              {details.decisionGuide.heading}
+            </h2>
+            <div className="mt-5 space-y-4 text-base leading-7 text-slate-600">
+              {details.decisionGuide.paragraphs.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
+
       <section className="bg-[#F6F8FB] py-16 sm:py-20">
         <div className="ypios-container rounded-[28px] bg-[#0D1B3D] px-7 py-10 text-white sm:px-10 lg:flex lg:items-center lg:justify-between lg:gap-12">
           <div className="max-w-2xl">
@@ -249,7 +265,9 @@ export default async function ProjectPage({ params }: Props) {
                 Voir {service.label}
               </Link>
             ))}
-            <Link href="/contact" className="ypios-button-primary">Nous contacter →</Link>
+            <Link href="/contact" className="ypios-button-primary">
+              {details.contactLabel ?? "Nous contacter →"}
+            </Link>
           </div>
         </div>
       </section>
