@@ -13,9 +13,14 @@ export type ProjectDetail = {
   technicalPoints: { title: string; text: string }[];
   resultHeading: string;
   result: string;
+  decisionGuide?: {
+    heading: string;
+    paragraphs: string[];
+  };
   serviceLinks: { href: string; label: string }[];
   ctaHeading: string;
   ctaText: string;
+  contactLabel?: string;
   lastModified: string;
 };
 
@@ -227,12 +232,12 @@ export const projects: Project[] = [
     description:
       "Remplacement complet de la centrale de traitement d’air par une nouvelle CTA Carrier, documentée dans son local technique.",
     details: {
-      seoTitle: "Remplacement d’une CTA à La Défense",
+      seoTitle: "Remplacement complet d’une CTA à La Défense",
       seoDescription:
-        "Découvrez le remplacement complet d’une centrale de traitement d’air par une nouvelle CTA Carrier au centre Westfield Les 4 Temps, à La Défense.",
+        "Remplacement complet d’une CTA Carrier au centre Westfield Les 4 Temps à La Défense : dépose de l’existant, installation et raccordement aux réseaux aérauliques.",
       h1: "Remplacement complet d’une CTA au centre Westfield Les 4 Temps",
       lead:
-        "Remplacement de l’ancienne centrale de traitement d’air par une nouvelle CTA Carrier dans un local technique existant à La Défense.",
+        "Dépose de l’ancienne centrale, installation d’une nouvelle CTA Carrier et raccordement aux réseaux aérauliques existants dans le local technique du centre.",
       contextHeading:
         "Remplacer une centrale existante dans son environnement technique.",
       configuration: "Remplacement complet en local technique",
@@ -270,6 +275,13 @@ export const projects: Project[] = [
       resultHeading: "Une nouvelle centrale intégrée au local technique.",
       result:
         "La nouvelle CTA Carrier remplace intégralement l’équipement précédent. Les photographies présentent la centrale installée, ses raccordements aérauliques et son intégration dans la configuration existante du local.",
+      decisionGuide: {
+        heading: "Remise en état ou remplacement complet de la CTA ?",
+        paragraphs: [
+          "Le choix dépend de l’état de la centrale existante, des organes à reprendre, de sa compatibilité avec les réseaux et des contraintes d’implantation dans le local technique.",
+          "YPIOS peut relever l’installation existante, identifier les adaptations nécessaires et préparer une solution de remplacement compatible avec le bâtiment et ses réseaux.",
+        ],
+      },
       serviceLinks: [
         { href: "/services/ventilation", label: "Ventilation & CTA" },
         { href: "/services/maintenance-cvc", label: "Maintenance CVC" },
@@ -277,7 +289,8 @@ export const projects: Project[] = [
       ctaHeading: "Une CTA existante à remplacer ou à remettre en état ?",
       ctaText:
         "Présentez-nous l’équipement, le local technique, les réseaux existants et les contraintes d’exploitation du site.",
-      lastModified: "2026-09-12",
+      contactLabel: "Faire étudier le remplacement de votre CTA →",
+      lastModified: "2026-09-19",
     },
     images: [
       {
