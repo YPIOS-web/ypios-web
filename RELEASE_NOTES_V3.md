@@ -1,8 +1,20 @@
-# Notes de version — YPIOS V3.6.0
+# Notes de version — YPIOS V3.7.0
 
-Date : 12 septembre 2026
+Date : 19 septembre 2026
+
+## Évolution V3.7.0 — optimisation Remplacement CTA
+
+- Optimisation de l’étude de cas `/realisations/quatre-temps` à partir du premier signal Search Console observé sur la requête « remplacement CTA ».
+- Précision du title, de la meta-description et du texte d’introduction autour du remplacement complet de la CTA Carrier.
+- Ajout d’un bloc d’aide à la décision distinguant remise en état et remplacement complet, sans créer de nouvelle page ni modifier l’URL existante.
+- Contextualisation de l’appel à l’action pour permettre au visiteur de faire étudier le remplacement de sa CTA.
+- Conservation du H1, du canonical, du maillage interne, des données structurées `Article` et `BreadcrumbList` et de l’ensemble des photographies validées.
+- Aucun débit, puissance, performance, économie, délai d’intervention ou résultat chiffré non validé n’a été ajouté.
+- Aucun changement du formulaire, de GA4, de reCAPTCHA, des dépendances ou des en-têtes de sécurité.
 
 ## Évolution V3.6.0 — étude de cas Saint-Quentin-en-Yvelines
+
+Date : 12 septembre 2026
 
 - Création de la page indexable `/realisations/saint-quentin-en-yvelines` consacrée à l’installation d’une CTA en toiture sur un site industriel des Yvelines.
 - Présentation de la CTA VIM/CADO, des réseaux aérauliques circulaires, des changements de direction et du supportage visibles sur les photographies déjà publiques.
