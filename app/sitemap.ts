@@ -6,12 +6,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const routes = [
     ["/", 1, "2026-09-12"],
-    ["/services/climatisation", 0.9, "2026-09-11"],
+    ["/services/climatisation", 0.9, "2026-10-15"],
     ["/services/ventilation", 0.9, "2026-09-12"],
     ["/services/plomberie", 0.9, "2026-09-11"],
     ["/services/gtc-gtb", 0.9, "2026-09-11"],
     ["/services/maintenance-cvc", 0.9, "2026-09-12"],
-    ["/realisations", 0.8, "2026-09-12"],
+    ["/realisations", 0.8, "2026-10-15"],
     ["/contact", 0.8, "2026-09-08"],
     ["/mentions-legales", 0.3, "2026-09-08"],
     ["/politique-confidentialite", 0.3, "2026-09-08"],
