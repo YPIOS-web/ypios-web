@@ -184,8 +184,11 @@ export const services: Record<
       { title: "SAV", text: "Télémaintenance et intervention selon contrat" },
     ],
     references: [
-      { title: "Saint-Aspais — Climatisation du self", image: "/images/chantier/saint-aspais-unite-exterieure.webp" },
-      { title: "Saint-Aspais — Gainables et faux plafond", image: "/images/chantier/saint-aspais-gainable.webp" },
+      {
+        title: "Saint-Aspais — Confort thermique du réfectoire",
+        image: "/images/chantier/saint-aspais-film-solaire-facade.webp",
+        href: "/realisations/saint-aspais",
+      },
       {
         title: "Damae Paris 13 — Cassettes suspendues",
         image: "/images/chantier/damae-cassette.webp",

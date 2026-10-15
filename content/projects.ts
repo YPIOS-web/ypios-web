@@ -40,22 +40,73 @@ export const projects: Project[] = [
     slug: "saint-aspais",
     site: "Institution Saint-Aspais",
     location: "Melun (77)",
-    category: "Climatisation",
-    title: "Climatisation de l’espace self",
+    category: "Climatisation & protection solaire",
+    title: "Confort thermique du réfectoire",
     description:
-      "Intégration des gainables, plénums et diffuseurs dans le faux plafond existant, avec pose de l’unité extérieure Daikin.",
+      "Climatisation gainable de la zone de service du self, complétée par la pose extérieure d’un film solaire SILVER 80 XC sur les baies vitrées du réfectoire.",
+    details: {
+      seoTitle: "Confort thermique d’un réfectoire à Melun",
+      seoDescription:
+        "À Melun, YPIOS associe climatisation gainable et film solaire extérieur SILVER 80 XC pour traiter le confort thermique du réfectoire Saint-Aspais.",
+      h1: "Climatisation gainable et protection solaire du réfectoire Saint-Aspais",
+      lead:
+        "À Melun, YPIOS a accompagné l’Institution Saint-Aspais avec deux interventions complémentaires : la climatisation gainable de la zone de service du self, puis la pose d’une protection solaire extérieure sur les baies vitrées du réfectoire.",
+      contextHeading: "Une climatisation intégrée au faux plafond.",
+      configuration: "Gainables en faux plafond et film solaire extérieur",
+      context: [
+        "La première intervention a porté sur l’installation d’une climatisation gainable dans l’espace self, avec intégration des gainables, plénums et réseaux de diffusion dans le faux plafond existant.",
+        "Les photographies prises pendant les travaux montrent cette intégration technique ainsi que l’unité extérieure Daikin associée.",
+      ],
+      interventionHeading: "Une protection solaire complémentaire.",
+      interventionLead:
+        "YPIOS a ensuite complété cette installation par la pose extérieure d’un film de contrôle solaire SILVER 80 XC sur les baies vitrées du réfectoire.",
+      intervention: [
+        "Climatisation gainable de la zone de service du self lors de la première intervention",
+        "Intégration des gainables, plénums et réseaux de diffusion dans le faux plafond existant",
+        "Pose d’une unité extérieure Daikin associée à la climatisation",
+        "Pose extérieure du film de contrôle solaire SILVER 80 XC sur les baies vitrées du réfectoire lors de l’intervention complémentaire",
+      ],
+      galleryHeading: "Les deux interventions documentées sur site.",
+      technicalPoints: [
+        {
+          title: "Limiter les apports solaires",
+          text: "Le film vise à limiter les apports solaires à travers les vitrages, en complément du traitement de l’air intérieur assuré par la climatisation. Sa finition argentée et réfléchissante est visible sur la photographie de façade.",
+        },
+        {
+          title: "Valeurs de référence fabricant",
+          text: "La fiche Solar Screen indique une énergie solaire totale rejetée de 82 % sur un simple vitrage de référence de 3 mm et de 88 % sur un double vitrage Low-E de référence. Ces valeurs ne correspondent pas à une baisse de température mesurée dans le réfectoire.",
+        },
+        {
+          title: "Transmission de lumière visible",
+          text: "Le choix du film s’accompagne d’une diminution de la transmission de lumière visible : le fabricant indique 16 % sur le simple vitrage de référence et 15 % sur le double vitrage Low-E de référence. Ces caractéristiques dépendent de la configuration du vitrage.",
+        },
+      ],
+      resultHeading: "Deux interventions au service du confort thermique.",
+      result:
+        "Cette réalisation associe une action sur l’ambiance intérieure et une action sur les apports solaires au niveau des vitrages. Les photographies documentent les équipements de climatisation pendant leur installation et l’aspect de la façade après pose du film. Aucune mesure thermique avant/après ni donnée de consommation ne nous a été transmise : aucun gain chiffré de température ou d’énergie n’est donc revendiqué.",
+      serviceLinks: [{ href: "/services/climatisation", label: "Climatisation" }],
+      ctaHeading: "Un projet de confort thermique pour votre bâtiment ?",
+      ctaText:
+        "Présentez-nous les locaux, leurs usages, les surfaces vitrées et les équipements de climatisation existants pour étudier les solutions adaptées.",
+      contactLabel: "Faire étudier votre projet →",
+      lastModified: "2026-10-15",
+    },
     images: [
       {
-        src: "/images/chantier/saint-aspais-unite-exterieure.webp",
-        alt: "Unité extérieure Daikin installée par YPIOS à l’Institution Saint-Aspais",
-      },
-      {
-        src: "/images/chantier/saint-aspais-faux-plafond.webp",
-        alt: "Réseaux de climatisation intégrés dans le faux plafond du self de Saint-Aspais",
+        src: "/images/chantier/saint-aspais-film-solaire-facade.webp",
+        alt: "Façade vitrée du réfectoire Saint-Aspais à Melun après pose d’un film solaire extérieur réfléchissant",
       },
       {
         src: "/images/chantier/saint-aspais-gainable.webp",
-        alt: "Unité gainable et plénums avant fermeture du faux plafond à Saint-Aspais",
+        alt: "Unité gainable et plénums pendant l’installation de la climatisation du self Saint-Aspais",
+      },
+      {
+        src: "/images/chantier/saint-aspais-faux-plafond.webp",
+        alt: "Réseaux de climatisation pendant leur intégration dans le faux plafond du self Saint-Aspais",
+      },
+      {
+        src: "/images/chantier/saint-aspais-unite-exterieure.webp",
+        alt: "Unité extérieure Daikin de la climatisation du self Saint-Aspais à Melun",
       },
     ],
   },
