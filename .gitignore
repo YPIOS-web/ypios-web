@@ -3,6 +3,7 @@ node_modules/
 .next/
 out/
 *.tsbuildinfo
+test-results/
 
 # Local configuration and secrets
 .env

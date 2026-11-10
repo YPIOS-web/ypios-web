@@ -1,0 +1,2857 @@
+{
+  "routes": {
+    "/": {
+      "status": 200,
+      "title": "YPIOS | Climatisation, ventilation, plomberie & GTB",
+      "canonical": "https://www.ypios.fr/",
+      "metadata": [
+        [
+          "application-name",
+          "YPIOS"
+        ],
+        [
+          "author",
+          "YPIOS"
+        ],
+        [
+          "category",
+          "CVC, plomberie et gestion technique du bâtiment"
+        ],
+        [
+          "color-scheme",
+          "light"
+        ],
+        [
+          "creator",
+          "YPIOS"
+        ],
+        [
+          "description",
+          "YPIOS accompagne vos installations de climatisation, ventilation, plomberie et GTB : études, travaux, mise en service, maintenance et dépannage en Île-de-France."
+        ],
+        [
+          "googlebot",
+          "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+        ],
+        [
+          "og:description",
+          "Études, travaux, mise en service, maintenance et dépannage CVC, plomberie et GTB en Île-de-France."
+        ],
+        [
+          "og:image",
+          "https://www.ypios.fr/opengraph-image?fac8a0cc6818f4db"
+        ],
+        [
+          "og:image:alt",
+          "YPIOS — Climatisation, ventilation, plomberie et GTB en Île-de-France"
+        ],
+        [
+          "og:image:height",
+          "630"
+        ],
+        [
+          "og:image:type",
+          "image/png"
+        ],
+        [
+          "og:image:width",
+          "1200"
+        ],
+        [
+          "og:locale",
+          "fr_FR"
+        ],
+        [
+          "og:site_name",
+          "YPIOS"
+        ],
+        [
+          "og:title",
+          "YPIOS | Climatisation, ventilation, plomberie & GTB"
+        ],
+        [
+          "og:type",
+          "website"
+        ],
+        [
+          "og:url",
+          "https://www.ypios.fr"
+        ],
+        [
+          "publisher",
+          "YPIOS"
+        ],
+        [
+          "robots",
+          "index, follow"
+        ],
+        [
+          "theme-color",
+          "#0D1B3D"
+        ],
+        [
+          "twitter:card",
+          "summary_large_image"
+        ],
+        [
+          "twitter:description",
+          "Études, travaux, mise en service, maintenance et dépannage CVC, plomberie et GTB en Île-de-France."
+        ],
+        [
+          "twitter:image",
+          "https://www.ypios.fr/opengraph-image?fac8a0cc6818f4db"
+        ],
+        [
+          "twitter:image:alt",
+          "YPIOS — Climatisation, ventilation, plomberie et GTB en Île-de-France"
+        ],
+        [
+          "twitter:image:height",
+          "630"
+        ],
+        [
+          "twitter:image:type",
+          "image/png"
+        ],
+        [
+          "twitter:image:width",
+          "1200"
+        ],
+        [
+          "twitter:title",
+          "YPIOS | Climatisation, ventilation, plomberie & GTB"
+        ],
+        [
+          "viewport",
+          "width=device-width, initial-scale=1"
+        ]
+      ],
+      "structured": [
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "@id": "https://www.ypios.fr/#organization",
+          "name": "YPIOS",
+          "url": "https://www.ypios.fr",
+          "email": "contact@ypios.fr",
+          "logo": "https://www.ypios.fr/brand/ypios-logo.svg",
+          "image": "https://www.ypios.fr/opengraph-image",
+          "areaServed": "Île-de-France",
+          "knowsAbout": [
+            "Climatisation",
+            "Ventilation",
+            "Plomberie",
+            "GTC",
+            "GTB",
+            "Maintenance CVC"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "2, rue des Hauts Sablons",
+            "postalCode": "91310",
+            "addressLocality": "Leuville-sur-Orge",
+            "addressCountry": "FR"
+          }
+        }
+      ],
+      "h1": [
+        "Votre problème.Notre solution."
+      ],
+      "links": [
+        "/",
+        "/contact",
+        "/cookies",
+        "/mentions-legales",
+        "/politique-confidentialite",
+        "/realisations",
+        "/realisations/quatre-temps",
+        "/realisations/saint-quentin-en-yvelines",
+        "/services/climatisation",
+        "/services/gtc-gtb",
+        "/services/maintenance-cvc",
+        "/services/plomberie",
+        "/services/ventilation"
+      ],
+      "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https://www.google-analytics.com https://www.googletagmanager.com; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://www.google.com/recaptcha/; frame-src https://www.google.com/recaptcha/ https://recaptcha.google.com/recaptcha/; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+    },
+    "/services/climatisation": {
+      "status": 200,
+      "title": "Climatisation VRV/DRV en Île-de-France | YPIOS",
+      "canonical": "https://www.ypios.fr/services/climatisation",
+      "metadata": [
+        [
+          "application-name",
+          "YPIOS"
+        ],
+        [
+          "author",
+          "YPIOS"
+        ],
+        [
+          "category",
+          "CVC, plomberie et gestion technique du bâtiment"
+        ],
+        [
+          "color-scheme",
+          "light"
+        ],
+        [
+          "creator",
+          "YPIOS"
+        ],
+        [
+          "description",
+          "YPIOS étudie, installe, maintient et dépanne les systèmes de climatisation VRV/DRV, splits et gainables des bâtiments tertiaires en Île-de-France."
+        ],
+        [
+          "googlebot",
+          "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+        ],
+        [
+          "og:description",
+          "Études, travaux, mise en service, maintenance et dépannage CVC, plomberie et GTB en Île-de-France."
+        ],
+        [
+          "og:image",
+          "https://www.ypios.fr/opengraph-image?fac8a0cc6818f4db"
+        ],
+        [
+          "og:image:alt",
+          "YPIOS — Climatisation, ventilation, plomberie et GTB en Île-de-France"
+        ],
+        [
+          "og:image:height",
+          "630"
+        ],
+        [
+          "og:image:type",
+          "image/png"
+        ],
+        [
+          "og:image:width",
+          "1200"
+        ],
+        [
+          "og:locale",
+          "fr_FR"
+        ],
+        [
+          "og:site_name",
+          "YPIOS"
+        ],
+        [
+          "og:title",
+          "YPIOS | Climatisation, ventilation, plomberie & GTB"
+        ],
+        [
+          "og:type",
+          "website"
+        ],
+        [
+          "og:url",
+          "https://www.ypios.fr"
+        ],
+        [
+          "publisher",
+          "YPIOS"
+        ],
+        [
+          "robots",
+          "index, follow"
+        ],
+        [
+          "theme-color",
+          "#0D1B3D"
+        ],
+        [
+          "twitter:card",
+          "summary_large_image"
+        ],
+        [
+          "twitter:description",
+          "Études, travaux, mise en service, maintenance et dépannage CVC, plomberie et GTB en Île-de-France."
+        ],
+        [
+          "twitter:image",
+          "https://www.ypios.fr/opengraph-image?fac8a0cc6818f4db"
+        ],
+        [
+          "twitter:image:alt",
+          "YPIOS — Climatisation, ventilation, plomberie et GTB en Île-de-France"
+        ],
+        [
+          "twitter:image:height",
+          "630"
+        ],
+        [
+          "twitter:image:type",
+          "image/png"
+        ],
+        [
+          "twitter:image:width",
+          "1200"
+        ],
+        [
+          "twitter:title",
+          "YPIOS | Climatisation, ventilation, plomberie & GTB"
+        ],
+        [
+          "viewport",
+          "width=device-width, initial-scale=1"
+        ]
+      ],
+      "structured": [
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "@id": "https://www.ypios.fr/#organization",
+          "name": "YPIOS",
+          "url": "https://www.ypios.fr",
+          "email": "contact@ypios.fr",
+          "logo": "https://www.ypios.fr/brand/ypios-logo.svg",
+          "image": "https://www.ypios.fr/opengraph-image",
+          "areaServed": "Île-de-France",
+          "knowsAbout": [
+            "Climatisation",
+            "Ventilation",
+            "Plomberie",
+            "GTC",
+            "GTB",
+            "Maintenance CVC"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "2, rue des Hauts Sablons",
+            "postalCode": "91310",
+            "addressLocality": "Leuville-sur-Orge",
+            "addressCountry": "FR"
+          }
+        }
+      ],
+      "h1": [
+        "Climatisation VRV/DRV tertiaire"
+      ],
+      "links": [
+        "/",
+        "/contact",
+        "/cookies",
+        "/mentions-legales",
+        "/politique-confidentialite",
+        "/realisations",
+        "/realisations/damae-paris-13",
+        "/realisations/saint-aspais",
+        "/services/climatisation",
+        "/services/gtc-gtb",
+        "/services/maintenance-cvc",
+        "/services/plomberie",
+        "/services/ventilation"
+      ],
+      "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https://www.google-analytics.com https://www.googletagmanager.com; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://www.google.com/recaptcha/; frame-src https://www.google.com/recaptcha/ https://recaptcha.google.com/recaptcha/; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+    },
+    "/services/ventilation": {
+      "status": 200,
+      "title": "Ventilation & CTA en Île-de-France | YPIOS",
+      "canonical": "https://www.ypios.fr/services/ventilation",
+      "metadata": [
+        [
+          "application-name",
+          "YPIOS"
+        ],
+        [
+          "author",
+          "YPIOS"
+        ],
+        [
+          "category",
+          "CVC, plomberie et gestion technique du bâtiment"
+        ],
+        [
+          "color-scheme",
+          "light"
+        ],
+        [
+          "creator",
+          "YPIOS"
+        ],
+        [
+          "description",
+          "YPIOS réalise et maintient vos CTA, réseaux aérauliques, équipements de désenfumage et réglages de ventilation partout en Île-de-France."
+        ],
+        [
+          "googlebot",
+          "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+        ],
+        [
+          "og:description",
+          "Études, travaux, mise en service, maintenance et dépannage CVC, plomberie et GTB en Île-de-France."
+        ],
+        [
+          "og:image",
+          "https://www.ypios.fr/opengraph-image?fac8a0cc6818f4db"
+        ],
+        [
+          "og:image:alt",
+          "YPIOS — Climatisation, ventilation, plomberie et GTB en Île-de-France"
+        ],
+        [
+          "og:image:height",
+          "630"
+        ],
+        [
+          "og:image:type",
+          "image/png"
+        ],
+        [
+          "og:image:width",
+          "1200"
+        ],
+        [
+          "og:locale",
+          "fr_FR"
+        ],
+        [
+          "og:site_name",
+          "YPIOS"
+        ],
+        [
+          "og:title",
+          "YPIOS | Climatisation, ventilation, plomberie & GTB"
+        ],
+        [
+          "og:type",
+          "website"
+        ],
+        [
+          "og:url",
+          "https://www.ypios.fr"
+        ],
+        [
+          "publisher",
+          "YPIOS"
+        ],
+        [
+          "robots",
+          "index, follow"
+        ],
+        [
+          "theme-color",
+          "#0D1B3D"
+        ],
+        [
+          "twitter:card",
+          "summary_large_image"
+        ],
+        [
+          "twitter:description",
+          "Études, travaux, mise en service, maintenance et dépannage CVC, plomberie et GTB en Île-de-France."
+        ],
+        [
+          "twitter:image",
+          "https://www.ypios.fr/opengraph-image?fac8a0cc6818f4db"
+        ],
+        [
+          "twitter:image:alt",
+          "YPIOS — Climatisation, ventilation, plomberie et GTB en Île-de-France"
+        ],
+        [
+          "twitter:image:height",
+          "630"
+        ],
+        [
+          "twitter:image:type",
+          "image/png"
+        ],
+        [
+          "twitter:image:width",
+          "1200"
+        ],
+        [
+          "twitter:title",
+          "YPIOS | Climatisation, ventilation, plomberie & GTB"
+        ],
+        [
+          "viewport",
+          "width=device-width, initial-scale=1"
+        ]
+      ],
+      "structured": [
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "@id": "https://www.ypios.fr/#organization",
+          "name": "YPIOS",
+          "url": "https://www.ypios.fr",
+          "email": "contact@ypios.fr",
+          "logo": "https://www.ypios.fr/brand/ypios-logo.svg",
+          "image": "https://www.ypios.fr/opengraph-image",
+          "areaServed": "Île-de-France",
+          "knowsAbout": [
+            "Climatisation",
+            "Ventilation",
+            "Plomberie",
+            "GTC",
+            "GTB",
+            "Maintenance CVC"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "2, rue des Hauts Sablons",
+            "postalCode": "91310",
+            "addressLocality": "Leuville-sur-Orge",
+            "addressCountry": "FR"
+          }
+        }
+      ],
+      "h1": [
+        "Ventilation & traitement d’air"
+      ],
+      "links": [
+        "/",
+        "/contact",
+        "/cookies",
+        "/mentions-legales",
+        "/politique-confidentialite",
+        "/realisations",
+        "/realisations/aeroport-orly",
+        "/realisations/damae-paris-13",
+        "/realisations/quatre-temps",
+        "/services/climatisation",
+        "/services/gtc-gtb",
+        "/services/maintenance-cvc",
+        "/services/plomberie",
+        "/services/ventilation"
+      ],
+      "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https://www.google-analytics.com https://www.googletagmanager.com; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://www.google.com/recaptcha/; frame-src https://www.google.com/recaptcha/ https://recaptcha.google.com/recaptcha/; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+    },
+    "/services/plomberie": {
+      "status": 200,
+      "title": "Plomberie tertiaire en Île-de-France | YPIOS",
+      "canonical": "https://www.ypios.fr/services/plomberie",
+      "metadata": [
+        [
+          "application-name",
+          "YPIOS"
+        ],
+        [
+          "author",
+          "YPIOS"
+        ],
+        [
+          "category",
+          "CVC, plomberie et gestion technique du bâtiment"
+        ],
+        [
+          "color-scheme",
+          "light"
+        ],
+        [
+          "creator",
+          "YPIOS"
+        ],
+        [
+          "description",
+          "Plomberie technique et tertiaire : réseaux EF/ECS, évacuations, chaufferies, sanitaires, maintenance et dépannage dans toute l’Île-de-France."
+        ],
+        [
+          "googlebot",
+          "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+        ],
+        [
+          "og:description",
+          "Études, travaux, mise en service, maintenance et dépannage CVC, plomberie et GTB en Île-de-France."
+        ],
+        [
+          "og:image",
+          "https://www.ypios.fr/opengraph-image?fac8a0cc6818f4db"
+        ],
+        [
+          "og:image:alt",
+          "YPIOS — Climatisation, ventilation, plomberie et GTB en Île-de-France"
+        ],
+        [
+          "og:image:height",
+          "630"
+        ],
+        [
+          "og:image:type",
+          "image/png"
+        ],
+        [
+          "og:image:width",
+          "1200"
+        ],
+        [
+          "og:locale",
+          "fr_FR"
+        ],
+        [
+          "og:site_name",
+          "YPIOS"
+        ],
+        [
+          "og:title",
+          "YPIOS | Climatisation, ventilation, plomberie & GTB"
+        ],
+        [
+          "og:type",
+          "website"
+        ],
+        [
+          "og:url",
+          "https://www.ypios.fr"
+        ],
+        [
+          "publisher",
+          "YPIOS"
+        ],
+        [
+          "robots",
+          "index, follow"
+        ],
+        [
+          "theme-color",
+          "#0D1B3D"
+        ],
+        [
+          "twitter:card",
+          "summary_large_image"
+        ],
+        [
+          "twitter:description",
+          "Études, travaux, mise en service, maintenance et dépannage CVC, plomberie et GTB en Île-de-France."
+        ],
+        [
+          "twitter:image",
+          "https://www.ypios.fr/opengraph-image?fac8a0cc6818f4db"
+        ],
+        [
+          "twitter:image:alt",
+          "YPIOS — Climatisation, ventilation, plomberie et GTB en Île-de-France"
+        ],
+        [
+          "twitter:image:height",
+          "630"
+        ],
+        [
+          "twitter:image:type",
+          "image/png"
+        ],
+        [
+          "twitter:image:width",
+          "1200"
+        ],
+        [
+          "twitter:title",
+          "YPIOS | Climatisation, ventilation, plomberie & GTB"
+        ],
+        [
+          "viewport",
+          "width=device-width, initial-scale=1"
+        ]
+      ],
+      "structured": [
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "@id": "https://www.ypios.fr/#organization",
+          "name": "YPIOS",
+          "url": "https://www.ypios.fr",
+          "email": "contact@ypios.fr",
+          "logo": "https://www.ypios.fr/brand/ypios-logo.svg",
+          "image": "https://www.ypios.fr/opengraph-image",
+          "areaServed": "Île-de-France",
+          "knowsAbout": [
+            "Climatisation",
+            "Ventilation",
+            "Plomberie",
+            "GTC",
+            "GTB",
+            "Maintenance CVC"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "2, rue des Hauts Sablons",
+            "postalCode": "91310",
+            "addressLocality": "Leuville-sur-Orge",
+            "addressCountry": "FR"
+          }
+        }
+      ],
+      "h1": [
+        "Plomberie tertiaire"
+      ],
+      "links": [
+        "/",
+        "/contact",
+        "/cookies",
+        "/mentions-legales",
+        "/politique-confidentialite",
+        "/realisations",
+        "/services/climatisation",
+        "/services/gtc-gtb",
+        "/services/maintenance-cvc",
+        "/services/plomberie",
+        "/services/ventilation"
+      ],
+      "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https://www.google-analytics.com https://www.googletagmanager.com; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://www.google.com/recaptcha/; frame-src https://www.google.com/recaptcha/ https://recaptcha.google.com/recaptcha/; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+    },
+    "/services/gtc-gtb": {
+      "status": 200,
+      "title": "GTC / GTB & régulation CVC en Île-de-France | YPIOS",
+      "canonical": "https://www.ypios.fr/services/gtc-gtb",
+      "metadata": [
+        [
+          "application-name",
+          "YPIOS"
+        ],
+        [
+          "author",
+          "YPIOS"
+        ],
+        [
+          "category",
+          "CVC, plomberie et gestion technique du bâtiment"
+        ],
+        [
+          "color-scheme",
+          "light"
+        ],
+        [
+          "creator",
+          "YPIOS"
+        ],
+        [
+          "description",
+          "YPIOS diagnostique, intègre et maintient les systèmes GTC/GTB et la régulation CVC des bâtiments tertiaires en Île-de-France."
+        ],
+        [
+          "googlebot",
+          "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+        ],
+        [
+          "og:description",
+          "Études, travaux, mise en service, maintenance et dépannage CVC, plomberie et GTB en Île-de-France."
+        ],
+        [
+          "og:image",
+          "https://www.ypios.fr/opengraph-image?fac8a0cc6818f4db"
+        ],
+        [
+          "og:image:alt",
+          "YPIOS — Climatisation, ventilation, plomberie et GTB en Île-de-France"
+        ],
+        [
+          "og:image:height",
+          "630"
+        ],
+        [
+          "og:image:type",
+          "image/png"
+        ],
+        [
+          "og:image:width",
+          "1200"
+        ],
+        [
+          "og:locale",
+          "fr_FR"
+        ],
+        [
+          "og:site_name",
+          "YPIOS"
+        ],
+        [
+          "og:title",
+          "YPIOS | Climatisation, ventilation, plomberie & GTB"
+        ],
+        [
+          "og:type",
+          "website"
+        ],
+        [
+          "og:url",
+          "https://www.ypios.fr"
+        ],
+        [
+          "publisher",
+          "YPIOS"
+        ],
+        [
+          "robots",
+          "index, follow"
+        ],
+        [
+          "theme-color",
+          "#0D1B3D"
+        ],
+        [
+          "twitter:card",
+          "summary_large_image"
+        ],
+        [
+          "twitter:description",
+          "Études, travaux, mise en service, maintenance et dépannage CVC, plomberie et GTB en Île-de-France."
+        ],
+        [
+          "twitter:image",
+          "https://www.ypios.fr/opengraph-image?fac8a0cc6818f4db"
+        ],
+        [
+          "twitter:image:alt",
+          "YPIOS — Climatisation, ventilation, plomberie et GTB en Île-de-France"
+        ],
+        [
+          "twitter:image:height",
+          "630"
+        ],
+        [
+          "twitter:image:type",
+          "image/png"
+        ],
+        [
+          "twitter:image:width",
+          "1200"
+        ],
+        [
+          "twitter:title",
+          "YPIOS | Climatisation, ventilation, plomberie & GTB"
+        ],
+        [
+          "viewport",
+          "width=device-width, initial-scale=1"
+        ]
+      ],
+      "structured": [
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "@id": "https://www.ypios.fr/#organization",
+          "name": "YPIOS",
+          "url": "https://www.ypios.fr",
+          "email": "contact@ypios.fr",
+          "logo": "https://www.ypios.fr/brand/ypios-logo.svg",
+          "image": "https://www.ypios.fr/opengraph-image",
+          "areaServed": "Île-de-France",
+          "knowsAbout": [
+            "Climatisation",
+            "Ventilation",
+            "Plomberie",
+            "GTC",
+            "GTB",
+            "Maintenance CVC"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "2, rue des Hauts Sablons",
+            "postalCode": "91310",
+            "addressLocality": "Leuville-sur-Orge",
+            "addressCountry": "FR"
+          }
+        }
+      ],
+      "h1": [
+        "GTC / GTB & régulation CVC"
+      ],
+      "links": [
+        "/",
+        "/contact",
+        "/cookies",
+        "/mentions-legales",
+        "/politique-confidentialite",
+        "/realisations",
+        "/services/climatisation",
+        "/services/gtc-gtb",
+        "/services/maintenance-cvc",
+        "/services/plomberie",
+        "/services/ventilation"
+      ],
+      "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https://www.google-analytics.com https://www.googletagmanager.com; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://www.google.com/recaptcha/; frame-src https://www.google.com/recaptcha/ https://recaptcha.google.com/recaptcha/; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+    },
+    "/services/maintenance-cvc": {
+      "status": 200,
+      "title": "Maintenance CVC en Île-de-France | YPIOS",
+      "canonical": "https://www.ypios.fr/services/maintenance-cvc",
+      "metadata": [
+        [
+          "application-name",
+          "YPIOS"
+        ],
+        [
+          "author",
+          "YPIOS"
+        ],
+        [
+          "category",
+          "CVC, plomberie et gestion technique du bâtiment"
+        ],
+        [
+          "color-scheme",
+          "light"
+        ],
+        [
+          "creator",
+          "YPIOS"
+        ],
+        [
+          "description",
+          "Maintenance préventive, dépannage et remise en état des installations CVC des bâtiments tertiaires, ERP et sites industriels en Île-de-France."
+        ],
+        [
+          "googlebot",
+          "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+        ],
+        [
+          "og:description",
+          "Diagnostic, maintenance préventive, dépannage et remise en état des installations CVC des bâtiments professionnels."
+        ],
+        [
+          "og:image",
+          "https://www.ypios.fr/images/quatre-temps-apres.webp"
+        ],
+        [
+          "og:image:alt",
+          "Centrale de traitement d’air après intervention YPIOS"
+        ],
+        [
+          "og:title",
+          "Maintenance CVC en Île-de-France"
+        ],
+        [
+          "og:type",
+          "website"
+        ],
+        [
+          "og:url",
+          "https://www.ypios.fr/services/maintenance-cvc"
+        ],
+        [
+          "publisher",
+          "YPIOS"
+        ],
+        [
+          "robots",
+          "index, follow"
+        ],
+        [
+          "theme-color",
+          "#0D1B3D"
+        ],
+        [
+          "twitter:card",
+          "summary_large_image"
+        ],
+        [
+          "twitter:description",
+          "Études, travaux, mise en service, maintenance et dépannage CVC, plomberie et GTB en Île-de-France."
+        ],
+        [
+          "twitter:image",
+          "https://www.ypios.fr/images/quatre-temps-apres.webp"
+        ],
+        [
+          "twitter:image:alt",
+          "Centrale de traitement d’air après intervention YPIOS"
+        ],
+        [
+          "twitter:title",
+          "YPIOS | Climatisation, ventilation, plomberie & GTB"
+        ],
+        [
+          "viewport",
+          "width=device-width, initial-scale=1"
+        ]
+      ],
+      "structured": [
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "@id": "https://www.ypios.fr/#organization",
+          "name": "YPIOS",
+          "url": "https://www.ypios.fr",
+          "email": "contact@ypios.fr",
+          "logo": "https://www.ypios.fr/brand/ypios-logo.svg",
+          "image": "https://www.ypios.fr/opengraph-image",
+          "areaServed": "Île-de-France",
+          "knowsAbout": [
+            "Climatisation",
+            "Ventilation",
+            "Plomberie",
+            "GTC",
+            "GTB",
+            "Maintenance CVC"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "2, rue des Hauts Sablons",
+            "postalCode": "91310",
+            "addressLocality": "Leuville-sur-Orge",
+            "addressCountry": "FR"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "@id": "https://www.ypios.fr/services/maintenance-cvc#service",
+          "name": "Maintenance CVC en Île-de-France",
+          "serviceType": "Maintenance préventive et corrective des installations CVC",
+          "url": "https://www.ypios.fr/services/maintenance-cvc",
+          "provider": {
+            "@id": "https://www.ypios.fr/#organization"
+          },
+          "areaServed": {
+            "@type": "AdministrativeArea",
+            "name": "Île-de-France"
+          },
+          "audience": {
+            "@type": "BusinessAudience",
+            "audienceType": "Bâtiments tertiaires, ERP et sites industriels"
+          }
+        }
+      ],
+      "h1": [
+        "Maintenance CVC des bâtiments professionnels en Île-de-France"
+      ],
+      "links": [
+        "/",
+        "/contact",
+        "/cookies",
+        "/mentions-legales",
+        "/politique-confidentialite",
+        "/realisations",
+        "/realisations/quatre-temps",
+        "/services/climatisation",
+        "/services/gtc-gtb",
+        "/services/maintenance-cvc",
+        "/services/plomberie",
+        "/services/ventilation"
+      ],
+      "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https://www.google-analytics.com https://www.googletagmanager.com; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://www.google.com/recaptcha/; frame-src https://www.google.com/recaptcha/ https://recaptcha.google.com/recaptcha/; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+    },
+    "/realisations": {
+      "status": 200,
+      "title": "Réalisations CVC en Île-de-France | YPIOS",
+      "canonical": "https://www.ypios.fr/realisations",
+      "metadata": [
+        [
+          "application-name",
+          "YPIOS"
+        ],
+        [
+          "author",
+          "YPIOS"
+        ],
+        [
+          "category",
+          "CVC, plomberie et gestion technique du bâtiment"
+        ],
+        [
+          "color-scheme",
+          "light"
+        ],
+        [
+          "creator",
+          "YPIOS"
+        ],
+        [
+          "description",
+          "Découvrez des réalisations YPIOS en climatisation et ventilation pour des bureaux, ERP, sites industriels et installations techniques en Île-de-France."
+        ],
+        [
+          "googlebot",
+          "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+        ],
+        [
+          "og:description",
+          "Études, travaux, mise en service, maintenance et dépannage CVC, plomberie et GTB en Île-de-France."
+        ],
+        [
+          "og:image",
+          "https://www.ypios.fr/opengraph-image?fac8a0cc6818f4db"
+        ],
+        [
+          "og:image:alt",
+          "YPIOS — Climatisation, ventilation, plomberie et GTB en Île-de-France"
+        ],
+        [
+          "og:image:height",
+          "630"
+        ],
+        [
+          "og:image:type",
+          "image/png"
+        ],
+        [
+          "og:image:width",
+          "1200"
+        ],
+        [
+          "og:locale",
+          "fr_FR"
+        ],
+        [
+          "og:site_name",
+          "YPIOS"
+        ],
+        [
+          "og:title",
+          "YPIOS | Climatisation, ventilation, plomberie & GTB"
+        ],
+        [
+          "og:type",
+          "website"
+        ],
+        [
+          "og:url",
+          "https://www.ypios.fr"
+        ],
+        [
+          "publisher",
+          "YPIOS"
+        ],
+        [
+          "robots",
+          "index, follow"
+        ],
+        [
+          "theme-color",
+          "#0D1B3D"
+        ],
+        [
+          "twitter:card",
+          "summary_large_image"
+        ],
+        [
+          "twitter:description",
+          "Études, travaux, mise en service, maintenance et dépannage CVC, plomberie et GTB en Île-de-France."
+        ],
+        [
+          "twitter:image",
+          "https://www.ypios.fr/opengraph-image?fac8a0cc6818f4db"
+        ],
+        [
+          "twitter:image:alt",
+          "YPIOS — Climatisation, ventilation, plomberie et GTB en Île-de-France"
+        ],
+        [
+          "twitter:image:height",
+          "630"
+        ],
+        [
+          "twitter:image:type",
+          "image/png"
+        ],
+        [
+          "twitter:image:width",
+          "1200"
+        ],
+        [
+          "twitter:title",
+          "YPIOS | Climatisation, ventilation, plomberie & GTB"
+        ],
+        [
+          "viewport",
+          "width=device-width, initial-scale=1"
+        ]
+      ],
+      "structured": [
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "@id": "https://www.ypios.fr/#organization",
+          "name": "YPIOS",
+          "url": "https://www.ypios.fr",
+          "email": "contact@ypios.fr",
+          "logo": "https://www.ypios.fr/brand/ypios-logo.svg",
+          "image": "https://www.ypios.fr/opengraph-image",
+          "areaServed": "Île-de-France",
+          "knowsAbout": [
+            "Climatisation",
+            "Ventilation",
+            "Plomberie",
+            "GTC",
+            "GTB",
+            "Maintenance CVC"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "2, rue des Hauts Sablons",
+            "postalCode": "91310",
+            "addressLocality": "Leuville-sur-Orge",
+            "addressCountry": "FR"
+          }
+        }
+      ],
+      "h1": [
+        "Réalisations CVC en Île-de-France"
+      ],
+      "links": [
+        "/",
+        "/contact",
+        "/cookies",
+        "/mentions-legales",
+        "/politique-confidentialite",
+        "/realisations",
+        "/realisations/aeroport-orly",
+        "/realisations/damae-paris-13",
+        "/realisations/quatre-temps",
+        "/realisations/saint-aspais",
+        "/realisations/saint-quentin-en-yvelines",
+        "/services/climatisation",
+        "/services/gtc-gtb",
+        "/services/maintenance-cvc",
+        "/services/plomberie",
+        "/services/ventilation"
+      ],
+      "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https://www.google-analytics.com https://www.googletagmanager.com; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://www.google.com/recaptcha/; frame-src https://www.google.com/recaptcha/ https://recaptcha.google.com/recaptcha/; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+    },
+    "/contact": {
+      "status": 200,
+      "title": "Contact | YPIOS",
+      "canonical": "https://www.ypios.fr/contact",
+      "metadata": [
+        [
+          "application-name",
+          "YPIOS"
+        ],
+        [
+          "author",
+          "YPIOS"
+        ],
+        [
+          "category",
+          "CVC, plomberie et gestion technique du bâtiment"
+        ],
+        [
+          "color-scheme",
+          "light"
+        ],
+        [
+          "creator",
+          "YPIOS"
+        ],
+        [
+          "description",
+          "Devis, études, maintenance ou dépannage : contactez YPIOS et transmettez les éléments utiles à votre demande."
+        ],
+        [
+          "googlebot",
+          "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+        ],
+        [
+          "og:description",
+          "Études, travaux, mise en service, maintenance et dépannage CVC, plomberie et GTB en Île-de-France."
+        ],
+        [
+          "og:image",
+          "https://www.ypios.fr/opengraph-image?fac8a0cc6818f4db"
+        ],
+        [
+          "og:image:alt",
+          "YPIOS — Climatisation, ventilation, plomberie et GTB en Île-de-France"
+        ],
+        [
+          "og:image:height",
+          "630"
+        ],
+        [
+          "og:image:type",
+          "image/png"
+        ],
+        [
+          "og:image:width",
+          "1200"
+        ],
+        [
+          "og:locale",
+          "fr_FR"
+        ],
+        [
+          "og:site_name",
+          "YPIOS"
+        ],
+        [
+          "og:title",
+          "YPIOS | Climatisation, ventilation, plomberie & GTB"
+        ],
+        [
+          "og:type",
+          "website"
+        ],
+        [
+          "og:url",
+          "https://www.ypios.fr"
+        ],
+        [
+          "publisher",
+          "YPIOS"
+        ],
+        [
+          "robots",
+          "index, follow"
+        ],
+        [
+          "theme-color",
+          "#0D1B3D"
+        ],
+        [
+          "twitter:card",
+          "summary_large_image"
+        ],
+        [
+          "twitter:description",
+          "Études, travaux, mise en service, maintenance et dépannage CVC, plomberie et GTB en Île-de-France."
+        ],
+        [
+          "twitter:image",
+          "https://www.ypios.fr/opengraph-image?fac8a0cc6818f4db"
+        ],
+        [
+          "twitter:image:alt",
+          "YPIOS — Climatisation, ventilation, plomberie et GTB en Île-de-France"
+        ],
+        [
+          "twitter:image:height",
+          "630"
+        ],
+        [
+          "twitter:image:type",
+          "image/png"
+        ],
+        [
+          "twitter:image:width",
+          "1200"
+        ],
+        [
+          "twitter:title",
+          "YPIOS | Climatisation, ventilation, plomberie & GTB"
+        ],
+        [
+          "viewport",
+          "width=device-width, initial-scale=1"
+        ]
+      ],
+      "structured": [
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "@id": "https://www.ypios.fr/#organization",
+          "name": "YPIOS",
+          "url": "https://www.ypios.fr",
+          "email": "contact@ypios.fr",
+          "logo": "https://www.ypios.fr/brand/ypios-logo.svg",
+          "image": "https://www.ypios.fr/opengraph-image",
+          "areaServed": "Île-de-France",
+          "knowsAbout": [
+            "Climatisation",
+            "Ventilation",
+            "Plomberie",
+            "GTC",
+            "GTB",
+            "Maintenance CVC"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "2, rue des Hauts Sablons",
+            "postalCode": "91310",
+            "addressLocality": "Leuville-sur-Orge",
+            "addressCountry": "FR"
+          }
+        }
+      ],
+      "h1": [
+        "Parlons de votre besoin."
+      ],
+      "links": [
+        "/",
+        "/contact",
+        "/cookies",
+        "/mentions-legales",
+        "/politique-confidentialite",
+        "/realisations",
+        "/services/climatisation",
+        "/services/gtc-gtb",
+        "/services/maintenance-cvc",
+        "/services/plomberie",
+        "/services/ventilation"
+      ],
+      "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https://www.google-analytics.com https://www.googletagmanager.com; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://www.google.com/recaptcha/; frame-src https://www.google.com/recaptcha/ https://recaptcha.google.com/recaptcha/; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+    },
+    "/mentions-legales": {
+      "status": 200,
+      "title": "Mentions légales & CGU | YPIOS",
+      "canonical": "https://www.ypios.fr/mentions-legales",
+      "metadata": [
+        [
+          "application-name",
+          "YPIOS"
+        ],
+        [
+          "author",
+          "YPIOS"
+        ],
+        [
+          "category",
+          "CVC, plomberie et gestion technique du bâtiment"
+        ],
+        [
+          "color-scheme",
+          "light"
+        ],
+        [
+          "creator",
+          "YPIOS"
+        ],
+        [
+          "description",
+          "Informations légales de l’éditeur du site YPIOS, hébergeur, propriété intellectuelle et conditions d’utilisation."
+        ],
+        [
+          "googlebot",
+          "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+        ],
+        [
+          "og:description",
+          "Études, travaux, mise en service, maintenance et dépannage CVC, plomberie et GTB en Île-de-France."
+        ],
+        [
+          "og:image",
+          "https://www.ypios.fr/opengraph-image?fac8a0cc6818f4db"
+        ],
+        [
+          "og:image:alt",
+          "YPIOS — Climatisation, ventilation, plomberie et GTB en Île-de-France"
+        ],
+        [
+          "og:image:height",
+          "630"
+        ],
+        [
+          "og:image:type",
+          "image/png"
+        ],
+        [
+          "og:image:width",
+          "1200"
+        ],
+        [
+          "og:locale",
+          "fr_FR"
+        ],
+        [
+          "og:site_name",
+          "YPIOS"
+        ],
+        [
+          "og:title",
+          "YPIOS | Climatisation, ventilation, plomberie & GTB"
+        ],
+        [
+          "og:type",
+          "website"
+        ],
+        [
+          "og:url",
+          "https://www.ypios.fr"
+        ],
+        [
+          "publisher",
+          "YPIOS"
+        ],
+        [
+          "robots",
+          "index, follow"
+        ],
+        [
+          "theme-color",
+          "#0D1B3D"
+        ],
+        [
+          "twitter:card",
+          "summary_large_image"
+        ],
+        [
+          "twitter:description",
+          "Études, travaux, mise en service, maintenance et dépannage CVC, plomberie et GTB en Île-de-France."
+        ],
+        [
+          "twitter:image",
+          "https://www.ypios.fr/opengraph-image?fac8a0cc6818f4db"
+        ],
+        [
+          "twitter:image:alt",
+          "YPIOS — Climatisation, ventilation, plomberie et GTB en Île-de-France"
+        ],
+        [
+          "twitter:image:height",
+          "630"
+        ],
+        [
+          "twitter:image:type",
+          "image/png"
+        ],
+        [
+          "twitter:image:width",
+          "1200"
+        ],
+        [
+          "twitter:title",
+          "YPIOS | Climatisation, ventilation, plomberie & GTB"
+        ],
+        [
+          "viewport",
+          "width=device-width, initial-scale=1"
+        ]
+      ],
+      "structured": [
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "@id": "https://www.ypios.fr/#organization",
+          "name": "YPIOS",
+          "url": "https://www.ypios.fr",
+          "email": "contact@ypios.fr",
+          "logo": "https://www.ypios.fr/brand/ypios-logo.svg",
+          "image": "https://www.ypios.fr/opengraph-image",
+          "areaServed": "Île-de-France",
+          "knowsAbout": [
+            "Climatisation",
+            "Ventilation",
+            "Plomberie",
+            "GTC",
+            "GTB",
+            "Maintenance CVC"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "2, rue des Hauts Sablons",
+            "postalCode": "91310",
+            "addressLocality": "Leuville-sur-Orge",
+            "addressCountry": "FR"
+          }
+        }
+      ],
+      "h1": [
+        "Mentions légales & CGU"
+      ],
+      "links": [
+        "/",
+        "/contact",
+        "/cookies",
+        "/mentions-legales",
+        "/politique-confidentialite",
+        "/realisations",
+        "/services/climatisation",
+        "/services/gtc-gtb",
+        "/services/maintenance-cvc",
+        "/services/plomberie",
+        "/services/ventilation"
+      ],
+      "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https://www.google-analytics.com https://www.googletagmanager.com; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://www.google.com/recaptcha/; frame-src https://www.google.com/recaptcha/ https://recaptcha.google.com/recaptcha/; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+    },
+    "/politique-confidentialite": {
+      "status": 200,
+      "title": "Politique de confidentialité | YPIOS",
+      "canonical": "https://www.ypios.fr/politique-confidentialite",
+      "metadata": [
+        [
+          "application-name",
+          "YPIOS"
+        ],
+        [
+          "author",
+          "YPIOS"
+        ],
+        [
+          "category",
+          "CVC, plomberie et gestion technique du bâtiment"
+        ],
+        [
+          "color-scheme",
+          "light"
+        ],
+        [
+          "creator",
+          "YPIOS"
+        ],
+        [
+          "description",
+          "Informations sur le traitement des données personnelles, cookies et droits RGPD (accès, rectification, effacement)."
+        ],
+        [
+          "googlebot",
+          "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+        ],
+        [
+          "og:description",
+          "Études, travaux, mise en service, maintenance et dépannage CVC, plomberie et GTB en Île-de-France."
+        ],
+        [
+          "og:image",
+          "https://www.ypios.fr/opengraph-image?fac8a0cc6818f4db"
+        ],
+        [
+          "og:image:alt",
+          "YPIOS — Climatisation, ventilation, plomberie et GTB en Île-de-France"
+        ],
+        [
+          "og:image:height",
+          "630"
+        ],
+        [
+          "og:image:type",
+          "image/png"
+        ],
+        [
+          "og:image:width",
+          "1200"
+        ],
+        [
+          "og:locale",
+          "fr_FR"
+        ],
+        [
+          "og:site_name",
+          "YPIOS"
+        ],
+        [
+          "og:title",
+          "YPIOS | Climatisation, ventilation, plomberie & GTB"
+        ],
+        [
+          "og:type",
+          "website"
+        ],
+        [
+          "og:url",
+          "https://www.ypios.fr"
+        ],
+        [
+          "publisher",
+          "YPIOS"
+        ],
+        [
+          "robots",
+          "index, follow"
+        ],
+        [
+          "theme-color",
+          "#0D1B3D"
+        ],
+        [
+          "twitter:card",
+          "summary_large_image"
+        ],
+        [
+          "twitter:description",
+          "Études, travaux, mise en service, maintenance et dépannage CVC, plomberie et GTB en Île-de-France."
+        ],
+        [
+          "twitter:image",
+          "https://www.ypios.fr/opengraph-image?fac8a0cc6818f4db"
+        ],
+        [
+          "twitter:image:alt",
+          "YPIOS — Climatisation, ventilation, plomberie et GTB en Île-de-France"
+        ],
+        [
+          "twitter:image:height",
+          "630"
+        ],
+        [
+          "twitter:image:type",
+          "image/png"
+        ],
+        [
+          "twitter:image:width",
+          "1200"
+        ],
+        [
+          "twitter:title",
+          "YPIOS | Climatisation, ventilation, plomberie & GTB"
+        ],
+        [
+          "viewport",
+          "width=device-width, initial-scale=1"
+        ]
+      ],
+      "structured": [
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "@id": "https://www.ypios.fr/#organization",
+          "name": "YPIOS",
+          "url": "https://www.ypios.fr",
+          "email": "contact@ypios.fr",
+          "logo": "https://www.ypios.fr/brand/ypios-logo.svg",
+          "image": "https://www.ypios.fr/opengraph-image",
+          "areaServed": "Île-de-France",
+          "knowsAbout": [
+            "Climatisation",
+            "Ventilation",
+            "Plomberie",
+            "GTC",
+            "GTB",
+            "Maintenance CVC"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "2, rue des Hauts Sablons",
+            "postalCode": "91310",
+            "addressLocality": "Leuville-sur-Orge",
+            "addressCountry": "FR"
+          }
+        }
+      ],
+      "h1": [
+        "Politique de confidentialité"
+      ],
+      "links": [
+        "/",
+        "/contact",
+        "/cookies",
+        "/mentions-legales",
+        "/politique-confidentialite",
+        "/realisations",
+        "/services/climatisation",
+        "/services/gtc-gtb",
+        "/services/maintenance-cvc",
+        "/services/plomberie",
+        "/services/ventilation"
+      ],
+      "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https://www.google-analytics.com https://www.googletagmanager.com; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://www.google.com/recaptcha/; frame-src https://www.google.com/recaptcha/ https://recaptcha.google.com/recaptcha/; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+    },
+    "/cookies": {
+      "status": 200,
+      "title": "Cookies | YPIOS",
+      "canonical": "https://www.ypios.fr/cookies",
+      "metadata": [
+        [
+          "application-name",
+          "YPIOS"
+        ],
+        [
+          "author",
+          "YPIOS"
+        ],
+        [
+          "category",
+          "CVC, plomberie et gestion technique du bâtiment"
+        ],
+        [
+          "color-scheme",
+          "light"
+        ],
+        [
+          "creator",
+          "YPIOS"
+        ],
+        [
+          "description",
+          "Informations sur l’utilisation des cookies sur le site YPIOS."
+        ],
+        [
+          "googlebot",
+          "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+        ],
+        [
+          "og:description",
+          "Études, travaux, mise en service, maintenance et dépannage CVC, plomberie et GTB en Île-de-France."
+        ],
+        [
+          "og:image",
+          "https://www.ypios.fr/opengraph-image?fac8a0cc6818f4db"
+        ],
+        [
+          "og:image:alt",
+          "YPIOS — Climatisation, ventilation, plomberie et GTB en Île-de-France"
+        ],
+        [
+          "og:image:height",
+          "630"
+        ],
+        [
+          "og:image:type",
+          "image/png"
+        ],
+        [
+          "og:image:width",
+          "1200"
+        ],
+        [
+          "og:locale",
+          "fr_FR"
+        ],
+        [
+          "og:site_name",
+          "YPIOS"
+        ],
+        [
+          "og:title",
+          "YPIOS | Climatisation, ventilation, plomberie & GTB"
+        ],
+        [
+          "og:type",
+          "website"
+        ],
+        [
+          "og:url",
+          "https://www.ypios.fr"
+        ],
+        [
+          "publisher",
+          "YPIOS"
+        ],
+        [
+          "robots",
+          "index, follow"
+        ],
+        [
+          "theme-color",
+          "#0D1B3D"
+        ],
+        [
+          "twitter:card",
+          "summary_large_image"
+        ],
+        [
+          "twitter:description",
+          "Études, travaux, mise en service, maintenance et dépannage CVC, plomberie et GTB en Île-de-France."
+        ],
+        [
+          "twitter:image",
+          "https://www.ypios.fr/opengraph-image?fac8a0cc6818f4db"
+        ],
+        [
+          "twitter:image:alt",
+          "YPIOS — Climatisation, ventilation, plomberie et GTB en Île-de-France"
+        ],
+        [
+          "twitter:image:height",
+          "630"
+        ],
+        [
+          "twitter:image:type",
+          "image/png"
+        ],
+        [
+          "twitter:image:width",
+          "1200"
+        ],
+        [
+          "twitter:title",
+          "YPIOS | Climatisation, ventilation, plomberie & GTB"
+        ],
+        [
+          "viewport",
+          "width=device-width, initial-scale=1"
+        ]
+      ],
+      "structured": [
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "@id": "https://www.ypios.fr/#organization",
+          "name": "YPIOS",
+          "url": "https://www.ypios.fr",
+          "email": "contact@ypios.fr",
+          "logo": "https://www.ypios.fr/brand/ypios-logo.svg",
+          "image": "https://www.ypios.fr/opengraph-image",
+          "areaServed": "Île-de-France",
+          "knowsAbout": [
+            "Climatisation",
+            "Ventilation",
+            "Plomberie",
+            "GTC",
+            "GTB",
+            "Maintenance CVC"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "2, rue des Hauts Sablons",
+            "postalCode": "91310",
+            "addressLocality": "Leuville-sur-Orge",
+            "addressCountry": "FR"
+          }
+        }
+      ],
+      "h1": [
+        "Cookies"
+      ],
+      "links": [
+        "/",
+        "/contact",
+        "/cookies",
+        "/mentions-legales",
+        "/politique-confidentialite",
+        "/realisations",
+        "/services/climatisation",
+        "/services/gtc-gtb",
+        "/services/maintenance-cvc",
+        "/services/plomberie",
+        "/services/ventilation"
+      ],
+      "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https://www.google-analytics.com https://www.googletagmanager.com; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://www.google.com/recaptcha/; frame-src https://www.google.com/recaptcha/ https://recaptcha.google.com/recaptcha/; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+    },
+    "/realisations/saint-aspais": {
+      "status": 200,
+      "title": "Confort thermique d’un réfectoire à Melun | YPIOS",
+      "canonical": "https://www.ypios.fr/realisations/saint-aspais",
+      "metadata": [
+        [
+          "application-name",
+          "YPIOS"
+        ],
+        [
+          "author",
+          "YPIOS"
+        ],
+        [
+          "category",
+          "CVC, plomberie et gestion technique du bâtiment"
+        ],
+        [
+          "color-scheme",
+          "light"
+        ],
+        [
+          "creator",
+          "YPIOS"
+        ],
+        [
+          "description",
+          "À Melun, YPIOS associe climatisation gainable et film solaire extérieur SILVER 80 XC pour traiter le confort thermique du réfectoire Saint-Aspais."
+        ],
+        [
+          "googlebot",
+          "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+        ],
+        [
+          "og:description",
+          "À Melun, YPIOS associe climatisation gainable et film solaire extérieur SILVER 80 XC pour traiter le confort thermique du réfectoire Saint-Aspais."
+        ],
+        [
+          "og:image",
+          "https://www.ypios.fr/images/chantier/saint-aspais-film-solaire-facade.webp"
+        ],
+        [
+          "og:image:alt",
+          "Façade vitrée du réfectoire Saint-Aspais à Melun après pose d’un film solaire extérieur réfléchissant"
+        ],
+        [
+          "og:title",
+          "Confort thermique d’un réfectoire à Melun"
+        ],
+        [
+          "og:type",
+          "article"
+        ],
+        [
+          "og:url",
+          "https://www.ypios.fr/realisations/saint-aspais"
+        ],
+        [
+          "publisher",
+          "YPIOS"
+        ],
+        [
+          "robots",
+          "index, follow"
+        ],
+        [
+          "theme-color",
+          "#0D1B3D"
+        ],
+        [
+          "twitter:card",
+          "summary_large_image"
+        ],
+        [
+          "twitter:description",
+          "Études, travaux, mise en service, maintenance et dépannage CVC, plomberie et GTB en Île-de-France."
+        ],
+        [
+          "twitter:image",
+          "https://www.ypios.fr/images/chantier/saint-aspais-film-solaire-facade.webp"
+        ],
+        [
+          "twitter:image:alt",
+          "Façade vitrée du réfectoire Saint-Aspais à Melun après pose d’un film solaire extérieur réfléchissant"
+        ],
+        [
+          "twitter:title",
+          "YPIOS | Climatisation, ventilation, plomberie & GTB"
+        ],
+        [
+          "viewport",
+          "width=device-width, initial-scale=1"
+        ]
+      ],
+      "structured": [
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "@id": "https://www.ypios.fr/#organization",
+          "name": "YPIOS",
+          "url": "https://www.ypios.fr",
+          "email": "contact@ypios.fr",
+          "logo": "https://www.ypios.fr/brand/ypios-logo.svg",
+          "image": "https://www.ypios.fr/opengraph-image",
+          "areaServed": "Île-de-France",
+          "knowsAbout": [
+            "Climatisation",
+            "Ventilation",
+            "Plomberie",
+            "GTC",
+            "GTB",
+            "Maintenance CVC"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "2, rue des Hauts Sablons",
+            "postalCode": "91310",
+            "addressLocality": "Leuville-sur-Orge",
+            "addressCountry": "FR"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Article",
+              "@id": "https://www.ypios.fr/realisations/saint-aspais#article",
+              "headline": "Climatisation gainable et protection solaire du réfectoire Saint-Aspais",
+              "description": "À Melun, YPIOS associe climatisation gainable et film solaire extérieur SILVER 80 XC pour traiter le confort thermique du réfectoire Saint-Aspais.",
+              "image": [
+                "https://www.ypios.fr/images/chantier/saint-aspais-film-solaire-facade.webp",
+                "https://www.ypios.fr/images/chantier/saint-aspais-gainable.webp",
+                "https://www.ypios.fr/images/chantier/saint-aspais-faux-plafond.webp",
+                "https://www.ypios.fr/images/chantier/saint-aspais-unite-exterieure.webp"
+              ],
+              "dateModified": "2026-10-15T00:00:00.000Z",
+              "author": {
+                "@id": "https://www.ypios.fr/#organization"
+              },
+              "publisher": {
+                "@id": "https://www.ypios.fr/#organization"
+              },
+              "mainEntityOfPage": "https://www.ypios.fr/realisations/saint-aspais",
+              "articleSection": "Climatisation & protection solaire"
+            },
+            {
+              "@type": "BreadcrumbList",
+              "@id": "https://www.ypios.fr/realisations/saint-aspais#breadcrumb",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Accueil",
+                  "item": "https://www.ypios.fr/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Réalisations",
+                  "item": "https://www.ypios.fr/realisations"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Institution Saint-Aspais",
+                  "item": "https://www.ypios.fr/realisations/saint-aspais"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "h1": [
+        "Climatisation gainable et protection solaire du réfectoire Saint-Aspais"
+      ],
+      "links": [
+        "/",
+        "/contact",
+        "/cookies",
+        "/mentions-legales",
+        "/politique-confidentialite",
+        "/realisations",
+        "/services/climatisation",
+        "/services/gtc-gtb",
+        "/services/maintenance-cvc",
+        "/services/plomberie",
+        "/services/ventilation"
+      ],
+      "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https://www.google-analytics.com https://www.googletagmanager.com; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://www.google.com/recaptcha/; frame-src https://www.google.com/recaptcha/ https://recaptcha.google.com/recaptcha/; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+    },
+    "/realisations/damae-paris-13": {
+      "status": 200,
+      "title": "Climatisation de bureaux à Paris 13e | YPIOS",
+      "canonical": "https://www.ypios.fr/realisations/damae-paris-13",
+      "metadata": [
+        [
+          "application-name",
+          "YPIOS"
+        ],
+        [
+          "author",
+          "YPIOS"
+        ],
+        [
+          "category",
+          "CVC, plomberie et gestion technique du bâtiment"
+        ],
+        [
+          "color-scheme",
+          "light"
+        ],
+        [
+          "creator",
+          "YPIOS"
+        ],
+        [
+          "description",
+          "Découvrez l’installation de climatisation et de ventilation réalisée par YPIOS dans des bureaux à Paris 13e, avec cassettes et réseaux apparents."
+        ],
+        [
+          "googlebot",
+          "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+        ],
+        [
+          "og:description",
+          "Découvrez l’installation de climatisation et de ventilation réalisée par YPIOS dans des bureaux à Paris 13e, avec cassettes et réseaux apparents."
+        ],
+        [
+          "og:image",
+          "https://www.ypios.fr/images/chantier/damae-cassette.webp"
+        ],
+        [
+          "og:image:alt",
+          "Cassette de climatisation suspendue et réseau circulaire dans les bureaux Damae à Paris 13"
+        ],
+        [
+          "og:title",
+          "Climatisation de bureaux à Paris 13e"
+        ],
+        [
+          "og:type",
+          "article"
+        ],
+        [
+          "og:url",
+          "https://www.ypios.fr/realisations/damae-paris-13"
+        ],
+        [
+          "publisher",
+          "YPIOS"
+        ],
+        [
+          "robots",
+          "index, follow"
+        ],
+        [
+          "theme-color",
+          "#0D1B3D"
+        ],
+        [
+          "twitter:card",
+          "summary_large_image"
+        ],
+        [
+          "twitter:description",
+          "Études, travaux, mise en service, maintenance et dépannage CVC, plomberie et GTB en Île-de-France."
+        ],
+        [
+          "twitter:image",
+          "https://www.ypios.fr/images/chantier/damae-cassette.webp"
+        ],
+        [
+          "twitter:image:alt",
+          "Cassette de climatisation suspendue et réseau circulaire dans les bureaux Damae à Paris 13"
+        ],
+        [
+          "twitter:title",
+          "YPIOS | Climatisation, ventilation, plomberie & GTB"
+        ],
+        [
+          "viewport",
+          "width=device-width, initial-scale=1"
+        ]
+      ],
+      "structured": [
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "@id": "https://www.ypios.fr/#organization",
+          "name": "YPIOS",
+          "url": "https://www.ypios.fr",
+          "email": "contact@ypios.fr",
+          "logo": "https://www.ypios.fr/brand/ypios-logo.svg",
+          "image": "https://www.ypios.fr/opengraph-image",
+          "areaServed": "Île-de-France",
+          "knowsAbout": [
+            "Climatisation",
+            "Ventilation",
+            "Plomberie",
+            "GTC",
+            "GTB",
+            "Maintenance CVC"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "2, rue des Hauts Sablons",
+            "postalCode": "91310",
+            "addressLocality": "Leuville-sur-Orge",
+            "addressCountry": "FR"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Article",
+              "@id": "https://www.ypios.fr/realisations/damae-paris-13#article",
+              "headline": "Installation de climatisation et ventilation dans des bureaux à Paris 13e",
+              "description": "Découvrez l’installation de climatisation et de ventilation réalisée par YPIOS dans des bureaux à Paris 13e, avec cassettes et réseaux apparents.",
+              "image": [
+                "https://www.ypios.fr/images/chantier/damae-cassette.webp",
+                "https://www.ypios.fr/images/chantier/damae-reseaux-apparents.webp",
+                "https://www.ypios.fr/images/chantier/damae-bureaux.webp"
+              ],
+              "dateModified": "2026-09-12T00:00:00.000Z",
+              "author": {
+                "@id": "https://www.ypios.fr/#organization"
+              },
+              "publisher": {
+                "@id": "https://www.ypios.fr/#organization"
+              },
+              "mainEntityOfPage": "https://www.ypios.fr/realisations/damae-paris-13",
+              "articleSection": "Climatisation & ventilation"
+            },
+            {
+              "@type": "BreadcrumbList",
+              "@id": "https://www.ypios.fr/realisations/damae-paris-13#breadcrumb",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Accueil",
+                  "item": "https://www.ypios.fr/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Réalisations",
+                  "item": "https://www.ypios.fr/realisations"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Damae Medical",
+                  "item": "https://www.ypios.fr/realisations/damae-paris-13"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "h1": [
+        "Installation de climatisation et ventilation dans des bureaux à Paris 13e"
+      ],
+      "links": [
+        "/",
+        "/contact",
+        "/cookies",
+        "/mentions-legales",
+        "/politique-confidentialite",
+        "/realisations",
+        "/services/climatisation",
+        "/services/gtc-gtb",
+        "/services/maintenance-cvc",
+        "/services/plomberie",
+        "/services/ventilation"
+      ],
+      "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https://www.google-analytics.com https://www.googletagmanager.com; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://www.google.com/recaptcha/; frame-src https://www.google.com/recaptcha/ https://recaptcha.google.com/recaptcha/; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+    },
+    "/realisations/aeroport-orly": {
+      "status": 200,
+      "title": "Création d’un local CTA à l’aéroport d’Orly | YPIOS",
+      "canonical": "https://www.ypios.fr/realisations/aeroport-orly",
+      "metadata": [
+        [
+          "application-name",
+          "YPIOS"
+        ],
+        [
+          "author",
+          "YPIOS"
+        ],
+        [
+          "category",
+          "CVC, plomberie et gestion technique du bâtiment"
+        ],
+        [
+          "color-scheme",
+          "light"
+        ],
+        [
+          "creator",
+          "YPIOS"
+        ],
+        [
+          "description",
+          "Découvrez le local CTA neuf réalisé par YPIOS à l’aéroport d’Orly, avec réseaux aérauliques calorifugés et raccordements hydrauliques."
+        ],
+        [
+          "googlebot",
+          "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+        ],
+        [
+          "og:description",
+          "Découvrez le local CTA neuf réalisé par YPIOS à l’aéroport d’Orly, avec réseaux aérauliques calorifugés et raccordements hydrauliques."
+        ],
+        [
+          "og:image",
+          "https://www.ypios.fr/images/chantier/orly-local-cta.webp"
+        ],
+        [
+          "og:image:alt",
+          "Local CTA neuf réalisé par YPIOS à l’aéroport d’Orly"
+        ],
+        [
+          "og:title",
+          "Création d’un local CTA à l’aéroport d’Orly"
+        ],
+        [
+          "og:type",
+          "article"
+        ],
+        [
+          "og:url",
+          "https://www.ypios.fr/realisations/aeroport-orly"
+        ],
+        [
+          "publisher",
+          "YPIOS"
+        ],
+        [
+          "robots",
+          "index, follow"
+        ],
+        [
+          "theme-color",
+          "#0D1B3D"
+        ],
+        [
+          "twitter:card",
+          "summary_large_image"
+        ],
+        [
+          "twitter:description",
+          "Études, travaux, mise en service, maintenance et dépannage CVC, plomberie et GTB en Île-de-France."
+        ],
+        [
+          "twitter:image",
+          "https://www.ypios.fr/images/chantier/orly-local-cta.webp"
+        ],
+        [
+          "twitter:image:alt",
+          "Local CTA neuf réalisé par YPIOS à l’aéroport d’Orly"
+        ],
+        [
+          "twitter:title",
+          "YPIOS | Climatisation, ventilation, plomberie & GTB"
+        ],
+        [
+          "viewport",
+          "width=device-width, initial-scale=1"
+        ]
+      ],
+      "structured": [
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "@id": "https://www.ypios.fr/#organization",
+          "name": "YPIOS",
+          "url": "https://www.ypios.fr",
+          "email": "contact@ypios.fr",
+          "logo": "https://www.ypios.fr/brand/ypios-logo.svg",
+          "image": "https://www.ypios.fr/opengraph-image",
+          "areaServed": "Île-de-France",
+          "knowsAbout": [
+            "Climatisation",
+            "Ventilation",
+            "Plomberie",
+            "GTC",
+            "GTB",
+            "Maintenance CVC"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "2, rue des Hauts Sablons",
+            "postalCode": "91310",
+            "addressLocality": "Leuville-sur-Orge",
+            "addressCountry": "FR"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Article",
+              "@id": "https://www.ypios.fr/realisations/aeroport-orly#article",
+              "headline": "Création d’un local CTA à l’aéroport d’Orly",
+              "description": "Découvrez le local CTA neuf réalisé par YPIOS à l’aéroport d’Orly, avec réseaux aérauliques calorifugés et raccordements hydrauliques.",
+              "image": [
+                "https://www.ypios.fr/images/chantier/orly-local-cta.webp",
+                "https://www.ypios.fr/images/chantier/orly-cta-detail.webp",
+                "https://www.ypios.fr/images/chantier/orly-reseaux-hydrauliques.webp"
+              ],
+              "dateModified": "2026-09-11T00:00:00.000Z",
+              "author": {
+                "@id": "https://www.ypios.fr/#organization"
+              },
+              "publisher": {
+                "@id": "https://www.ypios.fr/#organization"
+              },
+              "mainEntityOfPage": "https://www.ypios.fr/realisations/aeroport-orly",
+              "articleSection": "Ventilation"
+            },
+            {
+              "@type": "BreadcrumbList",
+              "@id": "https://www.ypios.fr/realisations/aeroport-orly#breadcrumb",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Accueil",
+                  "item": "https://www.ypios.fr/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Réalisations",
+                  "item": "https://www.ypios.fr/realisations"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Aéroport d’Orly",
+                  "item": "https://www.ypios.fr/realisations/aeroport-orly"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "h1": [
+        "Création d’un local CTA à l’aéroport d’Orly"
+      ],
+      "links": [
+        "/",
+        "/contact",
+        "/cookies",
+        "/mentions-legales",
+        "/politique-confidentialite",
+        "/realisations",
+        "/services/climatisation",
+        "/services/gtc-gtb",
+        "/services/maintenance-cvc",
+        "/services/plomberie",
+        "/services/ventilation"
+      ],
+      "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https://www.google-analytics.com https://www.googletagmanager.com; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://www.google.com/recaptcha/; frame-src https://www.google.com/recaptcha/ https://recaptcha.google.com/recaptcha/; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+    },
+    "/realisations/quatre-temps": {
+      "status": 200,
+      "title": "Remplacement complet d’une CTA à La Défense | YPIOS",
+      "canonical": "https://www.ypios.fr/realisations/quatre-temps",
+      "metadata": [
+        [
+          "application-name",
+          "YPIOS"
+        ],
+        [
+          "author",
+          "YPIOS"
+        ],
+        [
+          "category",
+          "CVC, plomberie et gestion technique du bâtiment"
+        ],
+        [
+          "color-scheme",
+          "light"
+        ],
+        [
+          "creator",
+          "YPIOS"
+        ],
+        [
+          "description",
+          "Remplacement complet d’une CTA Carrier au centre Westfield Les 4 Temps à La Défense : dépose de l’existant, installation et raccordement aux réseaux aérauliques."
+        ],
+        [
+          "googlebot",
+          "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+        ],
+        [
+          "og:description",
+          "Remplacement complet d’une CTA Carrier au centre Westfield Les 4 Temps à La Défense : dépose de l’existant, installation et raccordement aux réseaux aérauliques."
+        ],
+        [
+          "og:image",
+          "https://www.ypios.fr/images/quatre-temps-apres.webp"
+        ],
+        [
+          "og:image:alt",
+          "Nouvelle CTA Carrier après remplacement au centre Westfield Les 4 Temps"
+        ],
+        [
+          "og:title",
+          "Remplacement complet d’une CTA à La Défense"
+        ],
+        [
+          "og:type",
+          "article"
+        ],
+        [
+          "og:url",
+          "https://www.ypios.fr/realisations/quatre-temps"
+        ],
+        [
+          "publisher",
+          "YPIOS"
+        ],
+        [
+          "robots",
+          "index, follow"
+        ],
+        [
+          "theme-color",
+          "#0D1B3D"
+        ],
+        [
+          "twitter:card",
+          "summary_large_image"
+        ],
+        [
+          "twitter:description",
+          "Études, travaux, mise en service, maintenance et dépannage CVC, plomberie et GTB en Île-de-France."
+        ],
+        [
+          "twitter:image",
+          "https://www.ypios.fr/images/quatre-temps-apres.webp"
+        ],
+        [
+          "twitter:image:alt",
+          "Nouvelle CTA Carrier après remplacement au centre Westfield Les 4 Temps"
+        ],
+        [
+          "twitter:title",
+          "YPIOS | Climatisation, ventilation, plomberie & GTB"
+        ],
+        [
+          "viewport",
+          "width=device-width, initial-scale=1"
+        ]
+      ],
+      "structured": [
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "@id": "https://www.ypios.fr/#organization",
+          "name": "YPIOS",
+          "url": "https://www.ypios.fr",
+          "email": "contact@ypios.fr",
+          "logo": "https://www.ypios.fr/brand/ypios-logo.svg",
+          "image": "https://www.ypios.fr/opengraph-image",
+          "areaServed": "Île-de-France",
+          "knowsAbout": [
+            "Climatisation",
+            "Ventilation",
+            "Plomberie",
+            "GTC",
+            "GTB",
+            "Maintenance CVC"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "2, rue des Hauts Sablons",
+            "postalCode": "91310",
+            "addressLocality": "Leuville-sur-Orge",
+            "addressCountry": "FR"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Article",
+              "@id": "https://www.ypios.fr/realisations/quatre-temps#article",
+              "headline": "Remplacement complet d’une CTA au centre Westfield Les 4 Temps",
+              "description": "Remplacement complet d’une CTA Carrier au centre Westfield Les 4 Temps à La Défense : dépose de l’existant, installation et raccordement aux réseaux aérauliques.",
+              "image": [
+                "https://www.ypios.fr/images/quatre-temps-apres.webp",
+                "https://www.ypios.fr/images/quatre-temps-avant.webp",
+                "https://www.ypios.fr/images/chantier/quatre-temps-cta.webp"
+              ],
+              "dateModified": "2026-09-19T00:00:00.000Z",
+              "author": {
+                "@id": "https://www.ypios.fr/#organization"
+              },
+              "publisher": {
+                "@id": "https://www.ypios.fr/#organization"
+              },
+              "mainEntityOfPage": "https://www.ypios.fr/realisations/quatre-temps",
+              "articleSection": "Ventilation & CTA"
+            },
+            {
+              "@type": "BreadcrumbList",
+              "@id": "https://www.ypios.fr/realisations/quatre-temps#breadcrumb",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Accueil",
+                  "item": "https://www.ypios.fr/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Réalisations",
+                  "item": "https://www.ypios.fr/realisations"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Westfield Les 4 Temps",
+                  "item": "https://www.ypios.fr/realisations/quatre-temps"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "h1": [
+        "Remplacement complet d’une CTA au centre Westfield Les 4 Temps"
+      ],
+      "links": [
+        "/",
+        "/contact",
+        "/cookies",
+        "/mentions-legales",
+        "/politique-confidentialite",
+        "/realisations",
+        "/services/climatisation",
+        "/services/gtc-gtb",
+        "/services/maintenance-cvc",
+        "/services/plomberie",
+        "/services/ventilation"
+      ],
+      "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https://www.google-analytics.com https://www.googletagmanager.com; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://www.google.com/recaptcha/; frame-src https://www.google.com/recaptcha/ https://recaptcha.google.com/recaptcha/; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+    },
+    "/realisations/saint-quentin-en-yvelines": {
+      "status": 200,
+      "title": "Installation d’une CTA en toiture à Saint-Quentin-en-Yvelines | YPIOS",
+      "canonical": "https://www.ypios.fr/realisations/saint-quentin-en-yvelines",
+      "metadata": [
+        [
+          "application-name",
+          "YPIOS"
+        ],
+        [
+          "author",
+          "YPIOS"
+        ],
+        [
+          "category",
+          "CVC, plomberie et gestion technique du bâtiment"
+        ],
+        [
+          "color-scheme",
+          "light"
+        ],
+        [
+          "creator",
+          "YPIOS"
+        ],
+        [
+          "description",
+          "Découvrez l’installation par YPIOS d’une CTA VIM/CADO et de réseaux aérauliques circulaires en toiture sur un site industriel des Yvelines."
+        ],
+        [
+          "googlebot",
+          "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+        ],
+        [
+          "og:description",
+          "Découvrez l’installation par YPIOS d’une CTA VIM/CADO et de réseaux aérauliques circulaires en toiture sur un site industriel des Yvelines."
+        ],
+        [
+          "og:image",
+          "https://www.ypios.fr/images/chantier/saint-quentin-hero.webp"
+        ],
+        [
+          "og:image:alt",
+          "CTA VIM CADO et réseaux circulaires à Saint-Quentin-en-Yvelines"
+        ],
+        [
+          "og:title",
+          "Installation d’une CTA en toiture à Saint-Quentin-en-Yvelines"
+        ],
+        [
+          "og:type",
+          "article"
+        ],
+        [
+          "og:url",
+          "https://www.ypios.fr/realisations/saint-quentin-en-yvelines"
+        ],
+        [
+          "publisher",
+          "YPIOS"
+        ],
+        [
+          "robots",
+          "index, follow"
+        ],
+        [
+          "theme-color",
+          "#0D1B3D"
+        ],
+        [
+          "twitter:card",
+          "summary_large_image"
+        ],
+        [
+          "twitter:description",
+          "Études, travaux, mise en service, maintenance et dépannage CVC, plomberie et GTB en Île-de-France."
+        ],
+        [
+          "twitter:image",
+          "https://www.ypios.fr/images/chantier/saint-quentin-hero.webp"
+        ],
+        [
+          "twitter:image:alt",
+          "CTA VIM CADO et réseaux circulaires à Saint-Quentin-en-Yvelines"
+        ],
+        [
+          "twitter:title",
+          "YPIOS | Climatisation, ventilation, plomberie & GTB"
+        ],
+        [
+          "viewport",
+          "width=device-width, initial-scale=1"
+        ]
+      ],
+      "structured": [
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "@id": "https://www.ypios.fr/#organization",
+          "name": "YPIOS",
+          "url": "https://www.ypios.fr",
+          "email": "contact@ypios.fr",
+          "logo": "https://www.ypios.fr/brand/ypios-logo.svg",
+          "image": "https://www.ypios.fr/opengraph-image",
+          "areaServed": "Île-de-France",
+          "knowsAbout": [
+            "Climatisation",
+            "Ventilation",
+            "Plomberie",
+            "GTC",
+            "GTB",
+            "Maintenance CVC"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "2, rue des Hauts Sablons",
+            "postalCode": "91310",
+            "addressLocality": "Leuville-sur-Orge",
+            "addressCountry": "FR"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Article",
+              "@id": "https://www.ypios.fr/realisations/saint-quentin-en-yvelines#article",
+              "headline": "Installation d’une CTA en toiture sur un site industriel à Saint-Quentin-en-Yvelines",
+              "description": "Découvrez l’installation par YPIOS d’une CTA VIM/CADO et de réseaux aérauliques circulaires en toiture sur un site industriel des Yvelines.",
+              "image": [
+                "https://www.ypios.fr/images/chantier/saint-quentin-hero.webp",
+                "https://www.ypios.fr/images/chantier/saint-quentin-cta.webp"
+              ],
+              "dateModified": "2026-09-12T00:00:00.000Z",
+              "author": {
+                "@id": "https://www.ypios.fr/#organization"
+              },
+              "publisher": {
+                "@id": "https://www.ypios.fr/#organization"
+              },
+              "mainEntityOfPage": "https://www.ypios.fr/realisations/saint-quentin-en-yvelines",
+              "articleSection": "Ventilation"
+            },
+            {
+              "@type": "BreadcrumbList",
+              "@id": "https://www.ypios.fr/realisations/saint-quentin-en-yvelines#breadcrumb",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Accueil",
+                  "item": "https://www.ypios.fr/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Réalisations",
+                  "item": "https://www.ypios.fr/realisations"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Site industriel",
+                  "item": "https://www.ypios.fr/realisations/saint-quentin-en-yvelines"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "h1": [
+        "Installation d’une CTA en toiture sur un site industriel à Saint-Quentin-en-Yvelines"
+      ],
+      "links": [
+        "/",
+        "/contact",
+        "/cookies",
+        "/mentions-legales",
+        "/politique-confidentialite",
+        "/realisations",
+        "/services/climatisation",
+        "/services/gtc-gtb",
+        "/services/maintenance-cvc",
+        "/services/plomberie",
+        "/services/ventilation"
+      ],
+      "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https://www.google-analytics.com https://www.googletagmanager.com; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://www.google.com/recaptcha/; frame-src https://www.google.com/recaptcha/ https://recaptcha.google.com/recaptcha/; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+    }
+  },
+  "redirects": {
+    "/cgu": {
+      "status": 308,
+      "location": "/mentions-legales"
+    },
+    "/politique-des-cookies": {
+      "status": 308,
+      "location": "/cookies"
+    },
+    "/services/a-propos": {
+      "status": 308,
+      "location": "/"
+    }
+  },
+  "robots": "User-Agent: *\nAllow: /\n\nHost: https://www.ypios.fr\nSitemap: https://www.ypios.fr/sitemap.xml\n",
+  "sitemap": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\" xmlns:image=\"http://www.google.com/schemas/sitemap-image/1.1\">\n<url>\n<loc>https://www.ypios.fr/</loc>\n<lastmod>2026-09-12T00:00:00.000Z</lastmod>\n<changefreq>monthly</changefreq>\n<priority>1</priority>\n</url>\n<url>\n<loc>https://www.ypios.fr/services/climatisation</loc>\n<lastmod>2026-10-15T00:00:00.000Z</lastmod>\n<changefreq>yearly</changefreq>\n<priority>0.9</priority>\n</url>\n<url>\n<loc>https://www.ypios.fr/services/ventilation</loc>\n<lastmod>2026-09-12T00:00:00.000Z</lastmod>\n<changefreq>yearly</changefreq>\n<priority>0.9</priority>\n</url>\n<url>\n<loc>https://www.ypios.fr/services/plomberie</loc>\n<lastmod>2026-09-11T00:00:00.000Z</lastmod>\n<changefreq>yearly</changefreq>\n<priority>0.9</priority>\n</url>\n<url>\n<loc>https://www.ypios.fr/services/gtc-gtb</loc>\n<lastmod>2026-09-11T00:00:00.000Z</lastmod>\n<changefreq>yearly</changefreq>\n<priority>0.9</priority>\n</url>\n<url>\n<loc>https://www.ypios.fr/services/maintenance-cvc</loc>\n<lastmod>2026-09-12T00:00:00.000Z</lastmod>\n<changefreq>yearly</changefreq>\n<priority>0.9</priority>\n</url>\n<url>\n<loc>https://www.ypios.fr/realisations</loc>\n<lastmod>2026-10-15T00:00:00.000Z</lastmod>\n<changefreq>yearly</changefreq>\n<priority>0.8</priority>\n</url>\n<url>\n<loc>https://www.ypios.fr/contact</loc>\n<lastmod>2026-09-08T00:00:00.000Z</lastmod>\n<changefreq>yearly</changefreq>\n<priority>0.8</priority>\n</url>\n<url>\n<loc>https://www.ypios.fr/mentions-legales</loc>\n<lastmod>2026-09-08T00:00:00.000Z</lastmod>\n<changefreq>yearly</changefreq>\n<priority>0.3</priority>\n</url>\n<url>\n<loc>https://www.ypios.fr/politique-confidentialite</loc>\n<lastmod>2026-09-08T00:00:00.000Z</lastmod>\n<changefreq>yearly</changefreq>\n<priority>0.3</priority>\n</url>\n<url>\n<loc>https://www.ypios.fr/cookies</loc>\n<lastmod>2026-09-08T00:00:00.000Z</lastmod>\n<changefreq>yearly</changefreq>\n<priority>0.3</priority>\n</url>\n<url>\n<loc>https://www.ypios.fr/realisations/saint-aspais</loc>\n<image:image>\n<image:loc>https://www.ypios.fr/images/chantier/saint-aspais-film-solaire-facade.webp</image:loc>\n</image:image>\n<image:image>\n<image:loc>https://www.ypios.fr/images/chantier/saint-aspais-gainable.webp</image:loc>\n</image:image>\n<image:image>\n<image:loc>https://www.ypios.fr/images/chantier/saint-aspais-faux-plafond.webp</image:loc>\n</image:image>\n<image:image>\n<image:loc>https://www.ypios.fr/images/chantier/saint-aspais-unite-exterieure.webp</image:loc>\n</image:image>\n<lastmod>2026-10-15T00:00:00.000Z</lastmod>\n<changefreq>yearly</changefreq>\n<priority>0.7</priority>\n</url>\n<url>\n<loc>https://www.ypios.fr/realisations/damae-paris-13</loc>\n<image:image>\n<image:loc>https://www.ypios.fr/images/chantier/damae-cassette.webp</image:loc>\n</image:image>\n<image:image>\n<image:loc>https://www.ypios.fr/images/chantier/damae-reseaux-apparents.webp</image:loc>\n</image:image>\n<image:image>\n<image:loc>https://www.ypios.fr/images/chantier/damae-bureaux.webp</image:loc>\n</image:image>\n<lastmod>2026-09-12T00:00:00.000Z</lastmod>\n<changefreq>yearly</changefreq>\n<priority>0.7</priority>\n</url>\n<url>\n<loc>https://www.ypios.fr/realisations/aeroport-orly</loc>\n<image:image>\n<image:loc>https://www.ypios.fr/images/chantier/orly-local-cta.webp</image:loc>\n</image:image>\n<image:image>\n<image:loc>https://www.ypios.fr/images/chantier/orly-cta-detail.webp</image:loc>\n</image:image>\n<image:image>\n<image:loc>https://www.ypios.fr/images/chantier/orly-reseaux-hydrauliques.webp</image:loc>\n</image:image>\n<lastmod>2026-09-11T00:00:00.000Z</lastmod>\n<changefreq>yearly</changefreq>\n<priority>0.7</priority>\n</url>\n<url>\n<loc>https://www.ypios.fr/realisations/quatre-temps</loc>\n<image:image>\n<image:loc>https://www.ypios.fr/images/quatre-temps-apres.webp</image:loc>\n</image:image>\n<image:image>\n<image:loc>https://www.ypios.fr/images/quatre-temps-avant.webp</image:loc>\n</image:image>\n<image:image>\n<image:loc>https://www.ypios.fr/images/chantier/quatre-temps-cta.webp</image:loc>\n</image:image>\n<lastmod>2026-09-19T00:00:00.000Z</lastmod>\n<changefreq>yearly</changefreq>\n<priority>0.7</priority>\n</url>\n<url>\n<loc>https://www.ypios.fr/realisations/saint-quentin-en-yvelines</loc>\n<image:image>\n<image:loc>https://www.ypios.fr/images/chantier/saint-quentin-hero.webp</image:loc>\n</image:image>\n<image:image>\n<image:loc>https://www.ypios.fr/images/chantier/saint-quentin-cta.webp</image:loc>\n</image:image>\n<lastmod>2026-09-12T00:00:00.000Z</lastmod>\n<changefreq>yearly</changefreq>\n<priority>0.7</priority>\n</url>\n</urlset>\n"
+}
