@@ -1,5 +1,7 @@
 // Production Next HTTP regression checks. SMTP and CAPTCHA are local fakes.
-// No C1-C3 implementation is imported, copied or enabled.
+// P2 compatibility: authoritative useActionState response replaces legacy URL redirects.
+require("./load.cjs");
+const { contactErrors } = require("../lib/contact-state.ts");
 const assert = require("node:assert/strict");
 const fs = require("node:fs");
 const path = require("node:path");
@@ -365,21 +367,25 @@ test(
           redirect: "manual",
         });
       }
-      function outcome(response, key, value) {
-        assert.equal(response.status, 303);
-        assert.equal(
-          new URL(response.headers.get("location"), origin).searchParams.get(
-            key,
-          ),
-          value,
-        );
+      async function outcome(response, key, value) {
+        assert.equal(response.status, 200);
+        assert.equal(response.headers.get("location"), null);
+        const html = decode(await response.text());
+        if (key === "sent") {
+          assert.match(html, /role="status"/);
+          assert.ok(html.includes("Merci, votre message"));
+        } else {
+          assert.match(html, /role="alert"/);
+          assert.ok(html.includes(contactErrors[value]), "Expected exact error: " + value);
+          assert.doesNotMatch(html, /role="status"/);
+        }
       }
       await check(
         "Actual Server Action accepts a request through fake SMTP",
         async () => {
           const before = inbox.length;
           const r = await post(await form());
-          outcome(r, "sent", "1");
+          await outcome(r, "sent", "1");
           assert.equal(inbox.length, before + 1);
           assert.match(inbox.at(-1), /main@example.invalid/);
           assert.match(inbox.at(-1), /LOCAL SECURITY TEST/);
@@ -392,7 +398,7 @@ test(
           new File(["%PDF-1.4\nLOCAL FAKE PDF"], "local.pdf"),
         );
         const before = inbox.length;
-        outcome(await post(data), "sent", "1");
+        await outcome(await post(data), "sent", "1");
         assert.equal(inbox.length, before + 1);
         assert.match(inbox.at(-1), /application\/pdf/);
       });
@@ -401,7 +407,7 @@ test(
           const data = await form();
           data.set("g-recaptcha-response", token);
           const before = inbox.length;
-          outcome(await post(data), "error", "captcha");
+          await outcome(await post(data), "error", "captcha");
           assert.equal(inbox.length, before);
         });
       for (const [field, value] of [
@@ -416,7 +422,7 @@ test(
             const data = await form();
             data.set(field, value);
             const before = inbox.length;
-            outcome(await post(data), "error", "fields");
+            await outcome(await post(data), "error", "fields");
             assert.equal(inbox.length, before);
           },
         );
@@ -443,14 +449,14 @@ test(
           const data = await form();
           for (const file of files()) data.append("files", file);
           const before = inbox.length;
-          outcome(await post(data), "error", error);
+          await outcome(await post(data), "error", error);
           assert.equal(inbox.length, before);
         });
       await check("SMTP rejection is an explicit failure", async () => {
         rejectAll = true;
         try {
           const before = inbox.length;
-          outcome(await post(await form()), "error", "mail");
+          await outcome(await post(await form()), "error", "mail");
           assert.equal(inbox.length, before);
         } finally {
           rejectAll = false;
@@ -462,8 +468,8 @@ test(
           const ip = "203.0.113.100";
           const before = inbox.length;
           for (let i = 0; i < 5; i++)
-            outcome(await post(await form(), { ip }), "sent", "1");
-          outcome(await post(await form(), { ip }), "error", "rate");
+            await outcome(await post(await form(), { ip }), "sent", "1");
+          await outcome(await post(await form(), { ip }), "error", "rate");
           assert.equal(inbox.length, before + 5);
         },
       );
@@ -478,20 +484,11 @@ test(
           assert.equal(inbox.length, before);
         },
       );
-      // A probe of an already documented C1-C3 defect, never treated as a corrected behaviour.
-      rejectPrincipal = true;
-      try {
-        const r = await post(await form());
-        reservations.push({
-          name: "Primary rejected / copy accepted",
-          status: r.status,
-          location: r.headers.get("location"),
-          scope:
-            "Pre-existing measurement/SMTP defect reserved to C1-C3; security-only patch must not silently change it.",
-        });
-      } finally {
-        rejectPrincipal = false;
-      }
+      await check("Primary rejected / copy accepted cannot produce success (C3)", async () => {
+        rejectPrincipal = true;
+        try { await outcome(await post(await form()), "error", "mail"); }
+        finally { rejectPrincipal = false; }
+      });
       await check(
         "Framework body limit rejects the payload and server remains responsive",
         async () => {

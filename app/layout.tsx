@@ -82,7 +82,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <JsonLd />
         <CookieBanner />
         <Suspense fallback={null}>
-          <AnalyticsConsent gaId={GA_ID} />
+          <AnalyticsConsent gaId={GA_ID} production={process.env.VERCEL_ENV === "production"} />
         </Suspense>
       </body>
     </html>

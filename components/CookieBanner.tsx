@@ -2,29 +2,10 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-
-const STORAGE_KEY = "ypios-consent-v1";
-
-type Consent = {
-  essential: true;
-  analytics: boolean;
-  marketing?: boolean;
-  updatedAt?: string;
-};
-
-function readConsent(): Consent | null {
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    return raw ? (JSON.parse(raw) as Consent) : null;
-  } catch {
-    return null;
-  }
-}
+import { hasConsentChoice, readAnalyticsConsent, saveAnalyticsConsent, subscribeConsent } from "@/lib/consent";
 
 function writeConsent(analytics: boolean) {
-  const consent: Consent = { essential: true, analytics, marketing: false, updatedAt: new Date().toISOString() };
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(consent));
-  window.dispatchEvent(new CustomEvent("ypios:consent-changed", { detail: consent }));
+  saveAnalyticsConsent(analytics);
 }
 
 export default function CookieBanner() {
@@ -33,12 +14,9 @@ export default function CookieBanner() {
   const [analytics, setAnalytics] = useState(false);
 
   useEffect(() => {
-    const saved = readConsent();
-    if (!saved) {
-      setVisible(true);
-      return;
-    }
-    setAnalytics(Boolean(saved.analytics));
+    const refresh = () => { setVisible(!hasConsentChoice()); setAnalytics(readAnalyticsConsent()); };
+    refresh();
+    return subscribeConsent(refresh);
   }, []);
 
   const save = (value: boolean) => {
@@ -49,8 +27,7 @@ export default function CookieBanner() {
   };
 
   const openSettings = () => {
-    const saved = readConsent();
-    setAnalytics(Boolean(saved?.analytics));
+    setAnalytics(readAnalyticsConsent());
     setSettingsOpen(true);
   };
 
